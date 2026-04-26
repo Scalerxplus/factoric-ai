@@ -7,7 +7,7 @@
   --color-accent-red: #D14343;
   --color-border-hairline: #1F1F1F;
   
-  --color-astra-purple: #9d50bb;
+  --color-astra-green: #10B981;
   --color-astra-blue: #00d2ff;
   --color-astra-gold: #f4d03f;
   
@@ -25,14 +25,14 @@
 }
 
 :root {
-  --background: #0D0D0D;
+  --background: #0a0a0a;
   --foreground: #F2F0E9;
   --muted: #4A4A4A;
   --border: #1F1F1F;
 }
 
 body {
-  background: radial-gradient(circle at 50% -20%, #10B98115, #0D0D0D 80%) fixed;
+  background: radial-gradient(circle at 50% -20%, #10B98110, #0a0a0a 80%) fixed;
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -59,8 +59,8 @@ body {
     -webkit-text-fill-color: transparent;
   }
 
-  .purple-glow {
-    box-shadow: 0 0 30px rgba(157, 80, 187, 0.3);
+  .green-glow {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
   }
 
   .emerald-glow {

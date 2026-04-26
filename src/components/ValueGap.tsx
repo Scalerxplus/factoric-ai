@@ -8,7 +8,7 @@ export const ValueGap = () => {
     <section className="section-spacing bg-white/[0.01]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-24">
-          <div className="text-astra-purple text-[10px] font-black uppercase tracking-[0.5em] mb-8">Structural Efficiency</div>
+          <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Structural Efficiency</div>
           <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-8">The Value Gap.</h2>
           <p className="text-lg text-white/40 max-w-2xl mx-auto leading-relaxed font-medium">
             Bridging the gap between intent and outcome through autonomous execution.
@@ -48,20 +48,20 @@ export const ValueGap = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-12 glass-card rounded-sm border-l-4 border-l-astra-purple relative z-10 purple-glow"
+            className="p-12 glass-card rounded-sm border-l-4 border-l-astra-green relative z-10 green-glow"
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-astra-purple/10 rounded-full">
-                <CheckCircle2 className="w-6 h-6 text-astra-purple" />
+              <div className="p-3 bg-astra-green/10 rounded-full">
+                <CheckCircle2 className="w-6 h-6 text-astra-green" />
               </div>
-              <div className="text-sm font-black uppercase tracking-widest text-astra-purple">Factoric Protocol</div>
+              <div className="text-sm font-black uppercase tracking-widest text-astra-green">Factoric Protocol</div>
             </div>
             <div className="space-y-6 text-xl font-medium">
               <div className="text-white/80">Instant Intent</div>
-              <ArrowRight className="w-4 h-4 text-astra-purple/30" />
+              <ArrowRight className="w-4 h-4 text-astra-green/30" />
               <div className="text-white/80">Autonomous Closure</div>
-              <ArrowRight className="w-4 h-4 text-astra-purple/30" />
-              <div className="text-astra-purple">Revenue.</div>
+              <ArrowRight className="w-4 h-4 text-astra-green/30" />
+              <div className="text-astra-green">Revenue.</div>
             </div>
           </motion.div>
         </div>
