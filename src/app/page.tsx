@@ -6,205 +6,135 @@ import { NeuralLogo } from "@/components/NeuralLogo";
 import { ImpactCalculator } from "@/components/ImpactCalculator";
 import { SecurityArchitecture } from "@/components/SecurityArchitecture";
 import { NationalAlignment } from "@/components/NationalAlignment";
-import { ArrowRight, Plus } from "lucide-react";
+import { AstraTerminal } from "@/components/AstraTerminal";
+import { ValueGap } from "@/components/ValueGap";
+import { ArrowRight, Plus, Brain, Cpu, Shield, Activity, Zap } from "lucide-react";
 import Link from "next/link";
+
+const trinity = [
+  {
+    tier: "BOS M",
+    title: "The Brain",
+    desc: "WhatsApp & Social Intelligence. Captures digital intent and maps it to structural outcomes.",
+    details: "Single User • 30-Day Free Trial",
+    accent: "border-astra-purple shadow-astra-purple/10",
+    icon: Brain,
+    color: "text-astra-purple",
+    cta: "Initialize M Logic"
+  },
+  {
+    tier: "BOS X",
+    title: "The Nervous System",
+    desc: "Telephony & Billing Sync. Integrates capital integrity engines to identify and close revenue leakage.",
+    details: "5 Users Standard • +₹699/mo per extra",
+    accent: "border-astra-blue shadow-astra-blue/10",
+    icon: Activity,
+    color: "text-astra-blue",
+    cta: "Initialize X Logic"
+  },
+  {
+    tier: "BOS Z",
+    title: "The Sentinel",
+    desc: "Computer Vision & Security. Total structural preservation and autonomous governance of physical assets.",
+    details: "10 Users Standard • +₹999/mo per extra",
+    accent: "border-astra-gold shadow-astra-gold/10",
+    icon: Shield,
+    color: "text-astra-gold",
+    cta: "Initialize Z Logic"
+  }
+];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0D0D0D] text-[#F2F0E9]">
+    <main className="min-h-screen bg-[#0a0a0a] text-[#F2F0E9] selection:bg-astra-purple/30 font-sans">
       <Navbar />
       
-      {/* Hero Section: Extreme Whitespace */}
-      <section className="relative flex flex-col items-center justify-center pt-64 pb-48 px-6 text-center">
-        <NeuralLogo className="w-24 h-24 mb-16" />
-        <h1 className="text-4xl md:text-8xl font-medium tracking-tight mb-8 leading-[1.05]">
-          Factoric AI
-        </h1>
-        <p className="text-lg md:text-2xl text-[#F2F0E9]/40 max-w-3xl mb-16 font-medium leading-relaxed">
-          The autonomous operational layer for sovereign institutions. <br />
-          Engineering the future of agentic labor and institutional logic.
-        </p>
-        <Link 
-          href={`/chat?prompt=${encodeURIComponent("how Factoric AI's Agentic AI can help a business engaging leads, recording and analysing data, doing billing, reciving patients and also watching over your cctv feeds to inform you right before something critical happens.")}`} 
-          className="px-12 py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all"
+      {/* 1. The Hero: Sovereign Command */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-48 px-6 text-center overflow-hidden">
+        {/* Subtle Background Elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-astra-purple/5 rounded-full blur-[160px] pointer-events-none" />
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 space-y-12"
         >
-          Experience Our AI Workforce
-        </Link>
-      </section>
-
-      {/* Section: Factoric Workforce (The Wide Centerpiece) */}
-      <section className="border-y border-[#1F1F1F] bg-[#F2F0E9]/[0.01]">
-        <div className="max-w-6xl mx-auto px-6 py-48 text-center">
-          <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em] mb-12">The Engine</div>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-12">Factoric Workforce</h2>
-          <p className="text-xl text-[#F2F0E9]/40 max-w-3xl mx-auto leading-relaxed font-medium mb-16">
-            The autonomous agentic labor force. A neural network of task-specific agents that govern the logic of every BOS level. Workforce does not just process data—it executes intent.
+          <NeuralLogo className="w-16 h-16 mx-auto mb-16 opacity-80" />
+          <div className="text-astra-purple text-[10px] font-black uppercase tracking-[0.6em] mb-8 animate-pulse">Sovereign Architecture Active</div>
+          <h1 className="text-5xl md:text-[120px] font-black tracking-tighter leading-[0.9] silver-gradient mb-12">
+            YOUR BUSINESS. <br />
+            ON AUTOPILOT.
+          </h1>
+          <p className="text-lg md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed mb-16">
+            While legacy systems wait for human input, Factoric AI executes mission-critical tasks autonomously. Deploy your 24/7 Digital Workforce today.
           </p>
-          <div className="grid md:grid-cols-3 gap-12 text-left">
-            {[
-              { t: "Cognitive Labor", d: "Agents that think and prioritize like your most elite operators.", p: "How does the autonomous agentic labor force optimize my existing workflows?" },
-              { t: "Neural Memory", d: "Systems that learn institutional nuance and adapt to shifting growth vectors.", p: "Explain the implementation of Neural Memory in institutional scaling." },
-              { t: "Zero Latency", d: "Autonomous execution of complex workflows 24/7 with zero human friction.", p: "Show me the latency reduction metrics for cross-border logistics." }
-            ].map((feature, i) => (
-              <Link 
-                key={i} 
-                href={`/chat?tier=WORKFORCE&prompt=${encodeURIComponent(feature.p)}`}
-                className="p-10 glass-card rounded-xl hover:bg-white/[0.05] transition-all group relative overflow-hidden"
-              >
-                <div className="absolute inset-0 data-pulse opacity-20 group-hover:opacity-40 transition-opacity" />
-                <Plus className="w-5 h-5 text-emerald-500 mb-6 group-hover:rotate-90 transition-transform relative z-10" />
-                <div className="text-sm font-bold uppercase tracking-widest mb-4 relative z-10">{feature.t}</div>
-                <p className="text-sm text-[#F2F0E9]/40 leading-relaxed font-medium mb-8 relative z-10">{feature.d}</p>
-                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity relative z-10">Initialize Inquiry →</div>
-              </Link>
-            ))}
+          
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+            <Link 
+              href="/chat" 
+              className="px-16 py-6 bg-astra-purple text-white hover:bg-astra-purple/80 purple-glow rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all"
+            >
+              Deploy Astra-1
+            </Link>
+            <Link 
+              href="/philosophy" 
+              className="px-16 py-6 border border-white/10 text-white/60 hover:text-white hover:border-white/20 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all backdrop-blur-sm"
+            >
+              Watch Intel Demo
+            </Link>
           </div>
+        </motion.div>
+      </section>
+
+      {/* 2. The Live "Mission Log" (Astra Terminal) */}
+      <section className="pb-48">
+        <AstraTerminal />
+      </section>
+
+      {/* 3. The Trinity (BOS M, X, Z) */}
+      <section className="max-w-7xl mx-auto px-6 section-spacing border-t border-white/5">
+        <div className="text-center mb-32">
+          <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Structural Tiers</div>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight">The Trinity Architecture.</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {trinity.map((item, i) => (
+            <motion.div
+              key={item.tier}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className={`p-12 glass-card rounded-sm flex flex-col group border-t-2 ${item.accent} transition-all hover:-translate-y-2`}
+            >
+              <div className="mb-12 flex justify-between items-start">
+                <item.icon className={`w-8 h-8 ${item.color}`} />
+                <div className={`text-[10px] font-black tracking-widest uppercase ${item.color}/40`}>{item.tier}</div>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+              <div className={`text-[10px] font-black uppercase tracking-widest mb-6 ${item.color}/60`}>{item.details}</div>
+              <p className="text-sm text-white/40 leading-relaxed font-medium mb-12 flex-grow">
+                {item.desc}
+              </p>
+              <Link 
+                href={`/chat?tier=${item.tier.split(' ')[1]}`}
+                className={`text-[8px] font-black uppercase tracking-[0.4em] ${item.color} group-hover:underline`}
+              >
+                {item.cta} →
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* Section: The Information Slabs (BOS M, X, Z) */}
-      <section className="max-w-6xl mx-auto px-6 section-spacing">
-        <div className="mb-32">
-          <h2 className="title-understated">The Architecture</h2>
-        </div>
+      {/* 4. The McKinsey "Value Gap" Section */}
+      <ValueGap />
 
-        <div className="space-y-32">
-          {/* BOS M */}
-          <div className="grid md:grid-cols-2 gap-24 items-center relative overflow-hidden group">
-            <div className="space-y-8 z-10">
-              <div className="flex items-center gap-4">
-                <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Precision Operations</div>
-                <div className="text-[8px] font-bold text-emerald-500/40 tracking-[0.2em] border-l border-white/10 pl-4">v4.1.0-M</div>
-              </div>
-              <h3 className="text-4xl font-medium">Factoric BOS M</h3>
-              <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
-                Engineered for Marketing & Lead Automation. BOS M captures every digital intent and maps it to a structural outcome.
-              </p>
-              <div className="text-[10px] uppercase font-bold tracking-[0.2em] text-emerald-500/60">Single User • 30-Day Free Trial</div>
-              <ul className="space-y-4 mb-12">
-                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Lead Management Automation
-                </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Social Media Intent Mapping
-                </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Instant Engagement Logic
-                </li>
-              </ul>
-              <Link 
-                href={`/chat?tier=M&prompt=${encodeURIComponent("Initialize lead management automation protocols for high-volume social media marketing.")}`}
-                className="inline-flex items-center gap-4 px-8 py-4 bg-accent-red text-[10px] uppercase font-black tracking-[0.3em] hover:bg-accent-red/80 transition-all text-white"
-              >
-                Initialize M Logic <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            <div className="p-16 glass-card rounded-sm flex flex-col justify-center min-h-[400px] relative overflow-hidden emerald-glow">
-              <div className="absolute inset-0 data-pulse opacity-10" />
-              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-emerald-500/20 uppercase relative z-10">System Active</div>
-              <div className="text-6xl font-light text-emerald-500/10 mb-8 tracking-tighter relative z-10">BOS M</div>
-              <div className="flex gap-12 relative z-10">
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Latency: 12ms</div>
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Nodes: 124</div>
-              </div>
-            </div>
-          </div>
-
-          {/* BOS X */}
-          <div className="grid md:grid-cols-2 gap-24 items-center relative overflow-hidden group">
-            <div className="p-16 glass-card rounded-sm flex flex-col justify-center min-h-[400px] order-2 md:order-1 text-right items-end relative overflow-hidden emerald-glow">
-              <div className="absolute inset-0 data-pulse opacity-10" />
-              <div className="absolute top-8 left-8 text-[8px] font-black tracking-[0.5em] text-emerald-500/20 uppercase relative z-10">Revenue Integrity</div>
-              <div className="text-6xl font-light text-emerald-500/20 mb-8 tracking-tighter relative z-10">BOS X</div>
-              <div className="flex gap-12 relative z-10">
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Attribution: 100%</div>
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Security: Tier 2</div>
-              </div>
-            </div>
-            <div className="space-y-8 order-1 md:order-2 z-10">
-              <div className="flex items-center gap-4">
-                <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Growth Acceleration</div>
-                <div className="text-[8px] font-bold text-emerald-500/40 tracking-[0.2em] border-l border-white/10 pl-4">v4.1.0-X</div>
-              </div>
-              <h3 className="text-4xl font-medium">Factoric BOS X</h3>
-              <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
-                Marketing + Revenue Acceleration. BOS X integrates capital integrity engines to identify and close revenue leakage.
-              </p>
-              <div className="text-[10px] uppercase font-bold tracking-[0.2em] text-emerald-500/60">5 Users Standard • +₹699/mo per extra</div>
-              <ul className="space-y-4 mb-12">
-                <li className="flex items-center gap-4 text-sm font-medium text-white">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Everything in BOS M
-                </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Automated Billing & Invoicing
-                </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> 100% Capital Attribution
-                </li>
-              </ul>
-              <Link 
-                href={`/chat?tier=X&prompt=${encodeURIComponent("Activate revenue acceleration and identify potential capital leakage in my current billing cycle.")}`}
-                className="inline-flex items-center gap-4 px-8 py-4 bg-accent-red text-[10px] uppercase font-black tracking-[0.3em] hover:bg-accent-red/80 transition-all text-white"
-              >
-                Initialize X Logic <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-
-          {/* BOS Z */}
-          <div className="grid md:grid-cols-2 gap-24 items-center relative overflow-hidden group">
-            <div className="space-y-8 z-10">
-              <div className="flex items-center gap-4">
-                <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Sovereign Control</div>
-                <div className="text-[8px] font-bold text-emerald-500/40 tracking-[0.2em] border-l border-white/10 pl-4">v4.1.0-Z</div>
-              </div>
-              <h3 className="text-4xl font-medium">Factoric BOS Z</h3>
-              <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
-                The Ultimate Engine. Integrated Marketing, Revenue, and Vision Security for enterprise-wide sovereign automation.
-              </p>
-              <div className="text-[10px] uppercase font-bold tracking-[0.2em] text-emerald-500/60">10 Users Standard • +₹999/mo per extra</div>
-              <ul className="space-y-4 mb-12">
-                <li className="flex items-center gap-4 text-sm font-medium text-white">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Everything in BOS X
-                </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Full HIPAA & DPDPA Shield
-                </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Isolated Sovereign Tiers
-                </li>
-              </ul>
-              <Link 
-                href={`/chat?tier=Z&prompt=${encodeURIComponent("Enable total sovereign vision security and integrated enterprise logic.")}`}
-                className="inline-flex items-center gap-4 px-8 py-4 bg-accent-red text-[10px] uppercase font-black tracking-[0.3em] hover:bg-accent-red/80 transition-all text-white"
-              >
-                Initialize Z Logic <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            <div className="p-16 glass-card rounded-sm flex flex-col justify-center min-h-[400px] relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)]">
-              <div className="absolute inset-0 data-pulse opacity-20" />
-              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-emerald-500/30 uppercase relative z-10">Sovereign State</div>
-              <div className="text-6xl font-light text-emerald-500/20 mb-8 tracking-tighter relative z-10">BOS Z</div>
-              <div className="flex gap-12 relative z-10">
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Compliance: 100%</div>
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Encryption: AES-4096</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Security Architecture */}
+      {/* Security Architecture Overlay */}
       <SecurityArchitecture />
 
-      {/* ROI Data Section */}
-      <ImpactCalculator />
-
-      {/* Final Selection CTA */}
-      <section className="max-w-4xl mx-auto px-6 py-64 text-center">
-        <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-12">
-          Initialize Your Architecture.
-        </h2>
         <div className="flex flex-col md:flex-row gap-8 justify-center">
           <Link 
             href="/contact" 
@@ -218,6 +148,28 @@ export default function Home() {
           >
             Enterprise Login
           </Link>
+        </div>
+      </section>
+
+      {/* 5. The Desi Footer (ScalerX Special) */}
+      <section className="section-spacing border-t border-white/5 bg-accent-red/5">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+          <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.5em]">The Bharat Protocol</div>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight">
+            Bharat ke vyapaariyon ke liye, <br />
+            <span className="text-accent-red">Bharat ka AI.</span>
+          </h2>
+          <p className="text-xl text-white/60 leading-relaxed font-medium max-w-2xl mx-auto">
+            Raipur ke hosptials ho ya Bhilai ki factories—ab har dhandha banega 'High-Tech'. Join the Factoric Revolution.
+          </p>
+          <div className="pt-12">
+            <Link 
+              href="/chat"
+              className="px-16 py-6 bg-white text-black hover:bg-white/90 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all"
+            >
+              Start Your Revolution
+            </Link>
+          </div>
         </div>
       </section>
 
