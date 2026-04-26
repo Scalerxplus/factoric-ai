@@ -17,6 +17,8 @@ const tiers = [
     target: "MSMEs, Hospitals, Service Hubs",
     tagline: "The Digital Operative that never sleeps.",
     accent: "silver",
+    users: "Single User",
+    trial: "30 Days Free Trial",
     features: [
       "Omnichannel Deployment: WhatsApp, FB, Instagram",
       "Astra-1 Brain: James Bond-level qualification logic",
@@ -33,6 +35,7 @@ const tiers = [
     tagline: "Strategic Interconnectivity. Total Revenue Control.",
     accent: "green-glow",
     featured: true,
+    users: "5 Users Standard (+₹699/mo per extra)",
     features: [
       "Everything in BOS M, PLUS:",
       "Cloud Telephony: AI-monitored voice & transcription",
@@ -49,6 +52,7 @@ const tiers = [
     target: "Factories, High-Security Units",
     tagline: "Omniscient Intelligence. Physical & Digital Security.",
     accent: "green",
+    users: "10 Users Standard (+₹999/mo per extra)",
     features: [
       "Everything in BOS X, PLUS:",
       "Neural Vision Deployment: CCTV Computer Vision",
@@ -132,15 +136,24 @@ export default function PricingPage() {
                 }`}>
                   {tier.name}
                 </div>
+                {tier.trial && (
+                  <div className="absolute top-6 right-6 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-[8px] font-black uppercase tracking-widest rounded-full text-emerald-400">
+                    {tier.trial}
+                  </div>
+                )}
+                
                 <h3 className="text-2xl font-medium mb-2">{tier.title}</h3>
-                <p className="text-[10px] text-white/20 uppercase font-bold tracking-widest mb-8">{tier.target}</p>
+                <p className="text-[10px] text-white/20 uppercase font-bold tracking-widest mb-6">{tier.target}</p>
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-5xl font-light tracking-tighter">{isAnnual ? tier.annualPrice : tier.monthlyPrice}</span>
                   <span className="text-white/20 text-xs font-bold uppercase tracking-widest">/ Month</span>
                 </div>
                 {isAnnual && (
-                  <div className="text-[10px] text-emerald-500 font-bold mb-4">Billed annually · Save 20%</div>
+                  <div className="text-[10px] text-emerald-500 font-bold mb-2">Billed annually · Save 20%</div>
                 )}
+                <div className="text-[10px] uppercase font-bold tracking-widest text-white/30 mb-6 bg-white/[0.03] inline-block px-3 py-1.5 rounded-sm">
+                  {tier.users}
+                </div>
                 <p className="text-sm text-white/40 font-medium italic">"{tier.tagline}"</p>
               </div>
 
