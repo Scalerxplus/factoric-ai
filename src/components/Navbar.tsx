@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, LayoutGrid } from "lucide-react";
 import { NeuralLogo } from "./NeuralLogo";
