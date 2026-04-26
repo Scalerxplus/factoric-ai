@@ -33,7 +33,7 @@ export const Navbar = () => {
             Sign In
           </Link>
           <Link 
-            href="/login?signup=true" 
+            href={`/chat?prompt=${encodeURIComponent("how Factoric AI's Agentic AI can help a business engaging leads, recording and analysing data, doing billing, reciving patients and also watching over your cctv feeds to inform you right before something critical happens.")}`} 
             className="px-6 py-2.5 text-[10px] uppercase font-black tracking-[0.3em] bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 transition-all rounded-sm"
           >
             Deploy
