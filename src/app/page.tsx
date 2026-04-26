@@ -24,10 +24,10 @@ export default function Home() {
           Engineering the future of agentic labor and institutional logic.
         </p>
         <Link 
-          href="/onboarding" 
+          href={`/chat?prompt=${encodeURIComponent("how Factoric AI's Agentic AI can help a business engaging leads, recording and analysing data, doing billing, reciving patients and also watching over your cctv feeds to inform you right before something critical happens.")}`} 
           className="px-12 py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all"
         >
-          Initialize Systems
+          Experience Our AI Workforce
         </Link>
       </section>
 
