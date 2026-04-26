@@ -120,13 +120,16 @@ export default function PricingPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 1 }}
-              className={`relative p-10 glass-card rounded-sm flex flex-col group overflow-hidden ${
+              className={`relative p-10 glass-card rounded-sm flex flex-col group ${
                 tier.accent === 'green-glow' ? 'border-emerald-500/40 emerald-glow' : ''
               }`}
             >
-              <div className="absolute inset-0 data-pulse opacity-10 group-hover:opacity-20 transition-opacity" />
+              <div className="absolute inset-0 overflow-hidden rounded-sm pointer-events-none">
+                <div className="absolute inset-0 data-pulse opacity-10 group-hover:opacity-20 transition-opacity" />
+              </div>
+              
               {tier.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-emerald-500 text-[8px] font-black uppercase tracking-[0.3em] rounded-full text-black z-20">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-emerald-500 text-[8px] font-black uppercase tracking-[0.3em] rounded-full text-black z-20 whitespace-nowrap shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                   Recommended Architecture
                 </div>
               )}
