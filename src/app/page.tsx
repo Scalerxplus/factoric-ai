@@ -80,6 +80,7 @@ export default function Home() {
               <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
                 Engineered for Marketing & Lead Automation. BOS M captures every digital intent and maps it to a structural outcome.
               </p>
+              <div className="text-[10px] uppercase font-bold tracking-[0.2em] text-emerald-500/60">Single User • 30-Day Free Trial</div>
               <ul className="space-y-4 mb-12">
                 <li className="flex items-center gap-4 text-sm font-medium text-white/60">
                   <Plus className="w-4 h-4 text-emerald-500" /> Lead Management Automation
@@ -129,6 +130,7 @@ export default function Home() {
               <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
                 Marketing + Revenue Acceleration. BOS X integrates capital integrity engines to identify and close revenue leakage.
               </p>
+              <div className="text-[10px] uppercase font-bold tracking-[0.2em] text-emerald-500/60">5 Users Standard • +₹699/mo per extra</div>
               <ul className="space-y-4 mb-12">
                 <li className="flex items-center gap-4 text-sm font-medium text-white">
                   <Plus className="w-4 h-4 text-emerald-500" /> Everything in BOS M
@@ -160,6 +162,7 @@ export default function Home() {
               <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
                 The Ultimate Engine. Integrated Marketing, Revenue, and Vision Security for enterprise-wide sovereign automation.
               </p>
+              <div className="text-[10px] uppercase font-bold tracking-[0.2em] text-emerald-500/60">10 Users Standard • +₹999/mo per extra</div>
               <ul className="space-y-4 mb-12">
                 <li className="flex items-center gap-4 text-sm font-medium text-white">
                   <Plus className="w-4 h-4 text-emerald-500" /> Everything in BOS X
