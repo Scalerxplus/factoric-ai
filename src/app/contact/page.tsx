@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { NeuralLogo } from "@/components/NeuralLogo";
 import { Mail, Globe, MapPin, Plus } from "lucide-react";
 import Link from "next/link";
+import { ChatInterface } from "@/components/ChatInterface";
 
 export default function ContactPage() {
   return (
@@ -63,38 +64,15 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="hairline-border rounded-sm p-12 bg-white/[0.01]">
-              <form className="space-y-8">
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase font-black tracking-widest text-accent-red/40">Full Name</label>
-                  <input 
-                    type="text" 
-                    className="w-full bg-transparent border-b border-[#1F1F1F] py-4 text-[#F2F0E9] focus:outline-none focus:border-accent-red transition-colors"
-                    placeholder="Enter your name"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase font-black tracking-widest text-accent-red/40">Institutional Email</label>
-                  <input 
-                    type="email" 
-                    className="w-full bg-transparent border-b border-[#1F1F1F] py-4 text-[#F2F0E9] focus:outline-none focus:border-accent-red transition-colors"
-                    placeholder="Enter your institutional email"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase font-black tracking-widest text-accent-red/40">Tier Inquiry</label>
-                  <textarea 
-                    className="w-full bg-transparent border-b border-[#1F1F1F] py-4 text-[#F2F0E9] focus:outline-none focus:border-accent-red transition-colors min-h-[120px]"
-                    placeholder="Which BOS tier (M, X, or Z) are you identifying for your growth?"
-                  />
-                </div>
-
-                <button className="w-full py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all">
-                  Submit Inquiry
-                </button>
-              </form>
+            <div className="hairline-border rounded-sm bg-black relative overflow-hidden group">
+              <div className="absolute inset-0 bg-emerald-500/5 blur-3xl pointer-events-none" />
+              <div className="relative z-10 p-2 md:p-6">
+                <ChatInterface 
+                  compact={true} 
+                  defaultTier="EXECUTIVE"
+                  defaultPrompt="You are a top executive from McKinsey handling the sales for Factoric AI. Engage me and help me find the right BOS tier (M, X, or Z) for my business. Ask me about my current operational bottlenecks." 
+                />
+              </div>
             </div>
           </div>
         </div>
