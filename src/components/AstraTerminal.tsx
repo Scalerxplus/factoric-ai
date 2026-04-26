@@ -74,7 +74,7 @@ export const AstraTerminal = () => {
         </div>
       </div>
       <p className="text-center mt-8 text-sm text-white/20 italic font-medium">
-        Aap so rahe hain, par Astra kaam kar rahi hai.
+        While you sleep, Astra executes.
       </p>
     </div>
   );
