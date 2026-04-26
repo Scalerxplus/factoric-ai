@@ -73,21 +73,21 @@ export default function Home() {
             <div className="space-y-8 z-10">
               <div className="flex items-center gap-4">
                 <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Precision Operations</div>
-                <div className="text-[8px] font-bold text-[#F2F0E9]/10 tracking-[0.2em] border-l border-[#1F1F1F] pl-4">v4.1.0-M</div>
+                <div className="text-[8px] font-bold text-emerald-500/40 tracking-[0.2em] border-l border-white/10 pl-4">v4.1.0-M</div>
               </div>
               <h3 className="text-4xl font-medium">Factoric BOS M</h3>
               <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
                 Engineered for Marketing & Lead Automation. BOS M captures every digital intent and maps it to a structural outcome.
               </p>
               <ul className="space-y-4 mb-12">
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
-                  <Plus className="w-4 h-4 text-accent-red" /> Lead Management Automation
+                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Lead Management Automation
                 </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
-                  <Plus className="w-4 h-4 text-accent-red" /> Social Media Intent Mapping
+                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Social Media Intent Mapping
                 </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
-                  <Plus className="w-4 h-4 text-accent-red" /> Instant Engagement Logic
+                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Instant Engagement Logic
                 </li>
               </ul>
               <Link 
@@ -122,21 +122,21 @@ export default function Home() {
             <div className="space-y-8 order-1 md:order-2 z-10">
               <div className="flex items-center gap-4">
                 <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Growth Acceleration</div>
-                <div className="text-[8px] font-bold text-[#F2F0E9]/10 tracking-[0.2em] border-l border-[#1F1F1F] pl-4">v4.1.0-X</div>
+                <div className="text-[8px] font-bold text-emerald-500/40 tracking-[0.2em] border-l border-white/10 pl-4">v4.1.0-X</div>
               </div>
               <h3 className="text-4xl font-medium">Factoric BOS X</h3>
               <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
                 Marketing + Revenue Acceleration. BOS X integrates capital integrity engines to identify and close revenue leakage.
               </p>
               <ul className="space-y-4 mb-12">
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]">
-                  <Plus className="w-4 h-4 text-accent-red" /> Everything in BOS M
+                <li className="flex items-center gap-4 text-sm font-medium text-white">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Everything in BOS M
                 </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
-                  <Plus className="w-4 h-4 text-accent-red" /> Automated Billing & Invoicing
+                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Automated Billing & Invoicing
                 </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
-                  <Plus className="w-4 h-4 text-accent-red" /> 100% Capital Attribution
+                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
+                  <Plus className="w-4 h-4 text-emerald-500" /> 100% Capital Attribution
                 </li>
               </ul>
               <Link 
@@ -153,21 +153,21 @@ export default function Home() {
             <div className="space-y-8 z-10">
               <div className="flex items-center gap-4">
                 <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Sovereign Control</div>
-                <div className="text-[8px] font-bold text-[#F2F0E9]/10 tracking-[0.2em] border-l border-[#1F1F1F] pl-4">v4.1.0-Z</div>
+                <div className="text-[8px] font-bold text-emerald-500/40 tracking-[0.2em] border-l border-white/10 pl-4">v4.1.0-Z</div>
               </div>
               <h3 className="text-4xl font-medium">Factoric BOS Z</h3>
               <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
                 The Ultimate Engine. Integrated Marketing, Revenue, and Vision Security for enterprise-wide sovereign automation.
               </p>
               <ul className="space-y-4 mb-12">
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]">
-                  <Plus className="w-4 h-4 text-accent-red" /> Everything in BOS X
+                <li className="flex items-center gap-4 text-sm font-medium text-white">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Everything in BOS X
                 </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
-                  <Plus className="w-4 h-4 text-accent-red" /> Vision-Based Anomaly Detection
+                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Vision-Based Anomaly Detection
                 </li>
-                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
-                  <Plus className="w-4 h-4 text-accent-red" /> Isolated Sovereign Tiers
+                <li className="flex items-center gap-4 text-sm font-medium text-white/60">
+                  <Plus className="w-4 h-4 text-emerald-500" /> Isolated Sovereign Tiers
                 </li>
               </ul>
               <Link 
