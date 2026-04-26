@@ -1,65 +1,225 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { Navbar } from "@/components/Navbar";
+import { NeuralLogo } from "@/components/NeuralLogo";
+import { ImpactCalculator } from "@/components/ImpactCalculator";
+import { NationalAlignment } from "@/components/NationalAlignment";
+import { ArrowRight, Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#0D0D0D] text-[#F2F0E9]">
+      <Navbar />
+      
+      {/* Hero Section: Extreme Whitespace */}
+      <section className="relative flex flex-col items-center justify-center pt-64 pb-48 px-6 text-center">
+        <NeuralLogo className="w-24 h-24 mb-16" />
+        <h1 className="text-4xl md:text-8xl font-medium tracking-tight mb-8 leading-[1.05]">
+          Factoric AI
+        </h1>
+        <p className="text-lg md:text-2xl text-[#F2F0E9]/40 max-w-3xl mb-16 font-medium leading-relaxed">
+          The autonomous operational layer for sovereign institutions. <br />
+          Engineering the future of agentic labor and institutional logic.
+        </p>
+        <Link 
+          href="/onboarding" 
+          className="px-12 py-5 bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl"
+        >
+          Initialize Systems
+        </Link>
+      </section>
+
+      {/* Section: Factoric Workforce (The Wide Centerpiece) */}
+      <section className="border-y border-[#1F1F1F] bg-[#F2F0E9]/[0.01]">
+        <div className="max-w-6xl mx-auto px-6 py-48 text-center">
+          <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em] mb-12">The Engine</div>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-12">Factoric Workforce</h2>
+          <p className="text-xl text-[#F2F0E9]/40 max-w-3xl mx-auto leading-relaxed font-medium mb-16">
+            The autonomous agentic labor force. A neural network of task-specific agents that govern the logic of every BOS level. Workforce does not just process data—it executes intent.
           </p>
+          <div className="grid md:grid-cols-3 gap-12 text-left">
+            {[
+              { t: "Cognitive Labor", d: "Agents that think and prioritize like your most elite operators.", p: "How does the autonomous agentic labor force optimize my existing workflows?" },
+              { t: "Neural Memory", d: "Systems that learn institutional nuance and adapt to shifting growth vectors.", p: "Explain the implementation of Neural Memory in institutional scaling." },
+              { t: "Zero Latency", d: "Autonomous execution of complex workflows 24/7 with zero human friction.", p: "Show me the latency reduction metrics for cross-border logistics." }
+            ].map((feature, i) => (
+              <Link 
+                key={i} 
+                href={`/chat?tier=WORKFORCE&prompt=${encodeURIComponent(feature.p)}`}
+                className="p-10 hairline-border rounded-xl bg-white/[0.01] hover:bg-white/[0.03] transition-all group"
+              >
+                <Plus className="w-5 h-5 text-accent-red mb-6 group-hover:rotate-90 transition-transform" />
+                <div className="text-sm font-bold uppercase tracking-widest mb-4">{feature.t}</div>
+                <p className="text-sm text-[#F2F0E9]/30 leading-relaxed font-medium mb-8">{feature.d}</p>
+                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-accent-red opacity-0 group-hover:opacity-100 transition-opacity">Initialize Inquiry →</div>
+              </Link>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Section: The Information Slabs (BOS M, X, Z) */}
+      <section className="max-w-6xl mx-auto px-6 section-spacing">
+        <div className="mb-32">
+          <h2 className="title-understated">The Architecture</h2>
         </div>
-      </main>
-    </div>
+
+        <div className="space-y-32">
+          {/* BOS M */}
+          <div className="grid md:grid-cols-2 gap-24 items-center relative overflow-hidden group">
+            <div className="space-y-8 z-10">
+              <div className="flex items-center gap-4">
+                <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Precision Operations</div>
+                <div className="text-[8px] font-bold text-[#F2F0E9]/10 tracking-[0.2em] border-l border-[#1F1F1F] pl-4">v4.1.0-M</div>
+              </div>
+              <h3 className="text-4xl font-medium">Factoric BOS M</h3>
+              <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
+                Engineered for Marketing & Lead Automation. BOS M captures every digital intent and maps it to a structural outcome.
+              </p>
+              <ul className="space-y-4 mb-12">
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
+                  <Plus className="w-4 h-4 text-accent-red" /> Lead Management Automation
+                </li>
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
+                  <Plus className="w-4 h-4 text-accent-red" /> Social Media Intent Mapping
+                </li>
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
+                  <Plus className="w-4 h-4 text-accent-red" /> Instant Engagement Logic
+                </li>
+              </ul>
+              <Link 
+                href={`/chat?tier=M&prompt=${encodeURIComponent("Initialize lead management automation protocols for high-volume social media marketing.")}`}
+                className="inline-flex items-center gap-4 px-8 py-4 hairline-border text-[10px] uppercase font-black tracking-[0.3em] hover:bg-white/[0.05] transition-all"
+              >
+                Initialize M Logic <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="p-16 hairline-border rounded-sm bg-white/[0.01] flex flex-col justify-center min-h-[400px] relative">
+              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-[#F2F0E9]/10 uppercase">System Active</div>
+              <div className="text-6xl font-light text-[#F2F0E9]/10 mb-8 tracking-tighter">BOS M</div>
+              <div className="flex gap-12">
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Latency: 12ms</div>
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Nodes: 124</div>
+              </div>
+            </div>
+          </div>
+
+          {/* BOS X */}
+          <div className="grid md:grid-cols-2 gap-24 items-center relative overflow-hidden group">
+            <div className="p-16 hairline-border rounded-sm bg-white/[0.01] flex flex-col justify-center min-h-[400px] order-2 md:order-1 text-right items-end relative">
+              <div className="absolute top-8 left-8 text-[8px] font-black tracking-[0.5em] text-[#F2F0E9]/10 uppercase">Revenue Integrity</div>
+              <div className="text-6xl font-light text-accent-red/20 mb-8 tracking-tighter">BOS X</div>
+              <div className="flex gap-12">
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Attribution: 100%</div>
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Security: Tier 2</div>
+              </div>
+            </div>
+            <div className="space-y-8 order-1 md:order-2 z-10">
+              <div className="flex items-center gap-4">
+                <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Growth Acceleration</div>
+                <div className="text-[8px] font-bold text-[#F2F0E9]/10 tracking-[0.2em] border-l border-[#1F1F1F] pl-4">v4.1.0-X</div>
+              </div>
+              <h3 className="text-4xl font-medium">Factoric BOS X</h3>
+              <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
+                Marketing + Revenue Acceleration. BOS X integrates capital integrity engines to identify and close revenue leakage.
+              </p>
+              <ul className="space-y-4 mb-12">
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]">
+                  <Plus className="w-4 h-4 text-accent-red" /> Everything in BOS M
+                </li>
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
+                  <Plus className="w-4 h-4 text-accent-red" /> Automated Billing & Invoicing
+                </li>
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
+                  <Plus className="w-4 h-4 text-accent-red" /> 100% Capital Attribution
+                </li>
+              </ul>
+              <Link 
+                href={`/chat?tier=X&prompt=${encodeURIComponent("Activate revenue acceleration and identify potential capital leakage in my current billing cycle.")}`}
+                className="inline-flex items-center gap-4 px-8 py-4 bg-accent-red text-[10px] uppercase font-black tracking-[0.3em] hover:bg-accent-red/80 transition-all text-white"
+              >
+                Initialize X Logic <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* BOS Z */}
+          <div className="grid md:grid-cols-2 gap-24 items-center relative overflow-hidden group">
+            <div className="space-y-8 z-10">
+              <div className="flex items-center gap-4">
+                <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em]">Sovereign Control</div>
+                <div className="text-[8px] font-bold text-[#F2F0E9]/10 tracking-[0.2em] border-l border-[#1F1F1F] pl-4">v4.1.0-Z</div>
+              </div>
+              <h3 className="text-4xl font-medium">Factoric BOS Z</h3>
+              <p className="text-lg text-[#F2F0E9]/40 leading-relaxed font-medium">
+                The Ultimate Engine. Integrated Marketing, Revenue, and Vision Security for enterprise-wide sovereign automation.
+              </p>
+              <ul className="space-y-4 mb-12">
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]">
+                  <Plus className="w-4 h-4 text-accent-red" /> Everything in BOS X
+                </li>
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
+                  <Plus className="w-4 h-4 text-accent-red" /> Vision-Based Anomaly Detection
+                </li>
+                <li className="flex items-center gap-4 text-sm font-medium text-[#F2F0E9]/60">
+                  <Plus className="w-4 h-4 text-accent-red" /> Isolated Sovereign Tiers
+                </li>
+              </ul>
+              <Link 
+                href={`/chat?tier=Z&prompt=${encodeURIComponent("Enable total sovereign vision security and integrated enterprise logic.")}`}
+                className="inline-flex items-center gap-4 px-8 py-4 hairline-border text-[10px] uppercase font-black tracking-[0.3em] hover:bg-[#F2F0E9] hover:text-[#0D0D0D] transition-all"
+              >
+                Initialize Z Logic <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="p-16 hairline-border rounded-sm bg-accent-red/5 flex flex-col justify-center min-h-[400px] relative">
+              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-accent-red/20 uppercase">Sovereign State</div>
+              <div className="text-6xl font-light text-accent-red mb-8 tracking-tighter">BOS Z</div>
+              <div className="flex gap-12">
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-accent-red/20">Compliance: 100%</div>
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-accent-red/20">Encryption: AES-4096</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Data Section */}
+      <ImpactCalculator />
+
+      {/* Final Selection CTA */}
+      <section className="max-w-4xl mx-auto px-6 py-64 text-center">
+        <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-12">
+          Initialize Your Architecture.
+        </h2>
+        <div className="flex flex-col md:flex-row gap-8 justify-center">
+          <Link 
+            href="/contact" 
+            className="px-16 py-5 bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl"
+          >
+            Strategy Consult
+          </Link>
+          <Link 
+            href="/login" 
+            className="px-16 py-5 hairline-border text-[#F2F0E9] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white/[0.05] transition-all"
+          >
+            Enterprise Login
+          </Link>
+        </div>
+      </section>
+
+      <NationalAlignment />
+
+      <footer className="py-32 text-center border-t border-[#1F1F1F]">
+        <div className="flex justify-center mb-12">
+          <NeuralLogo className="w-8 h-8 opacity-20" />
+        </div>
+        <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-[#F2F0E9]/10">
+          &copy; 2024 FACTORIC AI • ARCHITECTURAL RECORDS
+        </p>
+      </footer>
+    </main>
   );
 }

@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #0D0D0D;
+  --color-foreground: #F2F0E9;
+  --color-muted: #4A4A4A;
+  --color-accent-red: #D14343;
+  --color-border-hairline: #1F1F1F;
+  
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --radius-ios: 12px;
+  --radius-ios-sm: 8px;
+  
+  --animate-subtle-fade: fade-in 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0D0D0D;
+  --foreground: #F2F0E9;
+  --muted: #4A4A4A;
+  --border: #1F1F1F;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .soft-surface {
+    @apply bg-white/[0.02] border border-white/[0.05] shadow-[0_4px_24px_rgba(0,0,0,0.5)];
+    backdrop-filter: blur(8px);
+  }
+  
+  .hairline-border {
+    border-width: 0.5px;
+    border-color: var(--border);
+  }
+
+  .text-muted {
+    color: var(--muted);
+  }
+
+  .section-spacing {
+    @apply py-32 md:py-48;
+  }
+  
+  .title-understated {
+    @apply text-3xl md:text-5xl font-medium tracking-tight text-[#F5F5F7];
+    line-height: 1.1;
+  }
+
+  .matte-gradient {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+  }
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3A3A;
+}
+
+/* Headline First-Letter Signature */
+h1::first-letter,
+h2::first-letter,
+.title-understated::first-letter {
+  color: var(--color-accent-red);
 }
