@@ -28,7 +28,8 @@ const tiers = [
     price: "₹11,999",
     target: "Clinics, Real Estate, Scaled Ops",
     tagline: "Strategic Interconnectivity. Total Revenue Control.",
-    accent: "purple",
+    accent: "green-glow",
+    featured: true,
     features: [
       "Everything in BOS M, PLUS:",
       "Cloud Telephony: AI-monitored voice & transcription",
@@ -43,8 +44,7 @@ const tiers = [
     price: "₹19,999",
     target: "Factories, High-Security Units",
     tagline: "Omniscient Intelligence. Physical & Digital Security.",
-    accent: "purple-glow",
-    featured: true,
+    accent: "green",
     features: [
       "Everything in BOS X, PLUS:",
       "Neural Vision Deployment: CCTV Computer Vision",
@@ -57,7 +57,7 @@ const tiers = [
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-[#F2F0E9] font-sans selection:bg-purple-500/30">
+    <main className="min-h-screen bg-[#0a0a0a] text-[#F2F0E9] font-sans selection:bg-emerald-500/30">
       <Navbar />
       
       <section className="pt-48 pb-32 px-6 text-center max-w-5xl mx-auto">
@@ -66,7 +66,7 @@ export default function PricingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-[10px] uppercase font-black tracking-[0.6em] text-purple-500 mb-8">
+          <div className="text-[10px] uppercase font-black tracking-[0.6em] text-emerald-500 mb-8">
             Strategic Selection Menu
           </div>
           <h1 className="text-4xl md:text-7xl font-medium tracking-tight mb-8">
@@ -90,18 +90,18 @@ export default function PricingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 1 }}
               className={`relative p-10 hairline-border rounded-sm bg-white/[0.02] flex flex-col ${
-                tier.accent === 'purple-glow' ? 'border-purple-500/40 shadow-[0_0_50px_rgba(168,85,247,0.1)]' : ''
+                tier.accent === 'green-glow' ? 'border-emerald-500/40 shadow-[0_0_50px_rgba(16,185,129,0.1)]' : ''
               }`}
             >
               {tier.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-purple-500 text-[8px] font-black uppercase tracking-[0.3em] rounded-full text-black">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-emerald-500 text-[8px] font-black uppercase tracking-[0.3em] rounded-full text-black">
                   Recommended Architecture
                 </div>
               )}
               
               <div className="mb-12">
                 <div className={`text-[12px] font-black tracking-[0.4em] uppercase mb-4 ${
-                  tier.accent.includes('purple') ? 'text-purple-500' : 'text-white/40'
+                  tier.accent.includes('green') ? 'text-emerald-500' : 'text-white/40'
                 }`}>
                   {tier.name}
                 </div>
@@ -121,7 +121,7 @@ export default function PricingPage() {
                 {tier.features.map((feature, j) => (
                   <div key={j} className="flex gap-4 items-start group">
                     <Plus className={`w-3 h-3 mt-1 shrink-0 transition-colors ${
-                      tier.accent.includes('purple') ? 'text-purple-500' : 'text-white/20'
+                      tier.accent.includes('green') ? 'text-emerald-500' : 'text-white/20'
                     }`} />
                     <span className="text-xs text-white/60 leading-relaxed font-medium group-hover:text-white transition-colors">{feature}</span>
                   </div>
@@ -131,8 +131,8 @@ export default function PricingPage() {
               <Link
                 href={`/login?tier=${tier.name.replace('BOS ', '')}`}
                 className={`w-full py-5 text-center rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all ${
-                  tier.accent.includes('purple') 
-                    ? 'bg-purple-600 text-white hover:bg-purple-500 shadow-xl shadow-purple-900/20' 
+                  tier.accent.includes('green') 
+                    ? 'bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20' 
                     : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                 }`}
               >
@@ -148,7 +148,7 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">
-              <div className="text-[10px] uppercase font-black tracking-[0.4em] text-purple-500">The ROI Protocol</div>
+              <div className="text-[10px] uppercase font-black tracking-[0.4em] text-emerald-500">The ROI Protocol</div>
               <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-tight text-white">
                 Intelligence is cheaper <br />
                 <span className="text-white/40">than legacy labor.</span>
@@ -159,12 +159,12 @@ export default function PricingPage() {
               
               <div className="grid grid-cols-2 gap-8">
                 <div className="p-8 hairline-border rounded-sm bg-white/[0.01]">
-                  <TrendingDown className="w-6 h-6 text-purple-500 mb-4" />
+                  <TrendingDown className="w-6 h-6 text-emerald-500 mb-4" />
                   <div className="text-2xl font-light mb-1">60% - 80%</div>
                   <div className="text-[8px] font-black uppercase tracking-[0.2em] text-white/20">Cost Reduction</div>
                 </div>
                 <div className="p-8 hairline-border rounded-sm bg-white/[0.01]">
-                  <Zap className="w-6 h-6 text-purple-500 mb-4" />
+                  <Zap className="w-6 h-6 text-emerald-500 mb-4" />
                   <div className="text-2xl font-light mb-1">10x</div>
                   <div className="text-[8px] font-black uppercase tracking-[0.2em] text-white/20">Response Speed</div>
                 </div>
@@ -172,7 +172,7 @@ export default function PricingPage() {
             </div>
 
             <div className="p-12 hairline-border rounded-sm bg-black relative overflow-hidden group shadow-2xl">
-              <div className="absolute inset-0 bg-purple-500/5 blur-3xl" />
+              <div className="absolute inset-0 bg-emerald-500/5 blur-3xl" />
               <div className="relative z-10">
                 <div className="text-[10px] uppercase font-black tracking-[0.4em] text-white/20 mb-8 pb-4 border-b border-white/5">
                   Labor Cost Comparison
@@ -194,8 +194,8 @@ export default function PricingPage() {
                       <div className="text-xl font-medium">BOS M Digital Frontline</div>
                     </div>
                     <div className="text-right">
-                      <div className="text-[10px] uppercase font-bold text-purple-500 mb-1">Sovereign Cost</div>
-                      <div className="text-xl font-medium text-purple-500">₹5,999 / mo</div>
+                      <div className="text-[10px] uppercase font-bold text-emerald-500 mb-1">Sovereign Cost</div>
+                      <div className="text-xl font-medium text-emerald-500">₹5,999 / mo</div>
                     </div>
                   </div>
                   <div className="pt-8">
