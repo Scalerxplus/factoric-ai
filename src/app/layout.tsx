@@ -20,7 +20,12 @@ export const metadata: Metadata = {
   },
   description: "Factoric AI deploys autonomous agentic labor forces (BOS M, X, Z) to govern institutional logic. We engineer the future of high-performance operations for clinics, hospitals, factories, and MSMEs.",
   keywords: [
-    "Agentic AI", 
+    "Hospital automation",
+    "AI Marketing Automation",
+    "AI agent for hospital",
+    "AI agent for marketing",
+    "Agentic AI",
+    "AI for billing and payment",
     "AI Workforce", 
     "Autonomous Operations", 
     "Institutional Logic", 

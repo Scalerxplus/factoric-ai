@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next';
+import { blogPosts } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.factoricai.com';
   const lastModified = new Date();
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified,
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/pricing`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -42,4 +49,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
   ];
+
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }
