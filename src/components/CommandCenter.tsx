@@ -14,9 +14,9 @@ const sections = [
   {
     title: "System Architectures",
     links: [
-      { name: "BOS M: Digital Frontline", href: "/pricing", icon: Zap, desc: "Lead & Marketing Automation" },
-      { name: "BOS X: Unified Command", href: "/pricing", icon: Target, desc: "Revenue & Capital Integrity" },
-      { name: "BOS Z: Sovereign Sentinel", href: "/pricing", icon: Eye, desc: "Vision Security & Global Logic" },
+      { name: "BOS M: Cognitive Front", href: "/systems/bos-m", icon: Zap, desc: "Lead & Marketing Automation" },
+      { name: "BOS X: Revenue Synthesis", href: "/systems/bos-x", icon: Target, desc: "Revenue & Capital Integrity" },
+      { name: "BOS Z: Kinetic Sentinel", href: "/systems/bos-z", icon: Eye, desc: "Vision Security & Global Logic" },
     ]
   },
   {

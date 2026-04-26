@@ -152,7 +152,7 @@ export default function Home() {
                 {item.desc}
               </p>
               <Link 
-                href={`/chat?tier=${item.tier.split(' ')[1]}`}
+                href={`/systems/${item.tier.toLowerCase().replace(' ', '-')}`}
                 className={`text-[8px] font-black uppercase tracking-[0.4em] ${item.color} group-hover:underline`}
               >
                 {item.cta} →
