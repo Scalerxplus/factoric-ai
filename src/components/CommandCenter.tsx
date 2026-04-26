@@ -16,7 +16,7 @@ const sections = [
     links: [
       { name: "BOS M: Cognitive Front", href: "/systems/bos-m", icon: Zap, desc: "Lead & Marketing Automation" },
       { name: "BOS X: Revenue Synthesis", href: "/systems/bos-x", icon: Target, desc: "Revenue & Capital Integrity" },
-      { name: "BOS Z: Kinetic Sentinel", href: "/systems/bos-z", icon: Eye, desc: "Vision Security & Global Logic" },
+      { name: "BOS Z: Kinetic Sentinel", href: "/systems/bos-z", icon: Eye, desc: "M + X + Computer Vision Security" },
     ]
   },
   {

@@ -50,11 +50,11 @@ const tiers = [
     monthlyPrice: "₹19,999",
     annualPrice: "₹15,999",
     target: "High-Volume Hospitals, Malls, Jewelers",
-    tagline: "Omniscient Intelligence. Physical & Digital Security.",
+    tagline: "Absolute Overwatch. The power of M + X + Computer Vision.",
     accent: "green",
     users: "10 Users Standard (+₹999/mo per extra)",
     features: [
-      "Everything in BOS X, PLUS:",
+      "Everything in BOS X & M, PLUS:",
       "Neural Vision Deployment: CCTV Computer Vision",
       "HIPAA & DPDPA Sovereign Shield Protocol",
       "Anomaly Detection Engine: Safety & Security tracking",

@@ -9,11 +9,15 @@ export default function BosZPage() {
       id="BOS Z"
       title="The Kinetic Sentinel"
       headline="ABSOLUTE OVERWATCH. <br /> ZERO LATENCY."
-      description="Total structural preservation. BOS Z transforms your existing camera infrastructure into predictive security agents that identify and prevent anomalies before they escalate."
+      description="The Ultimate Sovereign Layer. BOS Z inherits every cognitive and revenue capability of M and X, while transforming your physical environment into a predictive security engine via Computer Vision."
       icon={Shield}
       color="text-astra-gold"
       accent="bg-astra-gold"
       capabilities={[
+        {
+          title: "Full M + X Core",
+          desc: "Includes all cognitive engagement and revenue synthesis labor from the M and X tiers."
+        },
         {
           title: "Neural Vision Synthesis",
           desc: "Processes 24/7 video feeds to identify objects, personnel, and suspicious behavioral patterns."

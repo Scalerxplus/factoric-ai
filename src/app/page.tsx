@@ -33,8 +33,8 @@ const trinity = [
   {
     tier: "BOS Z",
     title: "The Kinetic Sentinel",
-    desc: "Absolute security. Computer Vision that transforms your existing cameras into predictive security agents. If there is an anomaly, you don't just see it; you prevent it.",
-    details: "Sovereign Tier • Absolute Overwatch",
+    desc: "The Ultimate Sovereign Overwatch. Inherits every capability of BOS M and X, reinforced with Computer Vision for 24/7 physical security, anomaly detection, and total structural governance.",
+    details: "Sovereign Tier • M + X + Vision",
     accent: "border-astra-gold shadow-astra-gold/10",
     icon: Shield,
     color: "text-astra-gold",
