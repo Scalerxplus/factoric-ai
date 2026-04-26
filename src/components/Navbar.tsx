@@ -43,6 +43,12 @@ export const Navbar = () => {
 
             <div className="flex items-center gap-6">
               <Link 
+                href="/blog" 
+                className="hidden md:block text-[10px] uppercase font-bold tracking-[0.3em] text-[#F2F0E9]/60 hover:text-[#F2F0E9] transition-colors"
+              >
+                Insights
+              </Link>
+              <Link 
                 href="/login" 
                 className="hidden md:block text-[10px] uppercase font-bold tracking-[0.3em] text-[#F2F0E9]/60 hover:text-[#F2F0E9] transition-colors"
               >

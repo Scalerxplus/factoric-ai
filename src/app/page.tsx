@@ -182,7 +182,7 @@ export default function Home() {
           <div className="pt-12">
             <Link 
               href="/onboarding"
-              className="px-16 py-6 bg-astra-green text-white hover:bg-astra-green/80 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all green-glow"
+              className="px-8 md:px-16 py-4 md:py-6 bg-astra-green text-white hover:bg-astra-green/80 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all green-glow inline-block"
             >
               Initialize Global Infrastructure
             </Link>
