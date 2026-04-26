@@ -4,12 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const logs = [
-  { label: "[LOG]", content: "New Lead from WhatsApp (Raipur District).", color: "text-white/40" },
-  { label: "[ANALYSIS]", content: "Intent: High | Need: Hospital Automation | Status: Qualified.", color: "text-astra-purple font-bold" },
-  { label: "[ACTION]", content: "Lead pushed to Commander's Dashboard.", color: "text-white/80" },
-  { label: "[SYSTEM]", content: "Neural Bridge sync complete. v4.1.0 active.", color: "text-white/20" },
-  { label: "[Astra]", content: "Searching for operational bottlenecks in Raipur North...", color: "text-astra-purple/60 italic" },
-  { label: "[BOS Z]", content: "Neural Vision scan active. Zero anomalies detected.", color: "text-astra-gold font-bold" },
+  { label: "[LOG]", content: "High-Intent Inquiry Detected (USD 50K Potential).", color: "text-white/40" },
+  { label: "[ANALYSIS]", content: "Extracting BANT... Success. Intent: Mission Critical.", color: "text-astra-purple font-bold" },
+  { label: "[ACTION]", content: "Revenue Pipeline Updated. Commander Notified.", color: "text-white/80" },
+  { label: "[SYSTEM]", content: "Global Node Synchronization Complete. v4.2.0 active.", color: "text-white/20" },
+  { label: "[Astra]", content: "Analyzing capital leakage in North American infrastructure...", color: "text-astra-purple/60 italic" },
+  { label: "[BOS Z]", content: "Kinetic Sentinel active. Zero latency anomalies detected.", color: "text-astra-gold font-bold" },
 ];
 
 export const AstraTerminal = () => {

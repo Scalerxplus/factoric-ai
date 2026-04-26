@@ -3,44 +3,42 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { NeuralLogo } from "@/components/NeuralLogo";
-import { ImpactCalculator } from "@/components/ImpactCalculator";
 import { SecurityArchitecture } from "@/components/SecurityArchitecture";
-import { NationalAlignment } from "@/components/NationalAlignment";
 import { AstraTerminal } from "@/components/AstraTerminal";
 import { ValueGap } from "@/components/ValueGap";
-import { ArrowRight, Plus, Brain, Cpu, Shield, Activity, Zap } from "lucide-react";
+import { ArrowRight, Plus, Brain, Cpu, Shield, Activity, Zap, TrendingUp, Globe } from "lucide-react";
 import Link from "next/link";
 
 const trinity = [
   {
     tier: "BOS M",
-    title: "The Brain",
-    desc: "WhatsApp & Social Intelligence. Captures digital intent and maps it to structural outcomes.",
-    details: "Single User • 30-Day Free Trial",
+    title: "The Cognitive Front",
+    desc: "The 24/7 Intelligence layer. Native omnichannel engagement that extracts intent, qualifies leads via BANT, and scores your pipeline with lethal precision.",
+    details: "Universal Node • Deployment Ready",
     accent: "border-astra-purple shadow-astra-purple/10",
     icon: Brain,
     color: "text-astra-purple",
-    cta: "Initialize M Logic"
+    cta: "Deploy Cognitive Layer"
   },
   {
     tier: "BOS X",
-    title: "The Nervous System",
-    desc: "Telephony & Billing Sync. Integrates capital integrity engines to identify and close revenue leakage.",
-    details: "5 Users Standard • +₹699/mo per extra",
+    title: "The Revenue Synthesis",
+    desc: "The operational backbone. It bridges the gap between conversation and capital—syncing cloud telephony, billing systems, and payment gateways into a single flow.",
+    details: "Scale Module • Global Attribution",
     accent: "border-astra-blue shadow-astra-blue/10",
     icon: Activity,
     color: "text-astra-blue",
-    cta: "Initialize X Logic"
+    cta: "Deploy Synthesis Engine"
   },
   {
     tier: "BOS Z",
-    title: "The Sentinel",
-    desc: "Computer Vision & Security. Total structural preservation and autonomous governance of physical assets.",
-    details: "10 Users Standard • +₹999/mo per extra",
+    title: "The Kinetic Sentinel",
+    desc: "Absolute security. Computer Vision that transforms your existing cameras into predictive security agents. If there is an anomaly, you don't just see it; you prevent it.",
+    details: "Sovereign Tier • Absolute Overwatch",
     accent: "border-astra-gold shadow-astra-gold/10",
     icon: Shield,
     color: "text-astra-gold",
-    cta: "Initialize Z Logic"
+    cta: "Deploy Sentinel Logic"
   }
 ];
 
@@ -62,12 +60,12 @@ export default function Home() {
         >
           <NeuralLogo className="w-16 h-16 mx-auto mb-16 opacity-80" />
           <div className="text-astra-purple text-[10px] font-black uppercase tracking-[0.6em] mb-8 animate-pulse">Sovereign Architecture Active</div>
-          <h1 className="text-5xl md:text-[120px] font-black tracking-tighter leading-[0.9] silver-gradient mb-12">
-            YOUR BUSINESS. <br />
-            ON AUTOPILOT.
+          <h1 className="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] silver-gradient mb-12">
+            SOFTWARE IS THE PAST. <br />
+            AUTONOMOUS LABOR IS THE FUTURE.
           </h1>
-          <p className="text-lg md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed mb-16">
-            While legacy systems wait for human input, Factoric AI executes mission-critical tasks autonomously. Deploy your 24/7 Digital Workforce today.
+          <p className="text-lg md:text-2xl text-white/40 max-w-4xl mx-auto font-medium leading-relaxed mb-16">
+            Stop managing static data and start deploying intelligence. Factoric AI replaces human latency with High-Cognition Agents that qualify leads, synchronize revenue, and secure your infrastructure—instantly, globally, 24/7.
           </p>
           
           <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
@@ -75,28 +73,63 @@ export default function Home() {
               href="/chat" 
               className="px-16 py-6 bg-astra-purple text-white hover:bg-astra-purple/80 purple-glow rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all"
             >
-              Deploy Astra-1
+              Deploy The Workforce
             </Link>
             <Link 
-              href="/philosophy" 
+              href="/pricing" 
               className="px-16 py-6 border border-white/10 text-white/60 hover:text-white hover:border-white/20 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all backdrop-blur-sm"
             >
-              Watch Intel Demo
+              Reduce Operational Decay
             </Link>
           </div>
         </motion.div>
       </section>
 
-      {/* 2. The Live "Mission Log" (Astra Terminal) */}
-      <section className="pb-48">
+      {/* 2. The Pulse Section: Why Factoric? */}
+      <section className="section-spacing border-y border-white/5 bg-white/[0.01]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-16">
+            <div className="space-y-6">
+              <div className="p-4 bg-astra-purple/10 w-fit rounded-full mb-8">
+                <Zap className="w-6 h-6 text-astra-purple" />
+              </div>
+              <h3 className="text-2xl font-bold">Humans Sleep. <br />Opportunities Don't.</h3>
+              <p className="text-white/40 leading-relaxed font-medium">
+                While your competitors wait for business hours, Factoric agents are already closing deals. We don't just "respond"; we convert intent into revenue before the lead even cools down.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <div className="p-4 bg-astra-blue/10 w-fit rounded-full mb-8">
+                <TrendingUp className="w-6 h-6 text-astra-blue" />
+              </div>
+              <h3 className="text-2xl font-bold">From Data Entry <br />to Mission Execution.</h3>
+              <p className="text-white/40 leading-relaxed font-medium">
+                Traditional CRMs are expensive digital graveyards. Factoric is a living workforce. Our agents don't wait for you to type; they think, analyze, and act on your behalf.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <div className="p-4 bg-astra-gold/10 w-fit rounded-full mb-8">
+                <Globe className="w-6 h-6 text-astra-gold" />
+              </div>
+              <h3 className="text-2xl font-bold">Absolute Operational <br />Sovereignty.</h3>
+              <p className="text-white/40 leading-relaxed font-medium">
+                Scale your empire without increasing your headcount. One founder. One engine. Global reach. That is the Factoric advantage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. The Interactive Proof: Mission Log */}
+      <section className="py-48">
         <AstraTerminal />
       </section>
 
-      {/* 3. The Trinity (BOS M, X, Z) */}
+      {/* 4. The Tiers: High-Stakes Modules */}
       <section className="max-w-7xl mx-auto px-6 section-spacing border-t border-white/5">
         <div className="text-center mb-32">
-          <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Structural Tiers</div>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight">The Trinity Architecture.</h2>
+          <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Structural Capabilities</div>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Deployment Modules.</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -135,36 +168,34 @@ export default function Home() {
       {/* Security Architecture Overlay */}
       <SecurityArchitecture />
 
-      {/* 5. The Desi Footer (ScalerX Special) */}
-      <section className="section-spacing border-t border-white/5 bg-accent-red/5">
+      {/* 5. Global Infrastructure Closing */}
+      <section className="section-spacing border-t border-white/5 bg-astra-purple/[0.02]">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-          <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.5em]">The Bharat Protocol</div>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight">
-            Bharat ke vyapaariyon ke liye, <br />
-            <span className="text-accent-red">Bharat ka AI.</span>
+          <div className="text-astra-purple text-[10px] font-black uppercase tracking-[0.5em]">The Sovereign Asset</div>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
+            Engineering the <br />
+            <span className="text-astra-purple">Autonomous Empire.</span>
           </h2>
-          <p className="text-xl text-white/60 leading-relaxed font-medium max-w-2xl mx-auto">
-            Raipur ke hosptials ho ya Bhilai ki factories—ab har dhandha banega 'High-Tech'. Join the Factoric Revolution.
+          <p className="text-xl text-white/40 leading-relaxed font-medium max-w-2xl mx-auto">
+            Scale your institutional logic across borders. No headcount latency. No capital leakage. Total operational overwatch.
           </p>
           <div className="pt-12">
             <Link 
-              href="/chat"
-              className="px-16 py-6 bg-white text-black hover:bg-white/90 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all"
+              href="/onboarding"
+              className="px-16 py-6 bg-astra-purple text-white hover:bg-astra-purple/80 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all purple-glow"
             >
-              Start Your Revolution
+              Initialize Global Infrastructure
             </Link>
           </div>
         </div>
       </section>
 
-      <NationalAlignment />
-
-      <footer className="py-32 text-center border-t border-[#1F1F1F]">
+      <footer className="py-32 text-center border-t border-white/5">
         <div className="flex justify-center mb-12">
           <NeuralLogo className="w-8 h-8 opacity-20" />
         </div>
-        <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-[#F2F0E9]/10">
-          &copy; 2024 FACTORIC AI • ARCHITECTURAL RECORDS
+        <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-white/10">
+          &copy; 2024 FACTORIC AI • SOVEREIGN INFRASTRUCTURE
         </p>
       </footer>
     </main>
