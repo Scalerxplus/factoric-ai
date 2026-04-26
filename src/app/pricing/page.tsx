@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { NeuralLogo } from "@/components/NeuralLogo";
@@ -11,7 +12,8 @@ const tiers = [
   {
     name: "BOS M",
     title: "The 24/7 Digital Frontline",
-    price: "₹5,999",
+    monthlyPrice: "₹5,999",
+    annualPrice: "₹4,799",
     target: "MSMEs, Hospitals, Service Hubs",
     tagline: "The Digital Operative that never sleeps.",
     accent: "silver",
@@ -25,7 +27,8 @@ const tiers = [
   {
     name: "BOS X",
     title: "The Unified Command",
-    price: "₹11,999",
+    monthlyPrice: "₹11,999",
+    annualPrice: "₹9,599",
     target: "Clinics, Real Estate, Scaled Ops",
     tagline: "Strategic Interconnectivity. Total Revenue Control.",
     accent: "green-glow",
@@ -41,7 +44,8 @@ const tiers = [
   {
     name: "BOS Z",
     title: "The Sovereign Sentinel",
-    price: "₹19,999",
+    monthlyPrice: "₹19,999",
+    annualPrice: "₹15,999",
     target: "Factories, High-Security Units",
     tagline: "Omniscient Intelligence. Physical & Digital Security.",
     accent: "green",
@@ -56,6 +60,8 @@ const tiers = [
 ];
 
 export default function PricingPage() {
+  const [isAnnual, setIsAnnual] = useState(true);
+
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-[#F2F0E9] font-sans selection:bg-emerald-500/30">
       <Navbar />
@@ -73,10 +79,31 @@ export default function PricingPage() {
             Choose your level of <br />
             <span className="text-white/40">Autonomous Intelligence.</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/30 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-lg md:text-xl text-white/30 max-w-2xl mx-auto font-medium leading-relaxed mb-16">
             Sovereignty. Intelligence. Zero Friction. <br />
             Scale your institution without adding human headcount.
           </p>
+
+          {/* Billing Toggle */}
+          <div className="inline-flex items-center gap-4 p-1.5 bg-white/[0.03] hairline-border rounded-full">
+            <button
+              onClick={() => setIsAnnual(false)}
+              className={`px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.3em] transition-all ${
+                !isAnnual ? 'bg-white/10 text-white' : 'text-white/30 hover:text-white/50'
+              }`}
+            >
+              Monthly
+            </button>
+            <button
+              onClick={() => setIsAnnual(true)}
+              className={`px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.3em] transition-all relative ${
+                isAnnual ? 'bg-emerald-600 text-white' : 'text-white/30 hover:text-white/50'
+              }`}
+            >
+              Annual
+              <span className="absolute -top-3 -right-2 px-2 py-0.5 bg-emerald-500 text-[7px] font-black uppercase tracking-wider rounded-full text-black">-20%</span>
+            </button>
+          </div>
         </motion.div>
       </section>
 
@@ -107,10 +134,13 @@ export default function PricingPage() {
                 </div>
                 <h3 className="text-2xl font-medium mb-2">{tier.title}</h3>
                 <p className="text-[10px] text-white/20 uppercase font-bold tracking-widest mb-8">{tier.target}</p>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-5xl font-light tracking-tighter">{tier.price}</span>
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-5xl font-light tracking-tighter">{isAnnual ? tier.annualPrice : tier.monthlyPrice}</span>
                   <span className="text-white/20 text-xs font-bold uppercase tracking-widest">/ Month</span>
                 </div>
+                {isAnnual && (
+                  <div className="text-[10px] text-emerald-500 font-bold mb-4">Billed annually · Save 20%</div>
+                )}
                 <p className="text-sm text-white/40 font-medium italic">"{tier.tagline}"</p>
               </div>
 
