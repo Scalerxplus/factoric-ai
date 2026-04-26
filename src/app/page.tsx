@@ -48,12 +48,13 @@ export default function Home() {
               <Link 
                 key={i} 
                 href={`/chat?tier=WORKFORCE&prompt=${encodeURIComponent(feature.p)}`}
-                className="p-10 hairline-border rounded-xl bg-white/[0.01] hover:bg-white/[0.03] transition-all group"
+                className="p-10 glass-card rounded-xl hover:bg-white/[0.05] transition-all group relative overflow-hidden"
               >
-                <Plus className="w-5 h-5 text-accent-red mb-6 group-hover:rotate-90 transition-transform" />
-                <div className="text-sm font-bold uppercase tracking-widest mb-4">{feature.t}</div>
-                <p className="text-sm text-[#F2F0E9]/30 leading-relaxed font-medium mb-8">{feature.d}</p>
-                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-accent-red opacity-0 group-hover:opacity-100 transition-opacity">Initialize Inquiry →</div>
+                <div className="absolute inset-0 data-pulse opacity-20 group-hover:opacity-40 transition-opacity" />
+                <Plus className="w-5 h-5 text-emerald-500 mb-6 group-hover:rotate-90 transition-transform relative z-10" />
+                <div className="text-sm font-bold uppercase tracking-widest mb-4 relative z-10">{feature.t}</div>
+                <p className="text-sm text-[#F2F0E9]/40 leading-relaxed font-medium mb-8 relative z-10">{feature.d}</p>
+                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity relative z-10">Initialize Inquiry →</div>
               </Link>
             ))}
           </div>
@@ -96,24 +97,26 @@ export default function Home() {
                 Initialize M Logic <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div className="p-16 hairline-border rounded-sm bg-white/[0.01] flex flex-col justify-center min-h-[400px] relative">
-              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-[#F2F0E9]/10 uppercase">System Active</div>
-              <div className="text-6xl font-light text-[#F2F0E9]/10 mb-8 tracking-tighter">BOS M</div>
-              <div className="flex gap-12">
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Latency: 12ms</div>
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Nodes: 124</div>
+            <div className="p-16 glass-card rounded-sm flex flex-col justify-center min-h-[400px] relative overflow-hidden emerald-glow">
+              <div className="absolute inset-0 data-pulse opacity-10" />
+              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-emerald-500/20 uppercase relative z-10">System Active</div>
+              <div className="text-6xl font-light text-emerald-500/10 mb-8 tracking-tighter relative z-10">BOS M</div>
+              <div className="flex gap-12 relative z-10">
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Latency: 12ms</div>
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Nodes: 124</div>
               </div>
             </div>
           </div>
 
           {/* BOS X */}
           <div className="grid md:grid-cols-2 gap-24 items-center relative overflow-hidden group">
-            <div className="p-16 hairline-border rounded-sm bg-white/[0.01] flex flex-col justify-center min-h-[400px] order-2 md:order-1 text-right items-end relative">
-              <div className="absolute top-8 left-8 text-[8px] font-black tracking-[0.5em] text-[#F2F0E9]/10 uppercase">Revenue Integrity</div>
-              <div className="text-6xl font-light text-accent-red/20 mb-8 tracking-tighter">BOS X</div>
-              <div className="flex gap-12">
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Attribution: 100%</div>
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-[#F2F0E9]/10">Security: Tier 2</div>
+            <div className="p-16 glass-card rounded-sm flex flex-col justify-center min-h-[400px] order-2 md:order-1 text-right items-end relative overflow-hidden emerald-glow">
+              <div className="absolute inset-0 data-pulse opacity-10" />
+              <div className="absolute top-8 left-8 text-[8px] font-black tracking-[0.5em] text-emerald-500/20 uppercase relative z-10">Revenue Integrity</div>
+              <div className="text-6xl font-light text-emerald-500/20 mb-8 tracking-tighter relative z-10">BOS X</div>
+              <div className="flex gap-12 relative z-10">
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Attribution: 100%</div>
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Security: Tier 2</div>
               </div>
             </div>
             <div className="space-y-8 order-1 md:order-2 z-10">
@@ -174,12 +177,13 @@ export default function Home() {
                 Initialize Z Logic <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div className="p-16 hairline-border rounded-sm bg-accent-red/5 flex flex-col justify-center min-h-[400px] relative">
-              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-accent-red/20 uppercase">Sovereign State</div>
-              <div className="text-6xl font-light text-accent-red mb-8 tracking-tighter">BOS Z</div>
-              <div className="flex gap-12">
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-accent-red/20">Compliance: 100%</div>
-                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-accent-red/20">Encryption: AES-4096</div>
+            <div className="p-16 glass-card rounded-sm flex flex-col justify-center min-h-[400px] relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)]">
+              <div className="absolute inset-0 data-pulse opacity-20" />
+              <div className="absolute top-8 right-8 text-[8px] font-black tracking-[0.5em] text-emerald-500/30 uppercase relative z-10">Sovereign State</div>
+              <div className="text-6xl font-light text-emerald-500/20 mb-8 tracking-tighter relative z-10">BOS Z</div>
+              <div className="flex gap-12 relative z-10">
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Compliance: 100%</div>
+                <div className="text-[8px] uppercase tracking-[0.3em] font-black text-emerald-500/20">Encryption: AES-4096</div>
               </div>
             </div>
           </div>

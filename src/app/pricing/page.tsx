@@ -120,12 +120,13 @@ export default function PricingPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 1 }}
-              className={`relative p-10 hairline-border rounded-sm bg-white/[0.02] flex flex-col ${
-                tier.accent === 'green-glow' ? 'border-emerald-500/40 shadow-[0_0_50px_rgba(16,185,129,0.1)]' : ''
+              className={`relative p-10 glass-card rounded-sm flex flex-col group overflow-hidden ${
+                tier.accent === 'green-glow' ? 'border-emerald-500/40 emerald-glow' : ''
               }`}
             >
+              <div className="absolute inset-0 data-pulse opacity-10 group-hover:opacity-20 transition-opacity" />
               {tier.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-emerald-500 text-[8px] font-black uppercase tracking-[0.3em] rounded-full text-black">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-emerald-500 text-[8px] font-black uppercase tracking-[0.3em] rounded-full text-black z-20">
                   Recommended Architecture
                 </div>
               )}
@@ -173,10 +174,10 @@ export default function PricingPage() {
 
               <Link
                 href={`/login?tier=${tier.name.replace('BOS ', '')}`}
-                className={`w-full py-5 text-center rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all ${
-                  tier.accent.includes('green') 
+                className={`w-full py-5 text-center rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all relative z-10 ${
+                  tier.accent.includes('green') || true // Force vibrancy on all mobile CTAs
                     ? 'bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20' 
-                    : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
+                    : 'bg-white/10 text-white hover:bg-white/20 border border-white/10'
                 }`}
               >
                 Initialize Deployment

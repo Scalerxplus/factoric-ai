@@ -27,7 +27,14 @@ export const metadata: Metadata = {
     "Factoric AI", 
     "BOS Architecture", 
     "AI CRM", 
-    "Business Operating System"
+    "Business Operating System",
+    "AI for Business",
+    "AI Agents for Business",
+    "AI Automation for Business",
+    "AI for Hospitals",
+    "AI for Healthcare",
+    "Medical AI Agents",
+    "Enterprise AI"
   ],
   authors: [{ name: "Factoric AI Architect Team" }],
   creator: "Factoric AI",
