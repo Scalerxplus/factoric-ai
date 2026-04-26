@@ -61,7 +61,7 @@ export default function Home() {
           <NeuralLogo className="w-16 h-16 mx-auto mb-16 opacity-80" />
           <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.6em] mb-8 animate-pulse">Sovereign Command Active</div>
           <h1 className="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] silver-gradient mb-12">
-            SOFTWARE IS THE PAST. <br />
+            <span className="text-accent-red">SOFTWARE IS THE PAST.</span> <br />
             AUTONOMOUS LABOR IS THE FUTURE.
           </h1>
           <p className="text-lg md:text-2xl text-white/40 max-w-4xl mx-auto font-medium leading-relaxed mb-16">
