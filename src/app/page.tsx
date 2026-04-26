@@ -135,22 +135,6 @@ export default function Home() {
       {/* Security Architecture Overlay */}
       <SecurityArchitecture />
 
-        <div className="flex flex-col md:flex-row gap-8 justify-center">
-          <Link 
-            href="/contact" 
-            className="px-16 py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all"
-          >
-            Strategy Consult
-          </Link>
-          <Link 
-            href="/login" 
-            className="px-16 py-5 hairline-border text-[#F2F0E9] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white/[0.05] transition-all"
-          >
-            Enterprise Login
-          </Link>
-        </div>
-      </section>
-
       {/* 5. The Desi Footer (ScalerX Special) */}
       <section className="section-spacing border-t border-white/5 bg-accent-red/5">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
