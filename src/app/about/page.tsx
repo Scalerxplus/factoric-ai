@@ -131,7 +131,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. Clear CTA (Lethal Button) */}
+      {/* 5. The Lab (Halo Effect) */}
+      <section className="section-spacing border-t border-white/5 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-24 items-center">
+            <div className="order-2 md:order-1 flex flex-col gap-8">
+              <div className="p-12 glass-card rounded-sm border border-white/10 bg-white/[0.01] relative group">
+                <div className="absolute top-0 left-0 w-2 h-2 bg-emerald-500" />
+                <h3 className="text-2xl font-bold mb-6">The Lab</h3>
+                <p className="text-lg text-white/40 leading-relaxed font-medium mb-8">
+                  Factoric AI is not an isolated product—it is the direct output of **ScalerX Lab**. Our core "Agentic Logic" is optimized within the lab's high-performance compute environment to ensure **zero-latency operations** across global deployment nodes.
+                </p>
+                <div className="flex items-center gap-4 pt-8 border-t border-white/5">
+                  <div className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500/40">Technical Authority: SCALERX-A1</div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 space-y-8">
+              <div className="text-[10px] uppercase font-black tracking-[0.5em] text-emerald-500">The Laboratory</div>
+              <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Institutional <br /><span className="text-emerald-500">Authority.</span></h2>
+              <p className="text-xl text-[#F2F0E9]/40 leading-relaxed font-medium">
+                By leveraging the research and infrastructure of <a href="https://scalerxlab.com" className="text-white hover:text-emerald-500 transition-colors underline underline-offset-8">ScalerX Lab</a>, Factoric AI provides a "Sovereign Layer" that traditional software simply cannot match. Every agent we deploy is stress-tested for structural integrity and fiscal accuracy before it enters your environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Clear CTA (Lethal Button) */}
       <section className="section-spacing text-center bg-accent-red/5 border-y border-accent-red/10">
         <div className="max-w-3xl mx-auto px-6 space-y-12">
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Ready to see the Intelligence in action?</h2>
@@ -151,7 +179,7 @@ export default function AboutPage() {
           <NeuralLogo className="w-8 h-8 opacity-20" />
         </div>
         <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-[#F2F0E9]/10">
-          &copy; 2024 FACTORIC AI • INSTITUTIONAL OVERWATCH
+          Factoric AI is a product of <a href="https://scalerxlab.com" className="text-white/20 hover:text-emerald-500 transition-colors">ScalerX Lab</a>. All rights reserved.
         </p>
       </footer>
     </main>

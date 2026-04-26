@@ -29,7 +29,10 @@ export const Navbar = () => {
         <div className="flex items-center justify-between w-full max-w-6xl">
           <Link href="/" className="flex items-center gap-4 group">
             <NeuralLogo className="w-8 h-8" />
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase text-[#F2F0E9]">Factoric AI</span>
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold tracking-[0.2em] uppercase text-[#F2F0E9]">Factoric AI</span>
+              <span className="text-[7px] font-mono font-bold tracking-widest text-emerald-500/60 uppercase">Intel: ScalerX-A1</span>
+            </div>
           </Link>
           
           <div className="flex items-center gap-8 md:gap-12">

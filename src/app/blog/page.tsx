@@ -81,7 +81,7 @@ export default function BlogPage() {
           <NeuralLogo className="w-8 h-8 opacity-20" />
         </div>
         <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-white/10">
-          &copy; 2024 FACTORIC AI • ARCHITECTURAL INTEL
+          Factoric AI is a product of <a href="https://scalerxlab.com" className="text-white/20 hover:text-astra-green transition-colors">ScalerX Lab</a>. All rights reserved.
         </p>
       </footer>
     </main>
