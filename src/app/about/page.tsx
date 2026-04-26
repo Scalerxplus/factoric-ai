@@ -102,7 +102,7 @@ export default function AboutPage() {
         <h2 className="text-3xl font-medium mb-12">Experience Structural Logic.</h2>
         <Link 
           href="/login" 
-          className="inline-flex items-center gap-6 px-16 py-5 bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl"
+          className="inline-flex items-center gap-6 px-16 py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all"
         >
           Initialize Deployment
         </Link>

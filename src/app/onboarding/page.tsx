@@ -72,7 +72,7 @@ export default function OnboardingPage() {
               <div className="pt-12">
                 <Link 
                   href="/" 
-                  className="w-full md:w-auto inline-flex items-center justify-between gap-12 px-12 py-5 bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl group"
+                  className="w-full md:w-auto inline-flex items-center justify-between gap-12 px-12 py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all group"
                 >
                   Continue to Hub <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                 </Link>

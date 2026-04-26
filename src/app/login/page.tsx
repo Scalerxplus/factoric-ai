@@ -100,7 +100,7 @@ export default function LoginPage() {
           <div className={`space-y-6 transition-all duration-700 ${selectedTier ? "opacity-100 translate-y-0" : "opacity-20 pointer-events-none translate-y-4"}`}>
             <button 
               onClick={() => handleLogin("google")}
-              className="w-full py-5 px-8 flex items-center justify-between bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl group"
+              className="w-full py-5 px-8 flex items-center justify-between bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all group"
             >
               <span className="flex items-center gap-4">
                 <svg className="w-4 h-4" viewBox="0 0 24 24">

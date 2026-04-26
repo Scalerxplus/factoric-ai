@@ -25,7 +25,7 @@ export default function Home() {
         </p>
         <Link 
           href="/onboarding" 
-          className="px-12 py-5 bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl"
+          className="px-12 py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all"
         >
           Initialize Systems
         </Link>
@@ -169,7 +169,7 @@ export default function Home() {
               </ul>
               <Link 
                 href={`/chat?tier=Z&prompt=${encodeURIComponent("Enable total sovereign vision security and integrated enterprise logic.")}`}
-                className="inline-flex items-center gap-4 px-8 py-4 hairline-border text-[10px] uppercase font-black tracking-[0.3em] hover:bg-[#F2F0E9] hover:text-[#0D0D0D] transition-all"
+                className="inline-flex items-center gap-4 px-8 py-4 hairline-border text-[10px] uppercase font-black tracking-[0.3em] hover:bg-emerald-600 hover:text-white hover:border-emerald-500 transition-all"
               >
                 Initialize Z Logic <ArrowRight className="w-4 h-4" />
               </Link>
@@ -197,7 +197,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-8 justify-center">
           <Link 
             href="/contact" 
-            className="px-16 py-5 bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl"
+            className="px-16 py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all"
           >
             Strategy Consult
           </Link>

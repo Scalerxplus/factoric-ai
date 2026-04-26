@@ -34,7 +34,7 @@ export const Navbar = () => {
           </Link>
           <Link 
             href="/login?signup=true" 
-            className="px-6 py-2.5 text-[10px] uppercase font-black tracking-[0.3em] bg-[#F2F0E9] text-[#0D0D0D] hover:bg-white transition-all rounded-sm"
+            className="px-6 py-2.5 text-[10px] uppercase font-black tracking-[0.3em] bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 transition-all rounded-sm"
           >
             Deploy
           </Link>

@@ -91,7 +91,7 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button className="w-full py-5 bg-[#F2F0E9] text-[#0D0D0D] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white transition-all shadow-2xl">
+                <button className="w-full py-5 bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all">
                   Submit Inquiry
                 </button>
               </form>
