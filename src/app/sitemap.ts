@@ -48,6 +48,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/systems/bos-m`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/systems/bos-x`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/systems/bos-z`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
