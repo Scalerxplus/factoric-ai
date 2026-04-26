@@ -92,7 +92,7 @@ export default function Home() {
               </ul>
               <Link 
                 href={`/chat?tier=M&prompt=${encodeURIComponent("Initialize lead management automation protocols for high-volume social media marketing.")}`}
-                className="inline-flex items-center gap-4 px-8 py-4 hairline-border text-[10px] uppercase font-black tracking-[0.3em] hover:bg-white/[0.05] transition-all"
+                className="inline-flex items-center gap-4 px-8 py-4 bg-accent-red text-[10px] uppercase font-black tracking-[0.3em] hover:bg-accent-red/80 transition-all text-white"
               >
                 Initialize M Logic <ArrowRight className="w-4 h-4" />
               </Link>
@@ -172,7 +172,7 @@ export default function Home() {
               </ul>
               <Link 
                 href={`/chat?tier=Z&prompt=${encodeURIComponent("Enable total sovereign vision security and integrated enterprise logic.")}`}
-                className="inline-flex items-center gap-4 px-8 py-4 hairline-border text-[10px] uppercase font-black tracking-[0.3em] hover:bg-emerald-600 hover:text-white hover:border-emerald-500 transition-all"
+                className="inline-flex items-center gap-4 px-8 py-4 bg-accent-red text-[10px] uppercase font-black tracking-[0.3em] hover:bg-accent-red/80 transition-all text-white"
               >
                 Initialize Z Logic <ArrowRight className="w-4 h-4" />
               </Link>
