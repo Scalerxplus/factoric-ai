@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { NeuralLogo } from "@/components/NeuralLogo";
-import { Mail, Globe, MapPin, Plus } from "lucide-react";
+import { Mail, Globe, MapPin, Loader2 } from "lucide-react";
 import Link from "next/link";
+import { Suspense } from "react";
 import { ChatInterface } from "@/components/ChatInterface";
 
 export default function ContactPage() {
@@ -67,11 +68,17 @@ export default function ContactPage() {
             <div className="hairline-border rounded-sm bg-black relative overflow-hidden group">
               <div className="absolute inset-0 bg-emerald-500/5 blur-3xl pointer-events-none" />
               <div className="relative z-10 p-2 md:p-6">
-                <ChatInterface 
-                  compact={true} 
-                  defaultTier="EXECUTIVE"
-                  defaultPrompt="You are a top executive from McKinsey handling the sales for Factoric AI. Engage me and help me find the right BOS tier (M, X, or Z) for my business. Ask me about my current operational bottlenecks." 
-                />
+                <Suspense fallback={
+                  <div className="flex h-[600px] items-center justify-center">
+                    <Loader2 className="w-8 h-8 animate-spin text-accent-red" />
+                  </div>
+                }>
+                  <ChatInterface 
+                    compact={true} 
+                    defaultTier="EXECUTIVE"
+                    defaultPrompt="You are a top executive from McKinsey handling the sales for Factoric AI. Engage me and help me find the right BOS tier (M, X, or Z) for my business. Ask me about my current operational bottlenecks." 
+                  />
+                </Suspense>
               </div>
             </div>
           </div>
