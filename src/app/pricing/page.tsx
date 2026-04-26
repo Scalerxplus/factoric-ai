@@ -40,7 +40,7 @@ const tiers = [
       "Everything in BOS M, PLUS:",
       "Cloud Telephony: AI-monitored voice & transcription",
       "Unified Financial Bridge: Sync with Billing/Payments",
-      "Third-Party Neural Links: ERP & API integrations",
+      "DPDPA & HIPAA Compliant Architecture",
       "Automated Document Dispatch: Instant AI triggers"
     ]
   },
@@ -56,8 +56,8 @@ const tiers = [
     features: [
       "Everything in BOS X, PLUS:",
       "Neural Vision Deployment: CCTV Computer Vision",
+      "HIPAA & DPDPA Sovereign Shield Protocol",
       "Anomaly Detection Engine: Safety & Security tracking",
-      "Tactical Threat Intelligence: Instant mobile alerts",
       "Full Organizational Control: God-View Dashboard"
     ]
   }
@@ -187,6 +187,28 @@ export default function PricingPage() {
               </Link>
             </motion.div>
           ))}
+        </div>
+
+        {/* Compliance Protocol Grid */}
+        <div className="mt-16 max-w-7xl mx-auto border-t border-white/5 pt-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center md:text-left space-y-2">
+              <div className="text-[10px] font-black uppercase tracking-widest text-emerald-500">HIPAA Protected</div>
+              <p className="text-[8px] text-white/20 uppercase font-bold leading-relaxed">Medical Grade Sovereignty</p>
+            </div>
+            <div className="text-center md:text-left space-y-2">
+              <div className="text-[10px] font-black uppercase tracking-widest text-emerald-500">DPDPA Adherent</div>
+              <p className="text-[8px] text-white/20 uppercase font-bold leading-relaxed">Digital Data Protection Act</p>
+            </div>
+            <div className="text-center md:text-left space-y-2">
+              <div className="text-[10px] font-black uppercase tracking-widest text-emerald-500">AES-4096 Shield</div>
+              <p className="text-[8px] text-white/20 uppercase font-bold leading-relaxed">Extreme Node Encryption</p>
+            </div>
+            <div className="text-center md:text-left space-y-2">
+              <div className="text-[10px] font-black uppercase tracking-widest text-emerald-500">Geofenced Data</div>
+              <p className="text-[8px] text-white/20 uppercase font-bold leading-relaxed">Sovereign Residency</p>
+            </div>
+          </div>
         </div>
       </section>
 

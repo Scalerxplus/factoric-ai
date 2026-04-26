@@ -34,7 +34,12 @@ export const metadata: Metadata = {
     "AI for Hospitals",
     "AI for Healthcare",
     "Medical AI Agents",
-    "Enterprise AI"
+    "Enterprise AI",
+    "HIPAA Compliant AI",
+    "DPDPA Compliance India",
+    "Healthcare AI Security",
+    "Sovereign Data Protection",
+    "Institutional Data Shield"
   ],
   authors: [{ name: "Factoric AI Architect Team" }],
   creator: "Factoric AI",

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { NeuralLogo } from "@/components/NeuralLogo";
 import { ImpactCalculator } from "@/components/ImpactCalculator";
+import { SecurityArchitecture } from "@/components/SecurityArchitecture";
 import { NationalAlignment } from "@/components/NationalAlignment";
 import { ArrowRight, Plus } from "lucide-react";
 import Link from "next/link";
@@ -164,7 +165,7 @@ export default function Home() {
                   <Plus className="w-4 h-4 text-emerald-500" /> Everything in BOS X
                 </li>
                 <li className="flex items-center gap-4 text-sm font-medium text-white/60">
-                  <Plus className="w-4 h-4 text-emerald-500" /> Vision-Based Anomaly Detection
+                  <Plus className="w-4 h-4 text-emerald-500" /> Full HIPAA & DPDPA Shield
                 </li>
                 <li className="flex items-center gap-4 text-sm font-medium text-white/60">
                   <Plus className="w-4 h-4 text-emerald-500" /> Isolated Sovereign Tiers
@@ -189,6 +190,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Security Architecture */}
+      <SecurityArchitecture />
 
       {/* ROI Data Section */}
       <ImpactCalculator />
