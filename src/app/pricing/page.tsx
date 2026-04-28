@@ -20,9 +20,9 @@ const tiers = [
     users: "Single User",
     trial: "30 Days Free Trial",
     features: [
-      "Omnichannel Deployment: WhatsApp, FB, Instagram",
-      "Astra-1 Brain: James Bond-level qualification logic",
-      "Elite CRM (Mini BOS): Absolute Source of Truth",
+      "AI-Driven Contact Center & 24/7 Qualification",
+      "BANT-ready agents for WhatsApp, Web, and Voice",
+      "Astra-1 Brain: Dual-Logic Architecture",
       "Intent Heatmapping: AI-driven lead scoring"
     ]
   },
@@ -38,10 +38,10 @@ const tiers = [
     users: "5 Users Standard (+₹699/mo per extra)",
     features: [
       "Everything in BOS M, PLUS:",
+      "Automated Revenue Operations",
       "Cloud Telephony: AI-monitored voice & transcription",
-      "Unified Financial Bridge: Sync with Billing/Payments",
-      "DPDPA & HIPAA Compliant Architecture",
-      "Automated Document Dispatch: Instant AI triggers"
+      "Unified Financial Bridge: CRM & Billing Sync",
+      "DPDPA & HIPAA Compliant Architecture"
     ]
   },
   {
@@ -55,9 +55,9 @@ const tiers = [
     users: "10 Users Standard (+₹999/mo per extra)",
     features: [
       "Everything in BOS X & M, PLUS:",
-      "Neural Vision Deployment: CCTV Computer Vision",
-      "HIPAA & DPDPA Sovereign Shield Protocol",
-      "Anomaly Detection Engine: Safety & Security tracking",
+      "AI-Powered Facility Security",
+      "Computer Vision for Real-time Anomaly Detection",
+      "Sovereign Shield Protocol (Physical & Digital)",
       "Full Organizational Control: God-View Dashboard"
     ]
   }
@@ -84,7 +84,7 @@ export default function PricingPage() {
             <span className="text-white/40">Autonomous Intelligence.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/30 max-w-2xl mx-auto font-medium leading-relaxed mb-16">
-            Sovereignty. Intelligence. Zero Friction. <br />
+            Costs less than a coffee-a-day; works more than 3 human administrators. <br />
             Scale your institution without adding human headcount.
           </p>
 

@@ -41,7 +41,7 @@ export const SecurityArchitecture = () => {
           <div className="text-emerald-500 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Security Layer 0</div>
           <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-8">The Security Architecture.</h2>
           <p className="text-lg text-white/40 max-w-2xl mx-auto leading-relaxed font-medium">
-            Institutional intelligence requires absolute data sovereignty. We build to the world's most rigorous compliance standards.
+            Institutional intelligence requires absolute data sovereignty. We build to the world's most rigorous compliance standards, powered by a Dual-Brain Architecture (Gemini 1.5 Flash + Groq Failover).
           </p>
         </div>
 
@@ -79,8 +79,13 @@ export const SecurityArchitecture = () => {
           <div className="absolute inset-0 data-pulse opacity-5" />
           <div className="relative z-10">
             <span className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-500">Compliance Audit Active</span>
-            <p className="mt-4 text-sm text-white/60 font-medium">
-              Factoric AI architectures are designed for SOC2 Type II readiness and ISO 27001 alignment.
+            <div className="flex flex-wrap justify-center items-center gap-8 mt-8 mb-8 grayscale opacity-50">
+              <div className="px-4 py-2 border border-white/10 rounded-sm text-[10px] font-black uppercase tracking-widest">DPDPA INDIA</div>
+              <div className="px-4 py-2 border border-white/10 rounded-sm text-[10px] font-black uppercase tracking-widest">HIPAA US</div>
+              <div className="px-4 py-2 border border-white/10 rounded-sm text-[10px] font-black uppercase tracking-widest">AES-4096</div>
+            </div>
+            <p className="text-sm text-white/60 font-medium">
+              Global Compliance, Sovereign Control. Factoric AI architectures are designed for SOC2 Type II readiness and ISO 27001 alignment.
             </p>
           </div>
         </div>

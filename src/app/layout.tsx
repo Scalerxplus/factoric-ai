@@ -20,31 +20,17 @@ export const metadata: Metadata = {
   },
   description: "Factoric AI deploys autonomous agentic labor forces (BOS M, X, Z) to govern institutional logic. We engineer the future of high-performance operations for clinics, hospitals, factories, and MSMEs.",
   keywords: [
-    "Hospital automation",
-    "AI Marketing Automation",
-    "AI agent for hospital",
-    "AI agent for marketing",
-    "Agentic AI",
-    "AI for billing and payment",
-    "AI Workforce", 
-    "Autonomous Operations", 
-    "Institutional Logic", 
-    "Factoric AI", 
-    "BOS Architecture", 
-    "AI CRM", 
-    "Business Operating System",
-    "AI for Business",
-    "AI Agents for Business",
-    "AI Automation for Business",
-    "AI for Hospitals",
-    "AI for Healthcare",
-    "Medical AI Agents",
-    "Enterprise AI",
+    "Enterprise AI SaaS India",
+    "Autonomous Lead Generation",
+    "AI Revenue Ops Platform",
     "HIPAA Compliant AI",
     "DPDPA Compliance India",
-    "Healthcare AI Security",
-    "Sovereign Data Protection",
-    "Institutional Data Shield"
+    "Agentic Labor",
+    "AI Workforce",
+    "Hospital automation",
+    "AI agent for hospital",
+    "AI for billing and payment",
+    "Sovereign Data Protection"
   ],
   authors: [{ name: "Factoric AI Architect Team" }],
   creator: "Factoric AI",
@@ -100,6 +86,41 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#0D0D0D]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Factoric AI",
+              "operatingSystem": "All",
+              "applicationCategory": "BusinessApplication",
+              "description": "Factoric AI deploys autonomous agentic labor forces to govern institutional logic.",
+              "offers": {
+                "@type": "Offer",
+                "price": "4799",
+                "priceCurrency": "INR"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Factoric AI",
+              "url": "https://www.factoricai.com",
+              "logo": "https://www.factoricai.com/icon.svg",
+              "parentOrganization": {
+                "@type": "Organization",
+                "name": "ScalerX Lab",
+                "url": "https://scalerxlab.com"
+              }
+            })
+          }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>

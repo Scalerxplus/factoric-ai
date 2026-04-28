@@ -13,7 +13,7 @@ const trinity = [
   {
     tier: "BOS M",
     title: "The Cognitive Front",
-    desc: "The 24/7 Intelligence layer. Native omnichannel engagement that extracts intent, qualifies leads via BANT, and scores your pipeline with lethal precision.",
+    desc: "AI-Driven Contact Center & 24/7 Lead Qualification. BANT-ready agents for WhatsApp, Web, and Voice.",
     details: "Universal Node • Deployment Ready",
     accent: "border-astra-green shadow-astra-green/10",
     icon: Brain,
@@ -23,7 +23,7 @@ const trinity = [
   {
     tier: "BOS X",
     title: "The Revenue Synthesis",
-    desc: "The operational backbone. It bridges the gap between conversation and capital—syncing cloud telephony, billing systems, and payment gateways into a single flow.",
+    desc: "Automated Revenue Operations. Seamlessly syncs CRM, Telephony, and Billing with zero leakage.",
     details: "Scale Module • Global Attribution",
     accent: "border-astra-blue shadow-astra-blue/10",
     icon: Activity,
@@ -33,7 +33,7 @@ const trinity = [
   {
     tier: "BOS Z",
     title: "The Kinetic Sentinel",
-    desc: "The Ultimate Sovereign Overwatch. Inherits every capability of BOS M and X, reinforced with Computer Vision for 24/7 physical security, anomaly detection, and total structural governance.",
+    desc: "AI-Powered Facility Security. Computer Vision for real-time anomaly detection and physical safety.",
     details: "Sovereign Tier • M + X + Vision",
     accent: "border-astra-gold shadow-astra-gold/10",
     icon: Shield,
@@ -60,10 +60,19 @@ export default function Home() {
         >
           <NeuralLogo className="w-16 h-16 mx-auto mb-16 opacity-80" />
           <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.6em] mb-8 animate-pulse">Sovereign Command Active</div>
-          <h1 className="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] silver-gradient mb-12">
+          <h1 className="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] silver-gradient mb-8">
             <span className="text-accent-red">SOFTWARE IS THE PAST.</span> <br />
             AUTONOMOUS LABOR IS THE FUTURE.
           </h1>
+          
+          <div className="bg-white/[0.03] border-y border-white/5 py-4 mb-12 overflow-hidden">
+            <div className="max-w-4xl mx-auto px-6">
+              <p className="text-[10px] md:text-xs uppercase font-bold tracking-[0.4em] text-emerald-500/80">
+                Factoric translates to: Sales on Autopilot. Billing without Errors. Security with Vision. We deploy Digital Labor that works while you sleep.
+              </p>
+            </div>
+          </div>
+
           <p className="text-lg md:text-2xl text-white/40 max-w-4xl mx-auto font-medium leading-relaxed mb-16">
             Stop managing static data and start deploying intelligence. Factoric AI replaces human latency with High-Cognition Agents that qualify leads, synchronize revenue, and secure your infrastructure—instantly, globally, 24/7.
           </p>
@@ -73,7 +82,7 @@ export default function Home() {
               href="/chat" 
               className="px-16 py-6 bg-astra-green text-white hover:bg-astra-green/80 green-glow rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all"
             >
-              Deploy The Workforce
+              Deploy Your Autonomous Workforce
             </Link>
             <Link 
               href="/pricing" 
@@ -168,23 +177,33 @@ export default function Home() {
       {/* Security Architecture Overlay */}
       <SecurityArchitecture />
 
-      {/* 5. Global Infrastructure Closing */}
+      {/* 5. Global Infrastructure & Trust Closing */}
       <section className="section-spacing border-t border-white/5 bg-astra-green/[0.02]">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-          <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">The Sovereign Asset</div>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
-            Engineering the <br />
-            <span className="text-astra-green">Autonomous Empire.</span>
-          </h2>
-          <p className="text-xl text-white/40 leading-relaxed font-medium max-w-2xl mx-auto">
-            Scale your institutional logic across borders. No headcount latency. No capital leakage. Total operational overwatch.
-          </p>
-          <div className="pt-12">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
+          <div className="space-y-4">
+            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">The Sovereign Asset</div>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
+              Engineering the <br />
+              <span className="text-astra-green">Autonomous Empire.</span>
+            </h2>
+            <p className="text-xl text-white/40 leading-relaxed font-medium max-w-2xl mx-auto">
+              Scale your institutional logic across borders. No headcount latency. No capital leakage. Total operational overwatch.
+            </p>
+          </div>
+
+          <div className="p-8 glass-card border border-white/5 rounded-sm bg-white/[0.01]">
+            <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-white/20 mb-6">Sovereign Infrastructure</div>
+            <p className="text-xs text-white/40 font-medium leading-relaxed">
+              Powered by IBM-backed <span className="text-white/60">Astra DB (Neural Memory)</span> and <span className="text-white/60">Premium Intel NVMe Compute (DigitalOcean)</span>.
+            </p>
+          </div>
+
+          <div className="pt-8">
             <Link 
               href="/onboarding"
               className="px-8 md:px-16 py-4 md:py-6 bg-astra-green text-white hover:bg-astra-green/80 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all green-glow inline-block"
             >
-              Initialize Global Infrastructure
+              Deploy Your Autonomous Workforce
             </Link>
           </div>
         </div>
