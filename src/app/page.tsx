@@ -52,8 +52,8 @@ const faqs = [
     a: "Yes. Factoric AI is engineered for high-compliance industries. We offer sovereign data hosting and AES-4096 encryption to ensure all institutional data remains geofenced and protected."
   },
   {
-    q: "Which CRMs and tools do you support?",
-    a: "BOS X integrates seamlessly with HubSpot, Zoho, Salesforce, Razorpay, and Twilio. Our architecture is designed for zero-friction synchronization across your existing tech stack."
+    q: "Do I still need Zoho, Salesforce, or LeadSquared?",
+    a: "No. Factoric AI is a full-stack Business Operating System (BOS) that natively replaces traditional CRMs. We have built-in capturing, engagement, nurturing, billing, and security vision—all within a single sovereign engine. You don't need external tools; you need Factoric."
   },
   {
     q: "Can AI agents really replace human front-desk staff?",
@@ -117,36 +117,36 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* 2. The Integration Ecosystem: The Cognitive Bridge */}
+      {/* 2. The Native Stack: All-in-One Sovereignty */}
       <section className="section-spacing border-b border-white/5 bg-white/[0.01]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">
-              <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">The Integration Ecosystem</div>
+              <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">The Sovereign Stack</div>
               <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
-                The <span className="text-astra-green">Cognitive Bridge</span> <br />
-                for existing tools.
+                Stop <span className="text-white/20 underline decoration-astra-green">Integrating.</span> <br />
+                Start <span className="text-astra-green">Operating.</span>
               </h2>
               <p className="text-lg text-white/40 leading-relaxed font-medium">
-                Factoric is designed to act as the "Cognitive Bridge" between all your existing communication channels. You don't need to change your tools; you only upgrade the intelligence that processes them.
+                Traditional CRMs (Zoho, Salesforce, LeadSquared) are fragmented silos that require expensive bridges. Factoric AI is a natively unified engine. We don't just "talk" to your tools; we have replaced them with superior, autonomous logic.
               </p>
               
               <div className="grid grid-cols-2 gap-8 pt-8">
                 <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Communication</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">WhatsApp • Email • SMS</div>
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Capturing</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Omnichannel Intake • WhatsApp • Web</div>
                 </div>
                 <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Voice Layer</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Cloud Telephony • Exotel • MyOperator</div>
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Nurturing</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Autonomous Engagement • No Human Entry</div>
                 </div>
                 <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Lead Sources</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Web • Google Business • Justdial</div>
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Billing</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Instant Invoicing • Payment Follow-ups</div>
                 </div>
                 <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">The Result</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">100% Unified Intelligence</div>
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Vision</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">CCTV Security • Facility Overwatch</div>
                 </div>
               </div>
             </div>
@@ -154,13 +154,13 @@ export default function Home() {
             <div className="p-12 glass-card rounded-sm border border-white/5 relative overflow-hidden group">
               <div className="absolute inset-0 bg-astra-green/5 blur-3xl group-hover:bg-astra-green/10 transition-all" />
               <div className="relative z-10 space-y-8">
-                <div className="text-[10px] uppercase font-black tracking-[0.4em] text-white/20 border-b border-white/5 pb-4">Real-time Synchronization</div>
+                <div className="text-[10px] uppercase font-black tracking-[0.4em] text-white/20 border-b border-white/5 pb-4">Unified Operating System</div>
                 <div className="space-y-6">
                   {[
-                    "Extracting intent from WhatsApp Business API...",
-                    "Syncing cloud telephony voice logs to Astra DB...",
-                    "Qualifying third-party directory leads in <10s...",
-                    "Executing autonomous revenue attribution..."
+                    "Replacing fragmented CRM silos with Unified BOS...",
+                    "Eliminating the need for third-party billing bridges...",
+                    "Deploying native Computer Vision security layers...",
+                    "Consolidating institutional logic into one engine..."
                   ].map((log, i) => (
                     <div key={i} className="flex gap-4 items-center">
                       <div className="w-1 h-1 rounded-full bg-astra-green animate-pulse" />
