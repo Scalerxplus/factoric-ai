@@ -27,10 +27,10 @@ export default function PhilosophyPage() {
           
           <div className="grid md:grid-cols-2 gap-16 py-16 border-t border-[#1F1F1F]">
             <p className="text-lg text-[#F2F0E9]/40 font-medium leading-relaxed">
-              The limitation of modern enterprise software isn't a lack of features. It's a lack of agency. Traditional ERPs are passive filing cabinets.
+              Traditional CRMs are passive "graveyards of data"—they require human effort to enter records and offer no active labor.
             </p>
             <p className="text-lg text-[#F2F0E9]/40 font-medium leading-relaxed">
-              They require human input to record chaos, rather than autonomous logic to prevent it. We are engineering the transition to agentic labor.
+              Factoric BOS (Business Operating System) is an active engine that qualifies leads, synchronizes revenue, and manages security without human intervention. We are not a place to store data; we are a system that works the data.
             </p>
           </div>
         </div>
@@ -86,22 +86,25 @@ export default function PhilosophyPage() {
             <table className="w-full text-left border-collapse bg-[#0D0D0D]">
               <thead>
                 <tr className="border-b border-[#1F1F1F]">
-                  <th className="p-10 text-[10px] font-black uppercase tracking-[0.3em] text-[#F2F0E9]/20 w-1/3">Core Capability</th>
-                  <th className="p-10 text-[10px] font-black uppercase tracking-[0.3em] text-[#F2F0E9]/20 w-1/3">Legacy Systems</th>
-                  <th className="p-10 text-[10px] font-black uppercase tracking-[0.3em] text-accent-red w-1/3">Factoric Architecture</th>
+                  <th className="p-10 text-[10px] font-black uppercase tracking-[0.3em] text-[#F2F0E9]/20 w-1/4">Capability</th>
+                  <th className="p-10 text-[10px] font-black uppercase tracking-[0.3em] text-[#F2F0E9]/20 w-1/4">Legacy CRM</th>
+                  <th className="p-10 text-[10px] font-black uppercase tracking-[0.3em] text-accent-red w-1/2">Factoric BOS Architecture</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#1F1F1F]">
                 {[
-                  { f: "Data Processing", l: "Passive Entry", s: "Factoric Workforce" },
-                  { f: "Logical Routing", l: "Manual Assignment", s: "Neural BOS Tiers" },
-                  { f: "Revenue Integrity", l: "Reactive Audit", s: "Closed-Loop BOS X" },
-                  { f: "Infrastructure", l: "Centralized Vulnerability", s: "Sovereign BOS Z Tiers" }
+                  { f: "Logical Agency", l: "Passive (Human Dependent)", s: "Autonomous (Agentic Labor)", d: "Zero human latency in decision making." },
+                  { f: "Operational Speed", l: "Reactive (Minutes/Hours)", s: "Proactive (<10 Seconds)", d: "Capture intent at the moment of peak interest." },
+                  { f: "Data Integrity", l: "Manual Logging", s: "API-Driven Synchronization", d: "100% precision in revenue and patient data." },
+                  { f: "Infrastructure", l: "Shared/Centralized", s: "Sovereign Isolated Instances", d: "Dedicated IBM Astra DB & Premium Compute." }
                 ].map((row, i) => (
                   <tr key={i} className="hover:bg-white/[0.01] transition-colors">
                     <td className="p-10 text-xs font-bold text-[#F2F0E9]/40">{row.f}</td>
                     <td className="p-10 text-xs text-[#F2F0E9]/30">{row.l}</td>
-                    <td className="p-10 text-xs text-[#F2F0E9] font-bold">{row.s}</td>
+                    <td className="p-10">
+                      <div className="text-xs text-[#F2F0E9] font-bold mb-2">{row.s}</div>
+                      <div className="text-[8px] font-black uppercase tracking-widest text-accent-red/40">{row.d}</div>
+                    </td>
                   </tr>
                 ))}
               </tbody>

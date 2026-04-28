@@ -24,9 +24,9 @@ const protocols = [
   },
   {
     title: "Sovereign Hosting",
-    desc: "Geofenced data residency options to ensure data never leaves your institutional borders.",
+    desc: "Isolated infrastructure on dedicated instances powered by IBM's Astra DB (Neural Memory).",
     icon: Server,
-    status: "Zero Leakage"
+    status: "Total Ownership"
   }
 ];
 
@@ -41,7 +41,7 @@ export const SecurityArchitecture = () => {
           <div className="text-emerald-500 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Security Layer 0</div>
           <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-8">The Security Architecture.</h2>
           <p className="text-lg text-white/40 max-w-2xl mx-auto leading-relaxed font-medium">
-            Institutional intelligence requires absolute data sovereignty. We build to the world's most rigorous compliance standards, powered by a Dual-Brain Architecture (Gemini 1.5 Flash + Groq Failover).
+            Protected by AES-4096 encryption. Our architecture utilizes a Dual-Engine Failover Protocol (Gemini + Groq) to ensure 100% operational uptime for your hospital or business.
           </p>
         </div>
 

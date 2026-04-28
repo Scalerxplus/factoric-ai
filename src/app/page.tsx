@@ -117,6 +117,63 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* 2. The Integration Ecosystem: The Cognitive Bridge */}
+      <section className="section-spacing border-b border-white/5 bg-white/[0.01]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-24 items-center">
+            <div className="space-y-12">
+              <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">The Integration Ecosystem</div>
+              <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
+                The <span className="text-astra-green">Cognitive Bridge</span> <br />
+                for existing tools.
+              </h2>
+              <p className="text-lg text-white/40 leading-relaxed font-medium">
+                Factoric is designed to act as the "Cognitive Bridge" between all your existing communication channels. You don't need to change your tools; you only upgrade the intelligence that processes them.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-8 pt-8">
+                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Communication</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">WhatsApp • Email • SMS</div>
+                </div>
+                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Voice Layer</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Cloud Telephony • Exotel • MyOperator</div>
+                </div>
+                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Lead Sources</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Web • Google Business • Justdial</div>
+                </div>
+                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">The Result</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">100% Unified Intelligence</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-12 glass-card rounded-sm border border-white/5 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-astra-green/5 blur-3xl group-hover:bg-astra-green/10 transition-all" />
+              <div className="relative z-10 space-y-8">
+                <div className="text-[10px] uppercase font-black tracking-[0.4em] text-white/20 border-b border-white/5 pb-4">Real-time Synchronization</div>
+                <div className="space-y-6">
+                  {[
+                    "Extracting intent from WhatsApp Business API...",
+                    "Syncing cloud telephony voice logs to Astra DB...",
+                    "Qualifying third-party directory leads in <10s...",
+                    "Executing autonomous revenue attribution..."
+                  ].map((log, i) => (
+                    <div key={i} className="flex gap-4 items-center">
+                      <div className="w-1 h-1 rounded-full bg-astra-green animate-pulse" />
+                      <div className="text-[10px] font-mono text-white/40">{log}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. The Pulse Section: Why Factoric? */}
       <section className="section-spacing border-y border-white/5 bg-white/[0.01]">
         <div className="max-w-6xl mx-auto px-6">
@@ -233,6 +290,45 @@ export default function Home() {
                 <div className="text-[8px] font-black uppercase tracking-widest text-astra-green/40">{sector.keywords}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: The Competitive Matrix (BOS vs CRM) */}
+      <section className="section-spacing border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-24">
+            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Strategic Comparison</div>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Factoric BOS vs. Legacy CRM.</h2>
+          </div>
+
+          <div className="overflow-hidden hairline-border rounded-sm">
+            <table className="w-full text-left border-collapse bg-black">
+              <thead>
+                <tr className="border-b border-white/5">
+                  <th className="p-8 text-[10px] font-black uppercase tracking-[0.3em] text-white/20 w-1/4">Feature</th>
+                  <th className="p-8 text-[10px] font-black uppercase tracking-[0.3em] text-white/20 w-1/4">Traditional CRM</th>
+                  <th className="p-8 text-[10px] font-black uppercase tracking-[0.3em] text-astra-green w-1/2">Factoric BOS</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/5 text-xs">
+                {[
+                  { f: "Data Entry", l: "Manual (Human Dependent)", s: "Autonomous (API Driven)", i: "Zero human error." },
+                  { f: "Response Speed", l: "Minutes to Hours", s: "Under 10 Seconds", i: "No patient/lead loss to competitors." },
+                  { f: "Core Function", l: "Static Record Keeping", s: "Active Operational Execution", i: "Revenue Leakage is eliminated." },
+                  { f: "Cost Structure", l: "High Per-User License", s: "Flat Subscription (₹4,799)", i: "Massive institutional cost reduction." }
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-white/[0.01] transition-colors group">
+                    <td className="p-8 font-bold text-white/40">{row.f}</td>
+                    <td className="p-8 text-white/20">{row.l}</td>
+                    <td className="p-8">
+                      <div className="text-white font-bold mb-1">{row.s}</div>
+                      <div className="text-[9px] text-astra-green/40 uppercase font-black tracking-widest">{row.i}</div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
