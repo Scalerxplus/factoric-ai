@@ -121,6 +121,41 @@ export default function RootLayout({
             })
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Is Factoric AI HIPAA and DPDPA compliant?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Factoric AI is engineered for high-compliance industries. We offer sovereign data hosting and AES-4096 encryption to ensure all institutional data remains geofenced and protected."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Which CRMs and tools do you support?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BOS X integrates seamlessly with HubSpot, Zoho, Salesforce, Razorpay, and Twilio."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can AI agents really replace human front-desk staff?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Factoric agents handle 80% of repetitive qualification and booking tasks, reducing response times by up to 60%."
+                  }
+                }
+              ]
+            })
+          }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>

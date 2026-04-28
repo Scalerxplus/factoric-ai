@@ -6,43 +6,63 @@ import { NeuralLogo } from "@/components/NeuralLogo";
 import { SecurityArchitecture } from "@/components/SecurityArchitecture";
 import { AstraTerminal } from "@/components/AstraTerminal";
 import { ValueGap } from "@/components/ValueGap";
-import { ArrowRight, Plus, Brain, Cpu, Shield, Activity, Zap, TrendingUp, Globe } from "lucide-react";
+import { 
+  ArrowRight, Plus, Brain, Cpu, Shield, Activity, Zap, TrendingUp, Globe, 
+  Stethoscope, Laptop, Warehouse, BarChart3, ShieldCheck, HelpCircle, ChevronDown
+} from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 const trinity = [
   {
     tier: "BOS M",
-    title: "The Cognitive Front",
-    desc: "AI-Driven Contact Center & 24/7 Lead Qualification. BANT-ready agents for WhatsApp, Web, and Voice.",
+    title: "AI Sales & Support Desk",
+    desc: "Autonomous agents for sales chat, inbound calls, WhatsApp, and email. Qualifies leads and closes bookings 24/7.",
     details: "Universal Node • Deployment Ready",
     accent: "border-astra-green shadow-astra-green/10",
     icon: Brain,
     color: "text-astra-green",
-    cta: "Deploy Cognitive Layer"
+    cta: "Deploy AI Sales Desk"
   },
   {
     tier: "BOS X",
-    title: "The Revenue Synthesis",
-    desc: "Automated Revenue Operations. Seamlessly syncs CRM, Telephony, and Billing with zero leakage.",
+    title: "Revenue & Billing Ops",
+    desc: "Syncs CRM, telephony, and billing tools. Automates invoicing, payment follow-ups, and revenue attribution.",
     details: "Scale Module • Global Attribution",
     accent: "border-astra-blue shadow-astra-blue/10",
     icon: Activity,
     color: "text-astra-blue",
-    cta: "Deploy Synthesis Engine"
+    cta: "Deploy Revenue Ops"
   },
   {
     tier: "BOS Z",
-    title: "The Kinetic Sentinel",
-    desc: "AI-Powered Facility Security. Computer Vision for real-time anomaly detection and physical safety.",
+    title: "AI CCTV & Facility Monitoring",
+    desc: "Real-time camera analytics and anomaly detection. Transforms existing cameras into predictive security agents.",
     details: "Sovereign Tier • M + X + Vision",
     accent: "border-astra-gold shadow-astra-gold/10",
     icon: Shield,
     color: "text-astra-gold",
-    cta: "Deploy Sentinel Logic"
+    cta: "Deploy AI Security"
+  }
+];
+
+const faqs = [
+  {
+    q: "Is Factoric AI HIPAA and DPDPA compliant?",
+    a: "Yes. Factoric AI is engineered for high-compliance industries. We offer sovereign data hosting and AES-4096 encryption to ensure all institutional data remains geofenced and protected."
+  },
+  {
+    q: "Which CRMs and tools do you support?",
+    a: "BOS X integrates seamlessly with HubSpot, Zoho, Salesforce, Razorpay, and Twilio. Our architecture is designed for zero-friction synchronization across your existing tech stack."
+  },
+  {
+    q: "Can AI agents really replace human front-desk staff?",
+    a: "Factoric agents handle 80% of repetitive qualification and booking tasks, allowing your human staff to focus on high-value closing. We reduce response times by up to 60%."
   }
 ];
 
 export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-[#F2F0E9] selection:bg-astra-green/30 font-sans">
       <Navbar />
@@ -65,10 +85,13 @@ export default function Home() {
             AUTONOMOUS LABOR IS THE FUTURE.
           </h1>
           
-          <div className="bg-white/[0.03] border-y border-white/5 py-4 mb-12 overflow-hidden">
+          <div className="bg-white/[0.03] border-y border-white/5 py-6 mb-12 overflow-hidden">
             <div className="max-w-4xl mx-auto px-6">
-              <p className="text-[10px] md:text-xs uppercase font-bold tracking-[0.4em] text-emerald-500/80">
-                Factoric translates to: Sales on Autopilot. Billing without Errors. Security with Vision. We deploy Digital Labor that works while you sleep.
+              <p className="text-xs md:text-sm uppercase font-black tracking-[0.4em] text-emerald-500">
+                Factoric translates to: Sales on Autopilot. Billing without Errors. Security with Vision.
+              </p>
+              <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-white/20 mt-2">
+                We deploy high-cognition digital labor that works while you sleep.
               </p>
             </div>
           </div>
@@ -173,6 +196,104 @@ export default function Home() {
 
       {/* 4. The McKinsey "Value Gap" Section */}
       <ValueGap />
+
+      {/* NEW: Sector Triage (Industry Use Cases) */}
+      <section className="section-spacing border-t border-white/5 bg-white/[0.01]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-24">
+            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Institutional Deployment</div>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Sector Triage.</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                icon: Stethoscope,
+                title: "Healthcare & Clinics",
+                desc: "AI Front-Desk for OPD bookings and patient qualification. 40% faster response times.",
+                keywords: "AI for Hospitals • Patient Triage • HIPAA"
+              },
+              {
+                icon: Laptop,
+                title: "SaaS & Enterprise IT",
+                desc: "Autonomous lead qualification and revenue ops sync. 2x MRR realization speed.",
+                keywords: "B2B Lead Gen • Revenue Ops • CRM Sync"
+              },
+              {
+                icon: Warehouse,
+                title: "Security & Retail",
+                desc: "AI-powered CCTV analytics for malls and factories. Zero capital leakage via anomaly detection.",
+                keywords: "Computer Vision • Loss Prevention • Safety"
+              }
+            ].map((sector, i) => (
+              <div key={i} className="p-10 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                <sector.icon className="w-8 h-8 text-white/20 mb-8 group-hover:text-astra-green transition-colors" />
+                <h3 className="text-xl font-bold mb-4">{sector.title}</h3>
+                <p className="text-sm text-white/40 leading-relaxed mb-8">{sector.desc}</p>
+                <div className="text-[8px] font-black uppercase tracking-widest text-astra-green/40">{sector.keywords}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Proof of Impact (The Validation Layer) */}
+      <section className="py-24 border-y border-white/5 bg-astra-green/[0.01]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+            <div className="space-y-2">
+              <div className="text-[10px] font-black uppercase tracking-widest text-astra-green">The Sovereign Record</div>
+              <h2 className="text-2xl font-medium">Validation of Impact.</h2>
+            </div>
+            <div className="flex flex-wrap justify-center gap-12">
+              {[
+                { label: "Lead Response", value: "-60%", sub: "Reduction in Latency" },
+                { label: "MRR Realization", value: "+25%", sub: "Revenue Throughput" },
+                { label: "Operational Risk", value: "Zero", sub: "Capital Leakage" }
+              ].map((stat, i) => (
+                <div key={i} className="space-y-1">
+                  <div className="text-3xl font-light text-white">{stat.value}</div>
+                  <div className="text-[8px] font-black uppercase tracking-widest text-white/20">{stat.label}</div>
+                  <div className="text-[7px] font-bold text-astra-green/40 uppercase">{stat.sub}</div>
+                </div>
+              ))}
+            </div>
+            <div className="opacity-20 grayscale flex gap-8 items-center">
+              <ShieldCheck className="w-8 h-8" />
+              <div className="text-[10px] font-black uppercase tracking-[0.3em]">Institutional Grade</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Intelligence Archive (FAQ) */}
+      <section className="section-spacing">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-24">
+            <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em] mb-8">System Inquiry</div>
+            <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Intelligence Archive.</h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <div key={i} className="hairline-border rounded-sm bg-white/[0.01] overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full p-8 flex justify-between items-center text-left hover:bg-white/[0.02] transition-colors"
+                >
+                  <span className="text-sm font-bold uppercase tracking-widest text-white/80">{faq.q}</span>
+                  <ChevronDown className={`w-4 h-4 text-white/20 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === i && (
+                  <div className="px-8 pb-8 text-sm text-white/40 leading-relaxed font-medium">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Security Architecture Overlay */}
       <SecurityArchitecture />
