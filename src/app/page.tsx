@@ -68,7 +68,7 @@ export default function Home() {
       <Navbar />
       
       {/* 1. The Hero: Sovereign Command */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-48 px-6 text-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex flex-col items-center justify-center pt-32 pb-24 px-6 text-center overflow-hidden">
         {/* Subtle Background Elements */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-astra-green/5 rounded-full blur-[160px] pointer-events-none" />
         
@@ -78,20 +78,17 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="relative z-10 space-y-12"
         >
-          <NeuralLogo className="w-16 h-16 mx-auto mb-16 opacity-80" />
-          <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.6em] mb-8 animate-pulse">Sovereign Command Active</div>
+          <NeuralLogo className="w-12 h-12 mx-auto mb-8 opacity-80" />
+          <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.6em] mb-4 animate-pulse">Sovereign Command Active</div>
           <h1 className="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] silver-gradient mb-8">
             <span className="text-accent-red">SOFTWARE IS THE PAST.</span> <br />
             AUTONOMOUS LABOR IS THE FUTURE.
           </h1>
           
-          <div className="bg-white/[0.03] border-y border-white/5 py-6 mb-12 overflow-hidden">
+          <div className="bg-white/[0.03] border-y border-white/5 py-4 mb-8 overflow-hidden">
             <div className="max-w-4xl mx-auto px-6">
-              <p className="text-xs md:text-sm uppercase font-black tracking-[0.4em] text-emerald-500">
-                Factoric translates to: Sales on Autopilot. Billing without Errors. Security with Vision.
-              </p>
-              <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-white/20 mt-2">
-                We deploy high-cognition digital labor that works while you sleep.
+              <p className="text-xs uppercase font-black tracking-[0.4em] text-emerald-500">
+                Factoric: Sales on Autopilot. Billing without Errors. Security with Vision.
               </p>
             </div>
           </div>
@@ -118,9 +115,9 @@ export default function Home() {
       </section>
 
       {/* 2. The Native Stack: All-in-One Sovereignty */}
-      <section className="section-spacing border-b border-white/5 bg-white/[0.01]">
+      <section className="section-spacing border-y border-white/5 bg-white/[0.01]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-24 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
               <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">The Sovereign Stack</div>
               <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
@@ -131,22 +128,22 @@ export default function Home() {
                 Traditional CRMs (Zoho, Salesforce, LeadSquared) are fragmented silos that require expensive bridges. Factoric AI is a natively unified engine. We don't just "talk" to your tools; we have replaced them with superior, autonomous logic.
               </p>
               
-              <div className="grid grid-cols-2 gap-8 pt-8">
-                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Capturing</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Omnichannel Intake • Cloud Telephony • Chat • WhatsApp</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Capturing</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Omnichannel Intake • Cloud Telephony • Chat • WhatsApp</div>
                 </div>
-                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Nurturing</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Autonomous Engagement • No Human Entry</div>
+                <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Nurturing</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Autonomous Engagement • No Human Entry</div>
                 </div>
-                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Billing</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Instant Invoicing • Payment Follow-ups</div>
+                <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Billing</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Instant Invoicing • Payment Follow-ups</div>
                 </div>
-                <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                  <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Vision</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">CCTV Security • Facility Overwatch</div>
+                <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                  <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Vision</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">CCTV Security • Facility Overwatch</div>
                 </div>
               </div>
             </div>
@@ -175,9 +172,9 @@ export default function Home() {
       </section>
 
       {/* 2. The Pulse Section: Why Factoric? */}
-      <section className="section-spacing border-y border-white/5 bg-white/[0.01]">
+      <section className="section-spacing border-b border-white/5 bg-white/[0.01]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-16">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-16">
             <div className="space-y-6">
               <div className="p-4 bg-astra-green/10 w-fit rounded-full mb-8">
                 <Zap className="w-6 h-6 text-astra-green" />
@@ -210,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* 3. The Interactive Proof: Mission Log */}
-      <section className="py-48">
+      <section className="py-24 md:py-48">
         <AstraTerminal />
       </section>
 
@@ -262,31 +259,31 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Sector Triage.</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-12">
             {[
               {
                 icon: Stethoscope,
-                title: "Healthcare & Clinics",
+                title: "Healthcare",
                 desc: "AI Front-Desk for OPD bookings and patient qualification. 40% faster response times.",
                 keywords: "AI for Hospitals • Patient Triage • HIPAA"
               },
               {
                 icon: Laptop,
-                title: "SaaS & Enterprise IT",
+                title: "SaaS & B2B",
                 desc: "Autonomous lead qualification and revenue ops sync. 2x MRR realization speed.",
                 keywords: "B2B Lead Gen • Revenue Ops • CRM Sync"
               },
               {
                 icon: Warehouse,
                 title: "Security & Retail",
-                desc: "AI-powered CCTV analytics for malls and factories. Zero capital leakage via anomaly detection.",
+                desc: "AI-powered CCTV analytics for malls and factories. Zero capital leakage.",
                 keywords: "Computer Vision • Loss Prevention • Safety"
               }
             ].map((sector, i) => (
-              <div key={i} className="p-10 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
-                <sector.icon className="w-8 h-8 text-white/20 mb-8 group-hover:text-astra-green transition-colors" />
-                <h3 className="text-xl font-bold mb-4">{sector.title}</h3>
-                <p className="text-sm text-white/40 leading-relaxed mb-8">{sector.desc}</p>
+              <div key={i} className="p-8 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
+                <sector.icon className="w-6 h-6 text-white/20 mb-6 group-hover:text-astra-green transition-colors" />
+                <h3 className="text-lg font-bold mb-3">{sector.title}</h3>
+                <p className="text-xs text-white/40 leading-relaxed mb-6">{sector.desc}</p>
                 <div className="text-[8px] font-black uppercase tracking-widest text-astra-green/40">{sector.keywords}</div>
               </div>
             ))}

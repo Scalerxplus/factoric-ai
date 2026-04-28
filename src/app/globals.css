@@ -81,7 +81,7 @@ body {
   }
 
   .section-spacing {
-    @apply py-24 md:py-48;
+    @apply py-16 md:py-40;
   }
   
   .title-understated {
