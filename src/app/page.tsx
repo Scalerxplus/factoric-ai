@@ -134,7 +134,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-8 pt-8">
                 <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
                   <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Capturing</div>
-                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Omnichannel Intake • WhatsApp • Web</div>
+                  <div className="text-sm font-bold text-white/60 group-hover:text-astra-green transition-colors">Omnichannel Intake • Cloud Telephony • Chat • WhatsApp</div>
                 </div>
                 <div className="p-6 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
                   <div className="text-[10px] font-black tracking-widest text-white/20 mb-4 uppercase">Native Nurturing</div>
