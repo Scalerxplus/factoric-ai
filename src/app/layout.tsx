@@ -15,22 +15,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.factoricai.com"),
   title: {
-    default: "Factoric AI | The Autonomous Operational Layer",
+    default: "Factoric AI | Autonomous Digital Labor & Business Operating System",
     template: "%s | Factoric AI",
   },
-  description: "Factoric AI deploys autonomous agentic labor forces (BOS M, X, Z) to govern institutional logic. We engineer the future of high-performance operations for clinics, hospitals, factories, and MSMEs.",
+  description: "Replace your legacy CRM with Factoric BOS. Deploy an active AI workforce for autonomous WhatsApp lead qualification, revenue syncing, and enterprise security.",
   keywords: [
-    "Enterprise AI SaaS India",
-    "Autonomous Lead Generation",
-    "AI Revenue Ops Platform",
-    "HIPAA Compliant AI",
-    "DPDPA Compliance India",
-    "Agentic Labor",
-    "AI Workforce",
-    "Hospital automation",
-    "AI agent for hospital",
-    "AI for billing and payment",
-    "Sovereign Data Protection"
+    "Autonomous Digital Labor",
+    "AI CRM India",
+    "AI Lead Qualification",
+    "Healthcare AI CRM",
+    "WhatsApp Business AI Agent",
+    "Automated Revenue Operations"
   ],
   authors: [{ name: "Factoric AI Architect Team" }],
   creator: "Factoric AI",
@@ -44,8 +39,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.factoricai.com",
-    title: "Factoric AI | The Autonomous Operational Layer",
-    description: "Engineering the future of agentic labor and institutional logic.",
+    title: "Factoric AI | Autonomous Digital Labor & Business Operating System",
+    description: "Replace your legacy CRM with Factoric BOS. Deploy an active AI workforce for autonomous lead qualification and revenue ops.",
     siteName: "Factoric AI",
     images: [{
       url: "/og-image.jpg",
@@ -56,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Factoric AI | The Autonomous Operational Layer",
-    description: "Engineering the future of agentic labor and institutional logic.",
+    title: "Factoric AI | Autonomous Digital Labor & Business Operating System",
+    description: "Replace your legacy CRM with Factoric BOS. Deploy an active AI workforce for autonomous lead qualification.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -138,10 +133,10 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "Which CRMs and tools do you support?",
+                  "name": "Do I still need Zoho, Salesforce, or LeadSquared?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "BOS X integrates seamlessly with HubSpot, Zoho, Salesforce, Razorpay, and Twilio."
+                    "text": "No. Factoric AI is a full-stack Business Operating System (BOS) that natively replaces traditional CRMs. We have built-in capturing, engagement, nurturing, billing, and security vision."
                   }
                 },
                 {

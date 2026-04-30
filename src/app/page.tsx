@@ -80,21 +80,20 @@ export default function Home() {
         >
           <NeuralLogo className="w-12 h-12 mx-auto mb-8 opacity-80" />
           <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.6em] mb-4 animate-pulse">Sovereign Command Active</div>
-          <h1 className="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] silver-gradient mb-8">
-            <span className="text-accent-red">SOFTWARE IS THE PAST.</span> <br />
-            AUTONOMOUS LABOR IS THE FUTURE.
+          <h1 className="text-4xl md:text-[90px] font-black tracking-tighter leading-[0.95] silver-gradient mb-8 text-balance">
+            Deploy Autonomous <span className="text-accent-red">Digital Labor</span> for Your Business.
           </h1>
           
           <div className="bg-white/[0.03] border-y border-white/5 py-4 mb-8 overflow-hidden">
             <div className="max-w-4xl mx-auto px-6">
-              <p className="text-xs uppercase font-black tracking-[0.4em] text-emerald-500">
-                Factoric: Sales on Autopilot. Billing without Errors. Security with Vision.
-              </p>
+              <h2 className="text-xs md:text-sm uppercase font-black tracking-[0.4em] text-emerald-500">
+                Factoric BOS replaces manual data entry and silent CRMs with an active AI workforce.
+              </h2>
             </div>
           </div>
 
           <p className="text-lg md:text-2xl text-white/40 max-w-4xl mx-auto font-medium leading-relaxed mb-16">
-            Stop managing static data and start deploying intelligence. Factoric AI replaces human latency with High-Cognition Agents that qualify leads, synchronize revenue, and secure your infrastructure—instantly, globally, 24/7.
+            We automate your WhatsApp lead qualification, revenue syncing, and enterprise security—so your team can focus on growth.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 md:gap-8 justify-center items-center">
@@ -102,16 +101,67 @@ export default function Home() {
               href="/chat" 
               className="w-full sm:w-auto px-8 md:px-16 py-5 md:py-6 bg-astra-green text-white hover:bg-astra-green/80 green-glow rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all text-center"
             >
-              Deploy Your Autonomous Workforce
+              See Factoric in Action
             </Link>
             <Link 
               href="/pricing" 
               className="w-full sm:w-auto px-8 md:px-16 py-5 md:py-6 border border-white/10 text-white/60 hover:text-white hover:border-white/20 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all backdrop-blur-sm text-center"
             >
-              Reduce Operational Decay
+              Explore BOS Modules &rarr;
             </Link>
           </div>
         </motion.div>
+      {/* Section 2: The Social Proof (Trust Strip) */}
+      <section className="py-12 border-b border-white/5 bg-black/50">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+          <h3 className="text-xs md:text-sm font-black uppercase tracking-[0.4em] text-white/40">
+            Powering Next-Gen Enterprise Operations Across Central India
+          </h3>
+          <div className="flex flex-wrap justify-center gap-12 items-center grayscale opacity-30 group">
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Pahlajanis' Women's Hospital</span>
+              <span className="text-[7px] font-bold text-astra-green/40 mt-1 uppercase">Securing 500+ Hospital Beds</span>
+            </div>
+            <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
+            <div className="text-[10px] font-black uppercase tracking-widest text-white/40">Enterprise Grade Infrastructure</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: "How It Works" (The 3-Step Flow) */}
+      <section className="section-spacing border-b border-white/5 bg-white/[0.01]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-24 text-center md:text-left">
+            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Operational Blueprint</div>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">How Our Business Operating System (BOS) Automates Work.</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12 relative">
+            {[
+              { 
+                step: "🔌 Connect (Ingest)", 
+                desc: "Plug Factoric into your WhatsApp Business API, Cloud Telephony, and Website via simple webhooks.",
+                accent: "text-astra-green"
+              },
+              { 
+                step: "🧠 Think (Analyze)", 
+                desc: "The Sovereign AI Brain (AgentX) reads intents, understands local languages (Hindi/English), and qualifies lead urgency in real-time.",
+                accent: "text-astra-blue"
+              },
+              { 
+                step: "⚡ Execute (Action)", 
+                desc: "BOS automatically routes the lead, collects UPI payments, and updates your records. Zero human touch required.",
+                accent: "text-astra-gold"
+              }
+            ].map((step, i) => (
+              <div key={i} className="p-8 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all relative">
+                <div className={`text-lg font-bold mb-4 ${step.accent}`}>{step.step}</div>
+                <p className="text-sm text-white/40 leading-relaxed font-medium">{step.desc}</p>
+                <div className="mt-8 text-[8px] font-black uppercase tracking-widest text-white/10">Step 0{i+1}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* 2. The Native Stack: All-in-One Sovereignty */}
@@ -215,11 +265,42 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 section-spacing border-t border-white/5">
         <div className="text-center mb-32">
           <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Structural Capabilities</div>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Deployment Modules.</h2>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight">The Factoric Suite: AI Modules Built for Scale</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {trinity.map((item, i) => (
+          {[
+            {
+              tier: "BOS M",
+              title: "AI Contact Center & Lead Triage",
+              desc: "24/7 AI Contact Center. Automatically engages leads, answers FAQs in local languages, and books appointments autonomously.",
+              details: "Universal Node • Deployment Ready",
+              accent: "border-astra-green shadow-astra-green/10",
+              icon: Brain,
+              color: "text-astra-green",
+              cta: "Deploy AI Sales Desk"
+            },
+            {
+              tier: "BOS X",
+              title: "Automated Revenue Synthesis",
+              desc: "Real-time Revenue Synthesis. Automates invoicing, collects UPI payments, and eliminates 100% of hospital and enterprise billing leakage.",
+              details: "Scale Module • Global Attribution",
+              accent: "border-astra-blue shadow-astra-blue/10",
+              icon: Activity,
+              color: "text-astra-blue",
+              cta: "Deploy Revenue Ops"
+            },
+            {
+              tier: "BOS Z",
+              title: "AI-Powered Facility Security",
+              desc: "AI-Powered Security. Computer vision for physical premises, anomaly detection, and real-time safety alerts.",
+              details: "Sovereign Tier • M + X + Vision",
+              accent: "border-astra-gold shadow-astra-gold/10",
+              icon: Shield,
+              color: "text-astra-gold",
+              cta: "Deploy AI Security"
+            }
+          ].map((item, i) => (
             <motion.div
               key={item.tier}
               initial={{ opacity: 0, y: 20 }}
@@ -256,28 +337,28 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-24">
             <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Institutional Deployment</div>
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Sector Triage.</h2>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Autonomous AI Solutions by Industry</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 md:gap-12">
             {[
               {
                 icon: Stethoscope,
-                title: "Healthcare",
-                desc: "AI Front-Desk for OPD bookings and patient qualification. 40% faster response times.",
+                title: "For Healthcare",
+                desc: "Stop OPD lead drops and automate patient triage. A smarter alternative to traditional Hospital HMIS.",
                 keywords: "AI for Hospitals • Patient Triage • HIPAA"
               },
               {
                 icon: Laptop,
-                title: "SaaS & B2B",
-                desc: "Autonomous lead qualification and revenue ops sync. 2x MRR realization speed.",
-                keywords: "B2B Lead Gen • Revenue Ops • CRM Sync"
+                title: "For Real Estate",
+                desc: "Filter out 90% of junk property leads autonomously directly from your marketing funnels.",
+                keywords: "B2B Lead Gen • Real Estate AI • Property Leads"
               },
               {
                 icon: Warehouse,
-                title: "Security & Retail",
-                desc: "AI-powered CCTV analytics for malls and factories. Zero capital leakage.",
-                keywords: "Computer Vision • Loss Prevention • Safety"
+                title: "For Enterprise",
+                desc: "Replace expensive CRM licenses with active digital labor tailored for high-ticket B2B sales.",
+                keywords: "B2B Sales • Enterprise AI • Digital Labor"
               }
             ].map((sector, i) => (
               <div key={i} className="p-8 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
@@ -296,7 +377,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-24">
             <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Strategic Comparison</div>
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Factoric BOS vs. Legacy CRM.</h2>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Factoric BOS vs. Legacy CRM Software</h2>
           </div>
 
           <div className="overflow-hidden hairline-border rounded-sm">
@@ -394,24 +475,17 @@ export default function Home() {
       {/* Security Architecture Overlay */}
       <SecurityArchitecture />
 
-      {/* 5. Global Infrastructure & Trust Closing */}
+      {/* Section 7: The Final Footer CTA */}
       <section className="section-spacing border-t border-white/5 bg-astra-green/[0.02]">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
           <div className="space-y-4">
             <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">The Sovereign Asset</div>
             <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
-              Engineering the <br />
-              <span className="text-astra-green">Autonomous Empire.</span>
+              Ready to Deploy Your <br />
+              <span className="text-astra-green">AI Workforce?</span>
             </h2>
             <p className="text-xl text-white/40 leading-relaxed font-medium max-w-2xl mx-auto">
-              Scale your institutional logic across borders. No headcount latency. No capital leakage. Total operational overwatch.
-            </p>
-          </div>
-
-          <div className="p-8 glass-card border border-white/5 rounded-sm bg-white/[0.01]">
-            <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-white/20 mb-6">Sovereign Infrastructure</div>
-            <p className="text-xs text-white/40 font-medium leading-relaxed">
-              Powered by IBM-backed <span className="text-white/60">Astra DB (Neural Memory)</span> and <span className="text-white/60">Premium Intel NVMe Compute (DigitalOcean)</span>.
+              Stop managing software. Start deploying labor.
             </p>
           </div>
 
@@ -420,7 +494,7 @@ export default function Home() {
               href="/onboarding"
               className="px-8 md:px-16 py-4 md:py-6 bg-astra-green text-white hover:bg-astra-green/80 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all green-glow inline-block"
             >
-              Deploy Your Autonomous Workforce
+              Start Your Sovereign Trial
             </Link>
           </div>
         </div>
