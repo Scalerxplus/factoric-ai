@@ -13,39 +13,6 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-const trinity = [
-  {
-    tier: "BOS M",
-    title: "AI Sales & Support Desk",
-    desc: "Autonomous agents for sales chat, inbound calls, WhatsApp, and email. Qualifies leads and closes bookings 24/7.",
-    details: "Universal Node • Deployment Ready",
-    accent: "border-astra-green shadow-astra-green/10",
-    icon: Brain,
-    color: "text-astra-green",
-    cta: "Deploy AI Sales Desk"
-  },
-  {
-    tier: "BOS X",
-    title: "Revenue & Billing Ops",
-    desc: "Syncs CRM, telephony, and billing tools. Automates invoicing, payment follow-ups, and revenue attribution.",
-    details: "Scale Module • Global Attribution",
-    accent: "border-astra-blue shadow-astra-blue/10",
-    icon: Activity,
-    color: "text-astra-blue",
-    cta: "Deploy Revenue Ops"
-  },
-  {
-    tier: "BOS Z",
-    title: "AI CCTV & Facility Monitoring",
-    desc: "Real-time camera analytics and anomaly detection. Transforms existing cameras into predictive security agents.",
-    details: "Sovereign Tier • M + X + Vision",
-    accent: "border-astra-gold shadow-astra-gold/10",
-    icon: Shield,
-    color: "text-astra-gold",
-    cta: "Deploy AI Security"
-  }
-];
-
 const faqs = [
   {
     q: "Is Factoric AI HIPAA and DPDPA compliant?",
@@ -53,7 +20,7 @@ const faqs = [
   },
   {
     q: "Do I still need Zoho, Salesforce, or LeadSquared?",
-    a: "No. Factoric AI is a full-stack Business Operating System (BOS) that natively replaces traditional CRMs. We have built-in capturing, engagement, nurturing, billing, and security vision—all within a single sovereign engine. You don't need external tools; you need Factoric."
+    a: "No. Factoric AI is a full-stack Business Operating System (BOS) that natively replaces traditional CRMs. We have built-in capturing, engagement, nurturing, billing, and security vision - all within a single sovereign engine. You don't need external tools; you need Factoric."
   },
   {
     q: "Can AI agents really replace human front-desk staff?",
@@ -93,7 +60,7 @@ export default function Home() {
           </div>
 
           <p className="text-lg md:text-2xl text-white/40 max-w-4xl mx-auto font-medium leading-relaxed mb-16">
-            We automate your WhatsApp lead qualification, revenue syncing, and enterprise security—so your team can focus on growth.
+            We automate your WhatsApp lead qualification, revenue syncing, and enterprise security - so your team can focus on growth.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 md:gap-8 justify-center items-center">
@@ -103,17 +70,21 @@ export default function Home() {
             >
               See Factoric in Action
             </Link>
-            <Link 
-              href="/pricing" 
-              className="w-full sm:w-auto px-8 md:px-16 py-5 md:py-6 border border-white/10 text-white/60 hover:text-white hover:border-white/20 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all backdrop-blur-sm text-center"
-            >
-              Explore BOS Modules &rarr;
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link 
+                href="/pricing" 
+                className="text-white/60 hover:text-white font-black text-[10px] uppercase tracking-[0.5em] transition-all"
+              >
+                Explore BOS Modules {"->"}
+              </Link>
+            </div>
           </div>
         </motion.div>
+      </section>
+
       {/* Section 2: The Social Proof (Trust Strip) */}
       <section className="py-12 border-b border-white/5 bg-black/50">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <h3 className="text-xs md:text-sm font-black uppercase tracking-[0.4em] text-white/40">
             Powering Next-Gen Enterprise Operations Across Central India
           </h3>
@@ -139,17 +110,17 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 relative">
             {[
               { 
-                step: "🔌 Connect (Ingest)", 
+                step: "Connect (Ingest)", 
                 desc: "Plug Factoric into your WhatsApp Business API, Cloud Telephony, and Website via simple webhooks.",
                 accent: "text-astra-green"
               },
               { 
-                step: "🧠 Think (Analyze)", 
+                step: "Think (Analyze)", 
                 desc: "The Sovereign AI Brain (AgentX) reads intents, understands local languages (Hindi/English), and qualifies lead urgency in real-time.",
                 accent: "text-astra-blue"
               },
               { 
-                step: "⚡ Execute (Action)", 
+                step: "Execute (Action)", 
                 desc: "BOS automatically routes the lead, collects UPI payments, and updates your records. Zero human touch required.",
                 accent: "text-astra-gold"
               }
@@ -181,19 +152,19 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
                   <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Capturing</div>
-                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Omnichannel Intake • Cloud Telephony • Chat • WhatsApp</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Omnichannel Intake - Cloud Telephony - Chat - WhatsApp</div>
                 </div>
                 <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
                   <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Nurturing</div>
-                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Autonomous Engagement • No Human Entry</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Autonomous Engagement - No Human Entry</div>
                 </div>
                 <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
                   <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Billing</div>
-                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Instant Invoicing • Payment Follow-ups</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">Instant Invoicing - Payment Follow-ups</div>
                 </div>
                 <div className="p-4 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
                   <div className="text-[9px] font-black tracking-widest text-white/20 mb-2 uppercase">Native Vision</div>
-                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">CCTV Security • Facility Overwatch</div>
+                  <div className="text-xs font-bold text-white/60 group-hover:text-astra-green transition-colors">CCTV Security - Facility Overwatch</div>
                 </div>
               </div>
             </div>
@@ -221,7 +192,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. The Pulse Section: Why Factoric? */}
       <section className="section-spacing border-b border-white/5 bg-white/[0.01]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 md:gap-16">
@@ -256,12 +226,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. The Interactive Proof: Mission Log */}
       <section className="py-24 md:py-48">
         <AstraTerminal />
       </section>
 
-      {/* 4. The Tiers: High-Stakes Modules */}
       <section className="max-w-7xl mx-auto px-6 section-spacing border-t border-white/5">
         <div className="text-center mb-32">
           <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Structural Capabilities</div>
@@ -274,7 +242,7 @@ export default function Home() {
               tier: "BOS M",
               title: "AI Contact Center & Lead Triage",
               desc: "24/7 AI Contact Center. Automatically engages leads, answers FAQs in local languages, and books appointments autonomously.",
-              details: "Universal Node • Deployment Ready",
+              details: "Universal Node - Deployment Ready",
               accent: "border-astra-green shadow-astra-green/10",
               icon: Brain,
               color: "text-astra-green",
@@ -284,7 +252,7 @@ export default function Home() {
               tier: "BOS X",
               title: "Automated Revenue Synthesis",
               desc: "Real-time Revenue Synthesis. Automates invoicing, collects UPI payments, and eliminates 100% of hospital and enterprise billing leakage.",
-              details: "Scale Module • Global Attribution",
+              details: "Scale Module - Global Attribution",
               accent: "border-astra-blue shadow-astra-blue/10",
               icon: Activity,
               color: "text-astra-blue",
@@ -294,7 +262,7 @@ export default function Home() {
               tier: "BOS Z",
               title: "AI-Powered Facility Security",
               desc: "AI-Powered Security. Computer vision for physical premises, anomaly detection, and real-time safety alerts.",
-              details: "Sovereign Tier • M + X + Vision",
+              details: "Sovereign Tier - M + X + Vision",
               accent: "border-astra-gold shadow-astra-gold/10",
               icon: Shield,
               color: "text-astra-gold",
@@ -322,17 +290,15 @@ export default function Home() {
                 href={`/systems/${item.tier.toLowerCase().replace(' ', '-')}`}
                 className={`text-[8px] font-black uppercase tracking-[0.4em] ${item.color} group-hover:underline`}
               >
-                {item.cta} →
+                {item.cta} {"->"}
               </Link>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* 4. The McKinsey "Value Gap" Section */}
       <ValueGap />
 
-      {/* NEW: Sector Triage (Industry Use Cases) */}
       <section className="section-spacing border-t border-white/5 bg-white/[0.01]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-24">
@@ -346,19 +312,19 @@ export default function Home() {
                 icon: Stethoscope,
                 title: "For Healthcare",
                 desc: "Stop OPD lead drops and automate patient triage. A smarter alternative to traditional Hospital HMIS.",
-                keywords: "AI for Hospitals • Patient Triage • HIPAA"
+                keywords: "AI for Hospitals - Patient Triage - HIPAA"
               },
               {
                 icon: Laptop,
                 title: "For Real Estate",
                 desc: "Filter out 90% of junk property leads autonomously directly from your marketing funnels.",
-                keywords: "B2B Lead Gen • Real Estate AI • Property Leads"
+                keywords: "B2B Lead Gen - Real Estate AI - Property Leads"
               },
               {
                 icon: Warehouse,
                 title: "For Enterprise",
                 desc: "Replace expensive CRM licenses with active digital labor tailored for high-ticket B2B sales.",
-                keywords: "B2B Sales • Enterprise AI • Digital Labor"
+                keywords: "B2B Sales - Enterprise AI - Digital Labor"
               }
             ].map((sector, i) => (
               <div key={i} className="p-8 hairline-border rounded-sm bg-black group hover:bg-white/[0.02] transition-all">
@@ -372,7 +338,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEW: The Competitive Matrix (BOS vs CRM) */}
       <section className="section-spacing border-t border-white/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-24">
@@ -394,7 +359,7 @@ export default function Home() {
                   { f: "Data Entry", l: "Manual (Human Dependent)", s: "Autonomous (API Driven)", i: "Zero human error." },
                   { f: "Response Speed", l: "Minutes to Hours", s: "Under 10 Seconds", i: "No patient/lead loss to competitors." },
                   { f: "Core Function", l: "Static Record Keeping", s: "Active Operational Execution", i: "Revenue Leakage is eliminated." },
-                  { f: "Cost Structure", l: "High Per-User License", s: "Flat Subscription (₹4,799)", i: "Massive institutional cost reduction." }
+                  { f: "Cost Structure", l: "High Per-User License", s: "Flat Subscription (Rs. 4,799)", i: "Massive institutional cost reduction." }
                 ].map((row, i) => (
                   <tr key={i} className="hover:bg-white/[0.01] transition-colors group">
                     <td className="p-8 font-bold text-white/40">{row.f}</td>
@@ -411,7 +376,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEW: Proof of Impact (The Validation Layer) */}
       <section className="py-16 md:py-32 border-y border-white/5 bg-astra-green/[0.01]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
@@ -443,7 +407,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEW: Intelligence Archive (FAQ) */}
       <section className="section-spacing">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-24">
@@ -472,10 +435,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Security Architecture Overlay */}
       <SecurityArchitecture />
 
-      {/* Section 7: The Final Footer CTA */}
       <section className="section-spacing border-t border-white/5 bg-astra-green/[0.02]">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
           <div className="space-y-4">
