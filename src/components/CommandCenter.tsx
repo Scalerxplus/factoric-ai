@@ -45,7 +45,7 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] bg-[#0D0D0D]/95 backdrop-blur-3xl overflow-y-auto px-6 py-24"
+          className="fixed inset-0 z-[100] bg-[#0D0D0D]/95 backdrop-blur-3xl overflow-y-auto px-6 py-12 md:py-24"
         >
           {/* Background Decorations */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -55,7 +55,7 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
 
           <div className="max-w-6xl mx-auto relative z-10">
             {/* Header */}
-            <div className="flex items-center justify-between mb-24 pb-8 border-b border-white/5">
+            <div className="flex items-center justify-between mb-12 md:mb-24 pb-8 border-b border-white/5">
               <div className="flex items-center gap-4">
                 <NeuralLogo className="w-10 h-10" />
                 <div>
@@ -72,7 +72,7 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
             </div>
 
             {/* Grid */}
-            <div className="grid md:grid-cols-3 gap-16 md:gap-24">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24">
               {sections.map((section, idx) => (
                 <motion.div
                   key={section.title}
@@ -84,19 +84,19 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
                   <div className="text-[10px] uppercase font-black tracking-[0.5em] text-white/20 pl-4 border-l border-emerald-500/40">
                     {section.title}
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-2 md:space-y-4">
                     {section.links.map((link) => (
                       <Link
                         key={link.name}
                         href={link.href}
                         onClick={onClose}
-                        className="group block p-6 rounded-sm hover:bg-white/[0.03] border border-transparent hover:border-white/5 transition-all"
+                        className="group block p-4 md:p-6 rounded-sm hover:bg-white/[0.03] border border-transparent hover:border-white/5 transition-all"
                       >
                         <div className="flex items-start gap-4 mb-2">
                           <link.icon className="w-4 h-4 text-emerald-500 mt-1 opacity-60 group-hover:opacity-100 transition-opacity" />
-                          <div className="text-lg font-medium text-white/80 group-hover:text-white transition-colors">{link.name}</div>
+                          <div className="text-base md:text-lg font-medium text-white/80 group-hover:text-white transition-colors">{link.name}</div>
                         </div>
-                        <p className="text-[10px] text-white/20 uppercase font-bold tracking-widest pl-8">{link.desc}</p>
+                        <p className="text-[8px] md:text-[10px] text-white/20 uppercase font-bold tracking-widest pl-8">{link.desc}</p>
                       </Link>
                     ))}
                   </div>

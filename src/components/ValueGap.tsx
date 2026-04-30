@@ -40,7 +40,7 @@ export const ValueGap = () => {
             className="group relative"
           >
             <div className="absolute inset-0 bg-red-500/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div className="p-16 glass-card rounded-sm border-l-2 border-l-red-500/30 relative z-10 min-h-[500px] flex flex-col">
+            <div className="p-6 md:p-16 glass-card rounded-sm border-l-2 border-l-red-500/30 relative z-10 min-h-[400px] md:min-h-[500px] flex flex-col">
               <div className="flex items-center justify-between mb-16">
                 <div className="flex items-center gap-4">
                   <div className="p-4 bg-red-500/10 rounded-full border border-red-500/20">
@@ -64,9 +64,9 @@ export const ValueGap = () => {
                     <div className="w-8 h-8 rounded-full border border-white/5 bg-white/[0.02] flex items-center justify-center shrink-0">
                       <step.i className="w-3.5 h-3.5 text-white/20" />
                     </div>
-                    <div className="space-y-2">
-                      <div className="text-xl font-bold text-white/40 group-last:text-red-500 transition-colors">{step.t}</div>
-                      <p className="text-[10px] text-white/10 font-medium leading-relaxed">{step.d}</p>
+                    <div className="space-y-1">
+                      <div className="text-lg md:text-xl font-bold text-white/40 group-last:text-red-500 transition-colors">{step.t}</div>
+                      <p className="text-[9px] md:text-[10px] text-white/10 font-medium leading-relaxed">{step.d}</p>
                     </div>
                     {idx < 2 && (
                       <div className="absolute left-4 top-10 w-[1px] h-8 bg-white/5" />
@@ -92,7 +92,7 @@ export const ValueGap = () => {
             className="group relative"
           >
             <div className="absolute inset-0 bg-astra-green/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div className="p-16 glass-card rounded-sm border-l-2 border-l-astra-green/50 relative z-10 min-h-[500px] flex flex-col green-glow">
+            <div className="p-6 md:p-16 glass-card rounded-sm border-l-2 border-l-astra-green/50 relative z-10 min-h-[400px] md:min-h-[500px] flex flex-col green-glow">
               <div className="flex items-center justify-between mb-16">
                 <div className="flex items-center gap-4">
                   <div className="p-4 bg-astra-green/10 rounded-full border border-astra-green/20">
@@ -116,9 +116,9 @@ export const ValueGap = () => {
                     <div className="w-8 h-8 rounded-full border border-astra-green/20 bg-astra-green/5 flex items-center justify-center shrink-0">
                       <step.i className="w-3.5 h-3.5 text-astra-green" />
                     </div>
-                    <div className="space-y-2">
-                      <div className="text-xl font-bold text-white/80 group-last:text-astra-green transition-colors">{step.t}</div>
-                      <p className="text-[10px] text-white/30 font-medium leading-relaxed">{step.d}</p>
+                    <div className="space-y-1">
+                      <div className="text-lg md:text-xl font-bold text-white/80 group-last:text-astra-green transition-colors">{step.t}</div>
+                      <p className="text-[9px] md:text-[10px] text-white/30 font-medium leading-relaxed">{step.d}</p>
                     </div>
                     {idx < 2 && (
                       <div className="absolute left-4 top-10 w-[1px] h-8 bg-astra-green/20" />

@@ -37,9 +37,10 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.02em;
-  line-height: 1.6;
+  line-height: 1.5;
   overflow-x: hidden;
   min-height: 100vh;
+  word-break: break-word;
 }
 
 @layer utilities {
@@ -81,11 +82,13 @@ body {
   }
 
   .section-spacing {
-    @apply py-16 md:py-40;
+    padding-top: clamp(4rem, 12vw, 12rem);
+    padding-bottom: clamp(4rem, 12vw, 12rem);
   }
   
   .title-understated {
-    @apply text-3xl md:text-5xl font-medium tracking-tight text-[#F5F5F7];
+    font-size: clamp(1.875rem, 5vw, 3rem);
+    @apply font-medium tracking-tight text-[#F5F5F7];
     line-height: 1.1;
   }
 

@@ -35,11 +35,11 @@ export const AstraTerminal = () => {
 
   return (
     <div className="w-full max-w-3xl mx-auto px-6">
-      <div className="glass-card rounded-sm p-8 font-mono text-xs overflow-hidden relative min-h-[300px]">
-        <div className="absolute top-4 left-4 flex gap-2 mb-8">
-          <div className="w-2 h-2 rounded-full bg-red-500/50" />
-          <div className="w-2 h-2 rounded-full bg-astra-gold/50" />
-          <div className="w-2 h-2 rounded-full bg-astra-green/50" />
+      <div className="glass-card rounded-sm p-4 md:p-8 font-mono text-[10px] md:text-xs overflow-hidden relative min-h-[350px] md:min-h-[300px]">
+        <div className="absolute top-4 left-4 flex gap-1.5 md:gap-2 mb-8">
+          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-red-500/50" />
+          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-astra-gold/50" />
+          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-astra-green/50" />
         </div>
         
         <div className="absolute top-4 right-4 text-[8px] font-black tracking-widest text-white/10 uppercase">
@@ -56,10 +56,10 @@ export const AstraTerminal = () => {
                 exit={{ opacity: 0, y: -10 }}
                 className="flex gap-4 items-start"
               >
-                <span className="text-[10px] font-black uppercase tracking-tighter text-astra-green shrink-0 min-w-[80px]">
+                <span className="text-[8px] md:text-[10px] font-black uppercase tracking-tighter text-astra-green shrink-0 min-w-[60px] md:min-w-[80px]">
                   {log.label}
                 </span>
-                <span className={`${log.color} leading-relaxed`}>{log.content}</span>
+                <span className={`${log.color} leading-relaxed text-[10px] md:text-xs`}>{log.content}</span>
               </motion.div>
             ))}
           </AnimatePresence>

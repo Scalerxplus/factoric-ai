@@ -24,14 +24,14 @@ export const Navbar = () => {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 flex justify-center py-6 md:py-8 px-6 bg-[#0D0D0D]/60 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(16,185,129,0.05)]"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-center py-4 md:py-8 px-4 md:px-6 bg-[#0D0D0D]/60 backdrop-blur-2xl border-b border-white/5 shadow-[0_4px_30px_rgba(16,185,129,0.05)]"
       >
         <div className="flex items-center justify-between w-full max-w-6xl">
-          <Link href="/" className="flex items-center gap-4 group">
-            <NeuralLogo className="w-8 h-8" />
+          <Link href="/" className="flex items-center gap-3 md:gap-4 group shrink-0">
+            <NeuralLogo className="w-6 h-6 md:w-8 md:h-8" />
             <div className="flex flex-col">
-              <span className="text-sm font-semibold tracking-[0.2em] uppercase text-[#F2F0E9]">Factoric AI</span>
-              <span className="text-[7px] font-mono font-bold tracking-widest text-emerald-500/60 uppercase">Intel: ScalerX-A1</span>
+              <span className="text-[10px] md:text-sm font-semibold tracking-[0.2em] uppercase text-[#F2F0E9]">Factoric AI</span>
+              <span className="text-[6px] md:text-[7px] font-mono font-bold tracking-widest text-emerald-500/60 uppercase">Intel: ScalerX-A1</span>
             </div>
           </Link>
           
@@ -65,7 +65,7 @@ export const Navbar = () => {
               </Link>
               <Link 
                 href={`/chat?prompt=${encodeURIComponent("how Factoric AI's Agentic AI can help a business engaging leads, recording and analysing data, doing billing, reciving patients and also watching over your cctv feeds to inform you right before something critical happens.")}`} 
-                className="px-6 py-2.5 text-[10px] uppercase font-black tracking-[0.3em] bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 transition-all rounded-sm"
+                className="px-4 md:px-6 py-2 md:py-2.5 text-[8px] md:text-[10px] uppercase font-black tracking-[0.3em] bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 transition-all rounded-sm whitespace-nowrap"
               >
                 Deploy
               </Link>

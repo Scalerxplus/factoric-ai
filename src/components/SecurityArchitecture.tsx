@@ -53,23 +53,23 @@ export const SecurityArchitecture = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="p-10 glass-card rounded-sm border border-white/5 hover:border-emerald-500/20 transition-all group"
+              className="p-6 md:p-10 glass-card rounded-sm border border-white/5 hover:border-emerald-500/20 transition-all group"
             >
-              <div className="flex justify-between items-start mb-8">
-                <div className="p-4 bg-emerald-500/10 rounded-full">
-                  <p.icon className="w-6 h-6 text-emerald-500" />
+              <div className="flex justify-between items-start mb-6 md:mb-8">
+                <div className="p-3 md:p-4 bg-emerald-500/10 rounded-full">
+                  <p.icon className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" />
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 bg-emerald-500/5 border border-emerald-500/10 rounded-full">
+                <div className="flex items-center gap-2 px-2 md:px-3 py-1 bg-emerald-500/5 border border-emerald-500/10 rounded-full">
                   <div className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-[7px] font-black uppercase tracking-widest text-emerald-500/60">{p.status}</span>
+                  <span className="text-[6px] md:text-[7px] font-black uppercase tracking-widest text-emerald-500/60">{p.status}</span>
                 </div>
               </div>
-              <h3 className="text-xl font-medium mb-4 group-hover:text-emerald-400 transition-colors">{p.title}</h3>
-              <p className="text-sm text-white/30 leading-relaxed font-medium mb-8">
+              <h3 className="text-lg md:text-xl font-medium mb-3 md:mb-4 group-hover:text-emerald-400 transition-colors">{p.title}</h3>
+              <p className="text-[10px] md:text-sm text-white/30 leading-relaxed font-medium mb-6 md:mb-8">
                 {p.desc}
               </p>
-              <div className="flex items-center gap-2 text-[8px] font-black uppercase tracking-widest text-emerald-500/40">
-                <CheckCircle2 className="w-3 h-3" /> Fully Operational Tier
+              <div className="flex items-center gap-2 text-[7px] md:text-[8px] font-black uppercase tracking-widest text-emerald-500/40">
+                <CheckCircle2 className="w-2.5 h-2.5 md:w-3 md:h-3" /> Fully Operational Tier
               </div>
             </motion.div>
           ))}

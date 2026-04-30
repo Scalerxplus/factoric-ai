@@ -97,16 +97,16 @@ export default function Home() {
             Stop managing static data and start deploying intelligence. Factoric AI replaces human latency with High-Cognition Agents that qualify leads, synchronize revenue, and secure your infrastructure—instantly, globally, 24/7.
           </p>
           
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-8 justify-center items-center">
             <Link 
               href="/chat" 
-              className="px-16 py-6 bg-astra-green text-white hover:bg-astra-green/80 green-glow rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all"
+              className="w-full sm:w-auto px-8 md:px-16 py-5 md:py-6 bg-astra-green text-white hover:bg-astra-green/80 green-glow rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all text-center"
             >
               Deploy Your Autonomous Workforce
             </Link>
             <Link 
               href="/pricing" 
-              className="px-16 py-6 border border-white/10 text-white/60 hover:text-white hover:border-white/20 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all backdrop-blur-sm"
+              className="w-full sm:w-auto px-8 md:px-16 py-5 md:py-6 border border-white/10 text-white/60 hover:text-white hover:border-white/20 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all backdrop-blur-sm text-center"
             >
               Reduce Operational Decay
             </Link>
@@ -331,29 +331,32 @@ export default function Home() {
       </section>
 
       {/* NEW: Proof of Impact (The Validation Layer) */}
-      <section className="py-24 border-y border-white/5 bg-astra-green/[0.01]">
+      <section className="py-16 md:py-32 border-y border-white/5 bg-astra-green/[0.01]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
-            <div className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            <div className="space-y-4 text-center md:text-left">
               <div className="text-[10px] font-black uppercase tracking-widest text-astra-green">The Sovereign Record</div>
-              <h2 className="text-2xl font-medium">Validation of Impact.</h2>
+              <h2 className="text-3xl font-medium">Validation of Impact.</h2>
+              <div className="opacity-20 grayscale flex justify-center md:justify-start gap-4 items-center">
+                <ShieldCheck className="w-6 h-6" />
+                <div className="text-[8px] font-black uppercase tracking-[0.3em]">Institutional Grade</div>
+              </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-12">
+            
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 col-span-1 md:col-span-2">
               {[
                 { label: "Lead Response", value: "-60%", sub: "Reduction in Latency" },
                 { label: "MRR Realization", value: "+25%", sub: "Revenue Throughput" },
                 { label: "Operational Risk", value: "Zero", sub: "Capital Leakage" }
               ].map((stat, i) => (
-                <div key={i} className="space-y-1">
-                  <div className="text-3xl font-light text-white">{stat.value}</div>
-                  <div className="text-[8px] font-black uppercase tracking-widest text-white/20">{stat.label}</div>
-                  <div className="text-[7px] font-bold text-astra-green/40 uppercase">{stat.sub}</div>
+                <div key={i} className="space-y-2 text-center md:text-left">
+                  <div className="text-4xl md:text-6xl font-light text-white tracking-tighter">{stat.value}</div>
+                  <div className="space-y-1">
+                    <div className="text-[9px] font-black uppercase tracking-widest text-white/40">{stat.label}</div>
+                    <div className="text-[8px] font-bold text-astra-green/60 uppercase tracking-tighter">{stat.sub}</div>
+                  </div>
                 </div>
               ))}
-            </div>
-            <div className="opacity-20 grayscale flex gap-8 items-center">
-              <ShieldCheck className="w-8 h-8" />
-              <div className="text-[10px] font-black uppercase tracking-[0.3em]">Institutional Grade</div>
             </div>
           </div>
         </div>
