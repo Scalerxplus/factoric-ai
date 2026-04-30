@@ -90,17 +90,17 @@ export default function Home() {
           </h3>
           <div className="flex flex-wrap justify-center gap-12 items-center grayscale opacity-30 group">
             <div className="flex flex-col items-center">
-              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Pahlajanis' Hospital</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Regional Healthcare Networks</span>
               <span className="text-[7px] font-bold text-astra-green/40 mt-1 uppercase">Sovereign Healthcare</span>
             </div>
             <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
             <div className="flex flex-col items-center">
-              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Central India Groups</span>
-              <span className="text-[7px] font-bold text-astra-green/40 mt-1 uppercase">Enterprise Operations</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Central India Enterprise</span>
+              <span className="text-[7px] font-bold text-astra-green/40 mt-1 uppercase">Operational Excellence</span>
             </div>
             <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
             <div className="flex flex-col items-center">
-              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Real Estate Assets</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Real Estate Developers</span>
               <span className="text-[7px] font-bold text-astra-green/40 mt-1 uppercase">Lead Automation</span>
             </div>
             <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
