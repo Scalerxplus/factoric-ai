@@ -12,27 +12,28 @@ interface CommandCenterProps {
 
 const sections = [
   {
-    title: "System Architectures",
+    title: "AI Agents",
     links: [
-      { name: "BOS M: Cognitive Front", href: "/systems/bos-m", icon: Zap, desc: "Lead & Marketing Automation" },
-      { name: "BOS X: Revenue Synthesis", href: "/systems/bos-x", icon: Target, desc: "Revenue & Capital Integrity" },
-      { name: "BOS Z: Kinetic Sentinel", href: "/systems/bos-z", icon: Eye, desc: "M + X + Computer Vision Security" },
+      { name: "Customer Support Agent", href: "/contact", icon: Zap, desc: "24/7 Autonomous Executives" },
+      { name: "Podcast Generator", href: "/contact", icon: Headphones, desc: "Synthetic Audio Production" },
+      { name: "Vlog Synthesizer", href: "/contact", icon: Video, desc: "Faceless Video Creation" },
+      { name: "Music Composer", href: "/contact", icon: Music, desc: "Original Tracks & Jingles" },
     ]
   },
   {
-    title: "Institutional Foundation",
+    title: "The Laboratory",
     links: [
-      { name: "About the Labs", href: "/about", icon: Info, desc: "Our mission and operational scope" },
-      { name: "Philosophy", href: "/philosophy", icon: BookOpen, desc: "The logic of agentic labor" },
-      { name: "Strategy Consult", href: "/contact", icon: MessageSquare, desc: "Direct link to AI architects" },
+      { name: "About Factoric AI", href: "/about", icon: Info, desc: "Our mission and capabilities" },
+      { name: "Use Cases", href: "/", icon: BookOpen, desc: "Discover what you can build" },
+      { name: "Strategy Consult", href: "/contact", icon: MessageSquare, desc: "Speak with our architects" },
     ]
   },
   {
-    title: "Deployment & Operations",
+    title: "Deployment",
     links: [
-      { name: "System Onboarding", href: "/onboarding", icon: Rocket, desc: "Initialize your architecture" },
-      { name: "Enterprise Login", href: "/login", icon: LogIn, desc: "Access your BOS dashboard" },
-      { name: "AI Workforce Chat", href: "/chat", icon: MessageSquare, desc: "Direct operative interaction" },
+      { name: "Request Deployment", href: "/contact", icon: Rocket, desc: "Start building your agent" },
+      { name: "Client Login", href: "/login", icon: LogIn, desc: "Access your dashboard" },
+      { name: "Talk to our AI", href: "/chat", icon: MessageSquare, desc: "Test the intelligence" },
     ]
   }
 ];

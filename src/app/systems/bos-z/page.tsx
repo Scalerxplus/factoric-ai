@@ -7,57 +7,53 @@ export default function BosZPage() {
   return (
     <SystemPage
       id="BOS Z"
-      title="The Kinetic Sentinel"
-      headline="ABSOLUTE OVERWATCH. <br /> ZERO LATENCY."
-      description="The Ultimate Sovereign Layer. BOS Z inherits every cognitive and revenue capability of M and X, while transforming your physical environment into a predictive security engine via Computer Vision."
+      title="The Visibility Layer"
+      headline="LIVE VISIBILITY. <br /> ABSOLUTE CONTROL."
+      description="Your operations don't stop at the digital screen. Factoric BOS Z uses intelligent monitoring to track camera feeds, detect physical anomalies, and escalate security alerts instantly."
       icon={Shield}
       color="text-astra-gold"
       accent="bg-astra-gold"
       capabilities={[
         {
-          title: "Full M + X Core",
-          desc: "Includes all cognitive engagement and revenue synthesis labor from the M and X tiers."
+          title: "Computer Vision Integration",
+          desc: "Connect your existing IP cameras directly to the BOS cognitive layer for autonomous overwatch."
         },
         {
-          title: "Neural Vision Synthesis",
-          desc: "Processes 24/7 video feeds to identify objects, personnel, and suspicious behavioral patterns."
+          title: "Anomaly Alerts",
+          desc: "Instant WhatsApp notifications to admins if unauthorized access or operational bottlenecks are detected."
         },
         {
-          title: "Predictive Security",
-          desc: "Identifies anomalies like perimeter breaches or unauthorized access in under 200ms."
+          title: "Compliance Audit Trails",
+          desc: "Unalterable, AI-verified logs of all facility events for total regulatory and legal protection."
         },
         {
-          title: "Asset Protection",
-          desc: "Monitors high-value physical inventory and infrastructure health via computer vision."
+          title: "Queue & Bottleneck Detection",
+          desc: "Real-time monitoring of waiting areas to alert management about operational friction."
         },
         {
-          title: "Autonomous Lockdown",
-          desc: "Triggers structural alarms and physical security protocols instantly upon verified threats."
+          title: "Digital Perimeter Guard",
+          desc: "Geofenced security zones that trigger cognitive alerts when breached during off-hours."
         },
         {
-          title: "Crowd Intelligence",
-          desc: "Analyzes density and movement patterns to optimize safety and operational flow."
-        },
-        {
-          title: "Incident Attribution",
-          desc: "Provides verifiable digital logs of every physical event for compliance and insurance."
+          title: "Institutional Memory",
+          desc: "Searchable visual logs—find specific events or patterns across weeks of facility footage instantly."
         }
       ]}
       useCases={[
         {
-          industry: "Manufacturing & Factories",
-          scenario: "Monitoring assembly lines for safety violations and unauthorized floor entry."
+          industry: "Private Hospitals",
+          scenario: "Monitoring patient safety, detecting facility overcrowding, and ensuring emergency zones are clear."
         },
         {
-          industry: "Retail & Warehousing",
-          scenario: "Preventing stock leakage and unauthorized inventory movement in real-time."
+          industry: "High-Security Logistics",
+          scenario: "Tracking unauthorized entry and ensuring compliance with on-ground safety protocols 24/7."
         },
         {
-          industry: "Hospitality & Estates",
-          scenario: "Ensuring 24/7 perimeter integrity and guest safety through predictive overwatch."
+          industry: "Luxury Retail & Real Estate",
+          scenario: "Protecting high-value assets and mapping visitor density patterns for operational optimization."
         }
       ]}
-      roi="BOS Z reduces security-related capital loss by 95% and eliminates the need for passive human monitoring."
+      roi="BOS Z provides 24/7 autonomous facility overwatch, reducing the need for manual guard supervision by 80% while increasing detection speed."
     />
   );
 }

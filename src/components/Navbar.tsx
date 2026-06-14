@@ -46,16 +46,16 @@ export const Navbar = () => {
 
             <div className="flex items-center gap-6">
               <Link 
-                href="/pricing" 
+                href="/about" 
                 className="hidden md:block text-[10px] uppercase font-bold tracking-[0.3em] text-[#F2F0E9]/60 hover:text-[#F2F0E9] transition-colors"
               >
-                Pricing
+                About
               </Link>
               <Link 
-                href="/blog" 
+                href="/" 
                 className="hidden md:block text-[10px] uppercase font-bold tracking-[0.3em] text-[#F2F0E9]/60 hover:text-[#F2F0E9] transition-colors"
               >
-                Insights
+                Use Cases
               </Link>
               <Link 
                 href="/login" 
@@ -64,7 +64,7 @@ export const Navbar = () => {
                 Sign In
               </Link>
               <Link 
-                href={`/chat?prompt=${encodeURIComponent("how Factoric AI's Agentic AI can help a business engaging leads, recording and analysing data, doing billing, reciving patients and also watching over your cctv feeds to inform you right before something critical happens.")}`} 
+                href={`/chat?prompt=${encodeURIComponent("I want to deploy an autonomous AI agent for my business.")}`} 
                 className="px-4 md:px-6 py-2 md:py-2.5 text-[8px] md:text-[10px] uppercase font-black tracking-[0.3em] bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 transition-all rounded-sm whitespace-nowrap"
               >
                 Deploy

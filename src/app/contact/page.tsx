@@ -13,17 +13,73 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#0D0D0D] text-[#F2F0E9]">
       <Navbar />
       
-      <section className="relative flex flex-col items-center justify-center pt-64 pb-32 px-6">
-        <div className="text-[10px] uppercase font-black tracking-[0.4em] text-accent-red mb-8">
-          Inquiry
+      <section className="relative pt-64 pb-32 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-[10px] uppercase font-black tracking-[0.5em] text-astra-green">Architect Consultation</div>
+            <h1 className="text-5xl md:text-8xl font-medium tracking-tight leading-[0.95]">
+              Let's Discuss Your <br />
+              <span className="text-white/40">Operational Bottlenecks.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/40 max-w-4xl mx-auto font-medium leading-relaxed">
+              Whether you want to unify inquiry handling, automate bookings, or completely eliminate billing leakage, our architects are ready to map Factoric AI to your workflows.
+            </p>
+          </motion.div>
         </div>
-        <h1 className="text-4xl md:text-8xl font-medium tracking-tight text-center mb-12 max-w-4xl leading-[1.05]">
-          Connect with the <br />
-          <span className="text-[#F2F0E9]/40">Architecture Team.</span>
-        </h1>
-        <p className="text-lg md:text-2xl text-[#F2F0E9]/40 text-center max-w-2xl mb-16 font-medium leading-relaxed">
-          Initialize a structural consult to identify the right BOS tier for your institution.
-        </p>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="section-spacing border-t border-white/5 bg-white/[0.01]">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="p-12 glass-card border border-white/5 rounded-sm">
+            <form className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-white/40">Full Name</label>
+                  <input type="text" className="w-full bg-black border border-white/10 rounded-sm p-4 text-sm focus:border-astra-green outline-none transition-colors" placeholder="e.g. John Doe" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-white/40">Company / Hospital Name</label>
+                  <input type="text" className="w-full bg-black border border-white/10 rounded-sm p-4 text-sm focus:border-astra-green outline-none transition-colors" placeholder="e.g. Apollo Healthcare" />
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-white/40">Industry</label>
+                  <select className="w-full bg-black border border-white/10 rounded-sm p-4 text-sm focus:border-astra-green outline-none transition-colors appearance-none">
+                    <option>Healthcare</option>
+                    <option>Real Estate</option>
+                    <option>Service Enterprise</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-white/40">Preferred Contact Method</label>
+                  <select className="w-full bg-black border border-white/10 rounded-sm p-4 text-sm focus:border-astra-green outline-none transition-colors appearance-none">
+                    <option>WhatsApp</option>
+                    <option>Phone Call</option>
+                    <option>Email</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-[10px] font-black uppercase tracking-widest text-white/40">Current Biggest Bottleneck</label>
+                <textarea className="w-full bg-black border border-white/10 rounded-sm p-4 text-sm focus:border-astra-green outline-none transition-colors h-32" placeholder="e.g. Lead drop, Billing leakage, Front-desk friction..."></textarea>
+              </div>
+
+              <button className="w-full py-6 bg-astra-green text-white font-black text-[10px] uppercase tracking-[0.5em] rounded-sm hover:bg-astra-green/80 transition-all green-glow">
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
 
       <section className="section-spacing border-t border-[#1F1F1F]">

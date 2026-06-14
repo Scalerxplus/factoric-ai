@@ -15,17 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.factoricai.com"),
   title: {
-    default: "Factoric AI | Autonomous Digital Labor & Business Operating System",
+    default: "Factoric AI | Autonomous AI Agent Platform",
     template: "%s | Factoric AI",
   },
-  description: "Replace your legacy CRM with Factoric BOS. Deploy an active AI workforce for autonomous WhatsApp lead qualification, revenue syncing, and enterprise security.",
+  description: "Factoric AI lets you train and deploy custom LLMs as 24/7 customer support executives, or create AI agents that produce vlogs, podcasts, and music autonomously.",
   keywords: [
-    "Autonomous Digital Labor",
-    "AI CRM India",
-    "AI Lead Qualification",
-    "Healthcare AI CRM",
-    "WhatsApp Business AI Agent",
-    "Automated Revenue Operations"
+    "AI Agents",
+    "Customer Support AI",
+    "AI Vlog Generator",
+    "AI Podcast Generator",
+    "AI Music Composer",
+    "Autonomous Operations",
+    "ScalerX Lab"
   ],
   authors: [{ name: "Factoric AI Architect Team" }],
   creator: "Factoric AI",

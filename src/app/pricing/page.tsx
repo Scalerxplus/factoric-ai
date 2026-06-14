@@ -10,55 +10,54 @@ import Link from "next/link";
 
 const tiers = [
   {
-    name: "BOS M",
-    title: "The 24/7 Digital Frontline",
-    monthlyPrice: "₹5,999",
-    annualPrice: "₹4,799",
-    target: "Clinics, Parlours, Garages, Boutiques",
-    tagline: "The Digital Operative that never sleeps.",
+    name: "Starter (BOS M)",
+    title: "Single Team / Single Clinic",
+    monthlyPrice: "Contact Sales",
+    annualPrice: "Contact Sales",
+    target: "Unified Frontline Engagement",
+    tagline: "Omnichannel Inbox, AI Triage, Appointment Booking.",
     accent: "silver",
-    users: "Single User",
-    trial: "30 Days Free Trial",
+    users: "No per-user fees",
     features: [
-      "AI-Driven Contact Center & 24/7 Qualification",
-      "BANT-ready agents for WhatsApp, Web, and Voice",
-      "Astra-1 Brain: Dual-Logic Architecture",
-      "Intent Heatmapping: AI-driven lead scoring"
+      "Omnichannel Universal Inbox",
+      "AI Lead Triage (AgentX)",
+      "Autonomous Appointment Booking",
+      "Digital Check-In Workflows"
     ]
   },
   {
-    name: "BOS X",
-    title: "The Unified Command",
-    monthlyPrice: "₹11,999",
-    annualPrice: "₹9,599",
-    target: "Hospitals, Real Estate, Car Dealerships",
-    tagline: "Strategic Interconnectivity. Total Revenue Control.",
+    name: "Growth (BOS M+X)",
+    title: "Multi-Workflow Operations",
+    monthlyPrice: "₹12,499",
+    annualPrice: "₹9,999",
+    target: "Revenue & Engagement Engine",
+    tagline: "Starter + Automated Invoicing, UPI Collections, Revenue Analytics.",
     accent: "green-glow",
     featured: true,
-    users: "5 Users Standard (+₹699/mo per extra)",
+    users: "No per-user fees",
     features: [
-      "Everything in BOS M, PLUS:",
-      "Automated Revenue Operations",
-      "Cloud Telephony: AI-monitored voice & transcription",
-      "Unified Financial Bridge: CRM & Billing Sync",
-      "DPDPA & HIPAA Compliant Architecture"
+      "Everything in Starter, PLUS:",
+      "Native Invoicing & Payments",
+      "Zero-Fee UPI Collections",
+      "Automated Revenue Reconciliation",
+      "Advanced Revenue Analytics"
     ]
   },
   {
-    name: "BOS Z",
-    title: "The Sovereign Sentinel",
-    monthlyPrice: "₹19,999",
-    annualPrice: "₹15,999",
-    target: "High-Volume Hospitals, Malls, Jewelers",
-    tagline: "Absolute Overwatch. The power of M + X + Computer Vision.",
+    name: "Enterprise (Full OS)",
+    title: "Complex Organizations",
+    monthlyPrice: "Custom",
+    annualPrice: "Custom",
+    target: "Physical & Digital Overwatch",
+    tagline: "Full Suite (M, X, Z), Custom Integrations, Sovereign Hosting.",
     accent: "green",
-    users: "10 Users Standard (+₹999/mo per extra)",
+    users: "No per-user fees",
     features: [
-      "Everything in BOS X & M, PLUS:",
-      "AI-Powered Facility Security",
-      "Computer Vision for Real-time Anomaly Detection",
-      "Sovereign Shield Protocol (Physical & Digital)",
-      "Full Organizational Control: God-View Dashboard"
+      "Everything in Growth, PLUS:",
+      "BOS Z Security Monitoring",
+      "Computer Vision Integration",
+      "Sovereign Isolated Hosting",
+      "Dedicated Solution Architect"
     ]
   }
 ];
@@ -77,15 +76,14 @@ export default function PricingPage() {
           transition={{ duration: 0.8 }}
         >
           <div className="text-[10px] uppercase font-black tracking-[0.6em] text-emerald-500 mb-8">
-            Strategic Selection Menu
+            Flat-Fee Deployment Models
           </div>
           <h1 className="text-4xl md:text-7xl font-medium tracking-tight mb-8">
-            Choose your level of <br />
-            <span className="text-white/40">Autonomous Intelligence.</span>
+            Deploy Digital Labor for a <br />
+            <span className="text-white/40">Fraction of Human Cost.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/30 max-w-2xl mx-auto font-medium leading-relaxed mb-16">
-            Costs less than a coffee-a-day; works more than 3 human administrators. <br />
-            Scale your institution without adding human headcount.
+            We don't punish growth with "per-user" licenses. Transparent, flat-fee deployment models built for scale.
           </p>
 
           {/* Billing Toggle */}

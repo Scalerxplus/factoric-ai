@@ -12,7 +12,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[#0D0D0D] text-[#F2F0E9] selection:bg-emerald-500/30">
       <Navbar />
       
-      {/* 1. The Visionary Narrative (McKinsey Style) */}
+      {/* Hero Section */}
       <section className="relative pt-64 pb-32 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -21,15 +21,49 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="space-y-12"
           >
-            <div className="text-[10px] uppercase font-black tracking-[0.5em] text-accent-red">Problem Statement: Operational Latency</div>
+            <div className="text-[10px] uppercase font-black tracking-[0.5em] text-astra-green">The Future of Labor</div>
             <h1 className="text-5xl md:text-8xl font-medium tracking-tight leading-[0.95]">
-              India's MSMEs are <br />
-              <span className="text-[#F2F0E9]/40">Bleeding Efficiency.</span>
+              We Build Operating Systems for <br />
+              <span className="text-white/40">Speed and Control.</span>
             </h1>
-            <p className="text-xl md:text-3xl text-[#F2F0E9]/40 max-w-4xl font-medium leading-relaxed">
-              Legacy organizations are trapped in "operational latency"—the gap between intent and outcome. While the world moves toward 24/7 automation, Indian MSMEs are held back by manual friction. Factoric AI is the antidote: **Autonomous Intelligence** engineered to eliminate the gap.
+            <p className="text-xl md:text-3xl text-white/40 max-w-4xl font-medium leading-relaxed">
+              Factoric AI was built for teams that need more than messaging tools or isolated dashboards. We build technology that executes labor, replaces fragmentation, and ensures absolute sovereignty.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Our Philosophy */}
+      <section className="section-spacing border-t border-white/5 bg-white/[0.01]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-24">
+            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Our Philosophy</div>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">The Factoric Creed</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                title: "Active Over Passive",
+                desc: "Software shouldn't wait for you to type into it. It should act on your behalf, qualfying leads and collecting revenue 24/7."
+              },
+              {
+                title: "Unification Over Fragmentation",
+                desc: "A business is a single entity; its software shouldn't be split across 10 different apps. We provide a single sovereign layer."
+              },
+              {
+                title: "Sovereignty Over SaaS",
+                desc: "Your data belongs to you. We build isolated fortresses for your enterprise, not shared dormitories in the cloud."
+              }
+            ].map((phil, i) => (
+              <div key={i} className="p-12 glass-card border border-white/5 rounded-sm hover:bg-white/[0.02] transition-all">
+                <h3 className="text-2xl font-bold mb-6 text-astra-green">{phil.title}</h3>
+                <p className="text-sm text-white/40 leading-relaxed font-medium">
+                  {phil.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
