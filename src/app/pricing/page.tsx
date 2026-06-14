@@ -138,11 +138,6 @@ export default function PricingPage() {
                 }`}>
                   {tier.name}
                 </div>
-                {tier.trial && (
-                  <div className="absolute top-6 right-6 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-[8px] font-black uppercase tracking-widest rounded-full text-emerald-400">
-                    {tier.trial}
-                  </div>
-                )}
                 
                 <h3 className="text-2xl font-medium mb-2">{tier.title}</h3>
                 <p className="text-[10px] text-white/20 uppercase font-bold tracking-widest mb-6">{tier.target}</p>
