@@ -52,12 +52,12 @@ export function ChatInterface({ defaultPrompt, defaultTier, compact = false }: C
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: content, tier }),
+        body: JSON.stringify({ message: content, tier, prompt: initialPrompt }),
       });
       const data = await response.json();
       setMessages([...newMessages, { role: "assistant", content: data.response }]);
     } catch (error) {
-      setMessages([...newMessages, { role: "assistant", content: "Structural sync failed. Please re-initialize." }]);
+      setMessages([...newMessages, { role: "assistant", content: "Intelligence sync failed. Please re-initialize." }]);
     } finally {
       setIsLoading(false);
     }
@@ -68,11 +68,11 @@ export function ChatInterface({ defaultPrompt, defaultTier, compact = false }: C
       {!compact && (
         <div className="mb-12 flex items-center justify-between border-b border-[#1F1F1F] pb-8">
           <div>
-            <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.4em] mb-2">Structural Interface</div>
+            <div className="text-emerald-500 text-[10px] font-black uppercase tracking-[0.4em] mb-2">Intelligence Interface</div>
             <h1 className="text-2xl font-medium uppercase tracking-widest">Factoric AI {tier}</h1>
           </div>
           <div className="text-[8px] font-bold text-[#F2F0E9]/20 tracking-[0.3em] uppercase">
-            Sovereign Protocol v4.1.0
+            Autonomous Protocol v4.1.0
           </div>
         </div>
       )}
@@ -86,10 +86,10 @@ export function ChatInterface({ defaultPrompt, defaultTier, compact = false }: C
               animate={{ opacity: 1, y: 0 }}
               className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
             >
-              <div className={`max-w-[95%] md:max-w-[85%] p-6 md:p-8 hairline-border rounded-sm ${m.role === "user" ? "bg-white/[0.03]" : "bg-[#F2F0E9]/[0.01] border-l-2 border-l-accent-red"}`}>
+              <div className={`max-w-[95%] md:max-w-[85%] p-6 md:p-8 hairline-border rounded-sm ${m.role === "user" ? "bg-white/[0.03]" : "bg-[#F2F0E9]/[0.01] border-l-2 border-l-purple-500"}`}>
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#F2F0E9]/20">
-                    {m.role === "user" ? "Institutional Intent" : `BOS ${tier} Logical Report`}
+                    {m.role === "user" ? "Institutional Intent" : `Factoric AI Logical Report`}
                   </div>
                   {m.role === "assistant" && (
                     <div className="text-[8px] uppercase font-black tracking-[0.3em] text-accent-red/40 flex items-center gap-2">

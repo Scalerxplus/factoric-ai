@@ -131,8 +131,8 @@ export default function ContactPage() {
                 }>
                   <ChatInterface 
                     compact={true} 
-                    defaultTier="EXECUTIVE"
-                    defaultPrompt="You are a top executive from McKinsey handling the sales for Factoric AI. Engage me and help me find the right BOS tier (M, X, or Z) for my business. Ask me about my current operational bottlenecks." 
+                    defaultTier="ARCHITECT"
+                    defaultPrompt="You are the Lead AI Solutions Architect for Factoric AI. Engage me and help me discover how custom autonomous AI agents can solve my business bottlenecks. Offer solutions like 24/7 multilingual support desks, agentic content pipelines, or autonomous media generation. Do not mention BOS tiers or McKinsey." 
                   />
                 </Suspense>
               </div>
