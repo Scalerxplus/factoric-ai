@@ -3,62 +3,69 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { NeuralLogo } from "@/components/NeuralLogo";
-import { NationalAlignment } from "@/components/NationalAlignment";
-import { ArrowRight, Target, Brain, Plus, Zap, Shield, Cpu, TrendingUp } from "lucide-react";
+import { ArrowRight, Brain, Workflow, Zap, Network, Bot } from "lucide-react";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#0D0D0D] text-[#F2F0E9] selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-black text-zinc-300 selection:bg-purple-500/30 font-sans">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-64 pb-32 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative pt-64 pb-32 px-6 overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
+          <div className="w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" />
+        </div>
+        <div className="max-w-6xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-12"
           >
-            <div className="text-[10px] uppercase font-black tracking-[0.5em] text-astra-green">The Future of Labor</div>
-            <h1 className="text-5xl md:text-8xl font-medium tracking-tight leading-[0.95]">
-              We Build Operating Systems for <br />
-              <span className="text-white/40">Speed and Control.</span>
+            <div className="inline-block border border-emerald-500/20 bg-emerald-500/5 px-4 py-1.5 rounded-full">
+              <div className="text-emerald-400 text-[10px] font-black uppercase tracking-[0.4em] flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                The Intelligence Infrastructure
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-8xl font-medium tracking-tight leading-[0.95] text-white">
+              Engineering Autonomous <br />
+              <span className="text-zinc-500">Workforces.</span>
             </h1>
-            <p className="text-xl md:text-3xl text-white/40 max-w-4xl font-medium leading-relaxed">
-              Factoric AI was built for teams that need more than messaging tools or isolated dashboards. We build technology that executes labor, replaces fragmentation, and ensures absolute sovereignty.
+            <p className="text-xl md:text-3xl text-zinc-400 max-w-4xl font-medium leading-relaxed">
+              We do not build chatbots. We architect self-governing multi-agent systems that autonomously execute enterprise operations, media synthesis, and customer triage.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Our Philosophy */}
-      <section className="section-spacing border-t border-white/5 bg-white/[0.01]">
+      <section className="py-32 border-t border-zinc-900 bg-zinc-950">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-24">
-            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Our Philosophy</div>
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">The Factoric Creed</h2>
+            <div className="text-purple-500 text-[10px] font-black uppercase tracking-[0.5em] mb-8">Architectural Philosophy</div>
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-white">The Factoric Creed</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
-                title: "Active Over Passive",
-                desc: "Software shouldn't wait for you to type into it. It should act on your behalf, qualfying leads and collecting revenue 24/7."
+                title: "Agents Over Apps",
+                desc: "Software shouldn't wait for human input. Our AI agents think, coordinate, and act autonomously across your entire tech stack without manual triggers."
               },
               {
-                title: "Unification Over Fragmentation",
-                desc: "A business is a single entity; its software shouldn't be split across 10 different apps. We provide a single sovereign layer."
+                title: "Deep-Tech Orchestration",
+                desc: "We deploy isolated multi-agent workflows (LLM + TTS + RAG) that communicate seamlessly to solve complex, multi-step institutional problems."
               },
               {
-                title: "Sovereignty Over SaaS",
-                desc: "Your data belongs to you. We build isolated fortresses for your enterprise, not shared dormitories in the cloud."
+                title: "Sovereign Intelligence",
+                desc: "Your data trains your agents. We build secure, ring-fenced models that capture your institutional knowledge and never share it externally."
               }
             ].map((phil, i) => (
-              <div key={i} className="p-12 glass-card border border-white/5 rounded-sm hover:bg-white/[0.02] transition-all">
-                <h3 className="text-2xl font-bold mb-6 text-astra-green">{phil.title}</h3>
-                <p className="text-sm text-white/40 leading-relaxed font-medium">
+              <div key={i} className="p-12 border border-zinc-800 bg-black rounded-sm hover:bg-zinc-900/50 hover:border-purple-500/30 transition-all duration-300 group">
+                <h3 className="text-2xl font-bold mb-6 text-white group-hover:text-purple-400 transition-colors">{phil.title}</h3>
+                <p className="text-sm text-zinc-400 leading-relaxed font-medium">
                   {phil.desc}
                 </p>
               </div>
@@ -68,38 +75,38 @@ export default function AboutPage() {
       </section>
 
       {/* 2. The Tech Stack (Deep-Tech Edge) */}
-      <section className="section-spacing border-t border-white/5 bg-white/[0.01]">
+      <section className="py-32 border-t border-zinc-900">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-24 items-start">
             <div className="space-y-12">
-              <div className="text-[10px] uppercase font-black tracking-[0.5em] text-emerald-500">The Deep-Tech Edge</div>
-              <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-tight">
-                Not an API Wrapper. <br />
-                <span className="text-[#F2F0E9]/40">A Cognitive Engine.</span>
+              <div className="text-[10px] uppercase font-black tracking-[0.5em] text-emerald-400">The Deployment Layer</div>
+              <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-tight text-white">
+                Cognitive <br />
+                <span className="text-zinc-500">Processing.</span>
               </h2>
-              <div className="space-y-8 text-[#F2F0E9]/50 leading-relaxed text-lg font-medium">
+              <div className="space-y-8 text-zinc-400 leading-relaxed text-lg font-medium">
                 <p>
-                  Factoric AI moves beyond basic LLM wrappers. We engineer **Agentic-AI Orchestration**—a proprietary layer that enables cognitive reasoning in real-time.
+                  Factoric AI moves beyond conversational wrappers. We engineer **Agentic Orchestration**—a proprietary intelligence layer that runs real-time inference across text, audio, and logic nodes.
                 </p>
                 <p>
-                  Our architecture is fully asynchronous, allowing our agents to extract **BANT** (Budget, Authority, Need, Timeline) intelligence and execute institutional logic without human intervention. This is a novel application of generative models for industrial automation.
+                  Whether it is parsing a customer's intent in Hindi and routing a ticket, or automatically generating a 10-minute podcast script and synthesizing the voice, our agents execute deterministic workflows with zero human intervention.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-6">
               {[
-                { title: 'Cognitive Reasoning', desc: 'System-wide logic processing at 12ms latency.', icon: Brain },
-                { title: 'Agentic Orchestration', desc: 'Multi-agent coordination for complex tasks.', icon: Cpu },
-                { title: 'Real-time BANT', desc: 'Autonomous lead qualification & intent mapping.', icon: Target },
+                { title: 'Agent Orchestration', desc: 'Multi-agent system coordination at <20ms latency.', icon: Network },
+                { title: 'Synthetic Media', desc: 'High-fidelity audio generation & TTS pipelines.', icon: Bot },
+                { title: 'Sovereign RAG', desc: 'Isolated retrieval-augmented generation models.', icon: Brain },
               ].map((tech, i) => (
-                <div key={i} className="p-8 glass-card rounded-sm border border-white/5 flex gap-6 items-center">
-                  <div className="p-4 bg-emerald-500/10 rounded-full shrink-0">
-                    <tech.icon className="w-6 h-6 text-emerald-500" />
+                <div key={i} className="p-8 border border-zinc-800 bg-black rounded-sm flex gap-6 items-center hover:border-purple-500/30 transition-colors group">
+                  <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-full shrink-0 group-hover:bg-purple-500/10 transition-colors">
+                    <tech.icon className="w-6 h-6 text-purple-500" />
                   </div>
                   <div>
                     <div className="text-sm font-bold uppercase tracking-widest text-white mb-1">{tech.title}</div>
-                    <div className="text-xs text-white/40 font-medium">{tech.desc}</div>
+                    <div className="text-xs text-zinc-500 font-medium">{tech.desc}</div>
                   </div>
                 </div>
               ))}
@@ -108,112 +115,55 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. Mission & Values (Founder's Philosophy) */}
-      <section className="section-spacing border-y border-white/5">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-24 items-center">
-            <div className="flex-1 space-y-12">
-              <div className="text-[10px] uppercase font-black tracking-[0.5em] text-accent-red">The Mission</div>
-              <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-tight">
-                Transforming <br />
-                <span className="text-accent-red">Software into Labor.</span>
-              </h2>
-              <div className="space-y-8 text-[#F2F0E9]/50 leading-relaxed text-lg font-medium">
-                <p>
-                  Our philosophy is simple: Software should no longer be a tool; it should be an employee. We are building the world's first **Digital Workforce**—operatives that work, think, and scale autonomously.
-                </p>
-                <p>
-                  From 1 to 1000+ deployments, Factoric AI architectures are engineered for infinite scalability, ensuring that institutional growth is never limited by human headcount.
-                </p>
-              </div>
-            </div>
-            <div className="flex-1 p-16 glass-card rounded-sm bg-white/[0.01] flex flex-col justify-center relative overflow-hidden emerald-glow shadow-2xl">
-               <div className="absolute inset-0 data-pulse opacity-10" />
-               <div className="relative z-10">
-                 <div className="text-6xl font-light text-emerald-500/20 mb-8 tracking-tighter">1,000+</div>
-                 <div className="text-[10px] uppercase font-bold tracking-[0.5em] text-emerald-500 mb-4">Deployment Scalability</div>
-                 <p className="text-sm text-white/40 font-medium">Engineered to govern entire organizations through a single unified neural bridge.</p>
-               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. DPIIT/Startup India Alignment */}
-      <section className="section-spacing bg-white/[0.01]">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
-          <div className="space-y-8">
-            <div className="text-[10px] uppercase font-black tracking-[0.5em] text-[#F2F0E9]/20">Economic Impact & Innovation</div>
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">The Digital Munim.</h2>
-            <p className="text-xl text-[#F2F0E9]/40 leading-relaxed font-medium">
-              By empowering local businesses through cost-efficient "Digital Munims," Factoric AI is creating a direct economic impact on the Indian MSME sector. We represent a **novel application of LLMs** for national industrial growth, aligned with the Startup India vision.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 pt-12">
-            {[
-              { label: 'Startup India', value: 'DPIIT Aligned' },
-              { label: 'Innovation', value: 'Agentic Core' },
-              { label: 'Economy', value: 'MSME Growth' },
-            ].map((tag, i) => (
-              <div key={i} className="p-6 border border-white/5 bg-white/[0.01] rounded-sm">
-                <div className="text-[8px] font-black uppercase tracking-[0.3em] text-[#F2F0E9]/20 mb-2">{tag.label}</div>
-                <div className="text-xs font-bold text-emerald-500 uppercase tracking-widest">{tag.value}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 5. The Lab (Halo Effect) */}
-      <section className="section-spacing border-t border-white/5 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[150px] pointer-events-none" />
+      <section className="py-32 border-t border-zinc-900 bg-zinc-950 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-[150px] pointer-events-none" />
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-24 items-center">
             <div className="order-2 md:order-1 flex flex-col gap-8">
-              <div className="p-12 glass-card rounded-sm border border-white/10 bg-white/[0.01] relative group">
-                <div className="absolute top-0 left-0 w-2 h-2 bg-emerald-500" />
-                <h3 className="text-2xl font-bold mb-6">The Lab</h3>
-                <p className="text-lg text-white/40 leading-relaxed font-medium mb-8">
-                  Factoric AI is not an isolated product—it is the direct output of **ScalerX Lab**. Our core "Agentic Logic" is optimized within the lab's high-performance compute environment to ensure **zero-latency operations** across global deployment nodes.
+              <div className="p-12 rounded-sm border border-zinc-800 bg-black relative group hover:border-purple-500/30 transition-all">
+                <div className="absolute top-0 left-0 w-2 h-2 bg-purple-500" />
+                <h3 className="text-2xl font-bold mb-6 text-white">The ScalerX Ecosystem</h3>
+                <p className="text-lg text-zinc-400 leading-relaxed font-medium mb-8">
+                  Factoric AI is the premium intelligence infrastructure of **ScalerX Lab**. Our core autonomous logic powers other enterprise entities within the holding ecosystem, including B2B operations and decentralized media networks.
                 </p>
-                <div className="flex items-center gap-4 pt-8 border-t border-white/5">
-                  <div className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500/40">Technical Authority: SCALERX-A1</div>
+                <div className="flex items-center gap-4 pt-8 border-t border-zinc-800">
+                  <div className="text-[10px] font-black uppercase tracking-[0.4em] text-purple-500">Infrastructure Layer: Active</div>
                 </div>
               </div>
             </div>
             <div className="order-1 md:order-2 space-y-8">
-              <div className="text-[10px] uppercase font-black tracking-[0.5em] text-emerald-500">The Laboratory</div>
-              <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Institutional <br /><span className="text-emerald-500">Authority.</span></h2>
-              <p className="text-xl text-[#F2F0E9]/40 leading-relaxed font-medium">
-                By leveraging the research and infrastructure of <a href="https://scalerxlab.com" className="text-white hover:text-emerald-500 transition-colors underline underline-offset-8">ScalerX Lab</a>, Factoric AI provides a "Sovereign Layer" that traditional software simply cannot match. Every agent we deploy is stress-tested for structural integrity and fiscal accuracy before it enters your environment.
+              <div className="text-[10px] uppercase font-black tracking-[0.5em] text-purple-500">Institutional Authority</div>
+              <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-white">
+                Backed By <br /><span className="text-purple-500">ScalerX Lab.</span>
+              </h2>
+              <p className="text-xl text-zinc-400 leading-relaxed font-medium">
+                By leveraging the research and capital of <a href="https://scalerxlab.com" className="text-white hover:text-purple-400 transition-colors underline underline-offset-8">ScalerX Lab</a>, Factoric AI operates with unparalleled stability. Every agent deployed is stress-tested in real-world high-volume environments before entering your ecosystem.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. Clear CTA (Lethal Button) */}
-      <section className="section-spacing text-center bg-accent-red/5 border-y border-accent-red/10">
+      {/* 6. Clear CTA */}
+      <section className="py-32 text-center border-t border-zinc-900 bg-black">
         <div className="max-w-3xl mx-auto px-6 space-y-12">
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tight">Ready to see the Intelligence in action?</h2>
+          <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white">Ready to deploy your intelligence layer?</h2>
           <Link 
-            href="/chat" 
-            className="inline-flex items-center gap-6 px-16 py-6 bg-accent-red text-white hover:bg-accent-red/80 shadow-2xl shadow-red-900/40 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all"
+            href="/contact" 
+            className="inline-flex items-center justify-center gap-6 px-16 py-6 bg-purple-600 text-white hover:bg-purple-500 shadow-[0_0_30px_rgba(147,51,234,0.3)] rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all group"
           >
-            Deploy Your First Agent <ArrowRight className="w-4 h-4" />
+            Request Deployment <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>
 
-      <NationalAlignment />
-
-      <footer className="py-32 text-center border-t border-white/5">
-        <div className="flex justify-center mb-12">
+      <footer className="py-24 text-center border-t border-zinc-900 bg-zinc-950">
+        <div className="flex justify-center mb-8">
           <NeuralLogo className="w-8 h-8 opacity-20" />
         </div>
-        <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-[#F2F0E9]/10">
-          Factoric AI is a product of <a href="https://scalerxlab.com" className="text-white/20 hover:text-emerald-500 transition-colors">ScalerX Lab</a>. All rights reserved.
+        <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-zinc-600">
+          Factoric AI is a <a href="https://scalerxlab.com" className="text-zinc-400 hover:text-purple-400 transition-colors">ScalerX Lab</a> Ecosystem Infrastructure.
         </p>
       </footer>
     </main>

@@ -31,17 +31,17 @@ export const Navbar = () => {
             <NeuralLogo className="w-6 h-6 md:w-8 md:h-8" />
             <div className="flex flex-col">
               <span className="text-[10px] md:text-sm font-semibold tracking-[0.2em] uppercase text-[#F2F0E9]">Factoric AI</span>
-              <span className="text-[6px] md:text-[7px] font-mono font-bold tracking-widest text-emerald-500/60 uppercase">Intel: ScalerX-A1</span>
+              <span className="text-[6px] md:text-[7px] font-mono font-bold tracking-widest text-purple-500 uppercase">Intel: ScalerX Lab</span>
             </div>
           </Link>
           
           <div className="flex items-center gap-8 md:gap-12">
             <button 
               onClick={() => setIsCommandCenterOpen(true)}
-              className="flex items-center gap-3 text-[10px] uppercase font-black tracking-[0.3em] text-[#F2F0E9]/60 hover:text-emerald-500 transition-all group"
+              className="flex items-center gap-3 text-[10px] uppercase font-black tracking-[0.3em] text-[#F2F0E9]/60 hover:text-purple-500 transition-all group"
             >
               <LayoutGrid className="w-4 h-4 group-hover:rotate-90 transition-transform" />
-              <span className="hidden md:inline">Systems</span>
+              <span className="hidden md:inline">Agents</span>
             </button>
 
             <div className="flex items-center gap-6">
@@ -52,10 +52,10 @@ export const Navbar = () => {
                 About
               </Link>
               <Link 
-                href="/" 
+                href="/industries" 
                 className="hidden md:block text-[10px] uppercase font-bold tracking-[0.3em] text-[#F2F0E9]/60 hover:text-[#F2F0E9] transition-colors"
               >
-                Use Cases
+                Industries
               </Link>
               <Link 
                 href="/login" 
@@ -65,7 +65,7 @@ export const Navbar = () => {
               </Link>
               <Link 
                 href={`/chat?prompt=${encodeURIComponent("I want to deploy an autonomous AI agent for my business.")}`} 
-                className="px-4 md:px-6 py-2 md:py-2.5 text-[8px] md:text-[10px] uppercase font-black tracking-[0.3em] bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 transition-all rounded-sm whitespace-nowrap"
+                className="px-4 md:px-6 py-2 md:py-2.5 text-[8px] md:text-[10px] uppercase font-black tracking-[0.3em] bg-purple-600 text-white hover:bg-purple-500 shadow-xl shadow-purple-900/20 transition-all rounded-sm whitespace-nowrap"
               >
                 Deploy
               </Link>

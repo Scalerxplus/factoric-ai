@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { NeuralLogo } from "@/components/NeuralLogo";
 import { ArrowLeft, ShieldCheck, Lock, ArrowRight, Plus } from "lucide-react";
 import Link from "next/link";
@@ -11,10 +11,10 @@ export default function LoginPage() {
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
 
   const tiers = [
-    { id: "WORKFORCE", name: "Workforce", desc: "Agentic Labor Layer" },
-    { id: "M", name: "BOS M", desc: "Precision Marketing" },
-    { id: "X", name: "BOS X", desc: "Revenue Acceleration" },
-    { id: "Z", name: "BOS Z", desc: "Sovereign Ultimate" },
+    { id: "SUPPORT", name: "Support Node", desc: "Autonomous Triage & Chat" },
+    { id: "MEDIA", name: "Media Node", desc: "Voice & Audio Synthesis" },
+    { id: "WORKFORCE", name: "Workforce", desc: "Internal RAG & Logic" },
+    { id: "ARCHITECT", name: "Architect", desc: "Full Multi-Agent Orchestration" },
   ];
 
   const handleLogin = (provider: string) => {
@@ -23,20 +23,21 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0D0D0D] text-[#F2F0E9] flex flex-col items-center justify-center px-6 overflow-hidden relative">
+    <main className="min-h-screen bg-black text-zinc-300 flex flex-col items-center justify-center px-6 overflow-hidden relative font-sans selection:bg-purple-500/30">
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 blur-[150px] pointer-events-none" />
       
       <Link 
         href="/" 
-        className="absolute top-12 left-12 flex items-center gap-3 text-[10px] uppercase font-black tracking-[0.4em] text-[#F2F0E9]/20 hover:text-accent-red transition-colors group"
+        className="absolute top-12 left-12 flex items-center gap-3 text-[10px] uppercase font-black tracking-[0.4em] text-zinc-600 hover:text-purple-400 transition-colors group z-20"
       >
         <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" /> 
         Return to Hub
       </Link>
 
-      <div className="absolute top-12 right-12 flex items-center gap-4 text-[8px] font-bold text-[#F2F0E9]/10 tracking-[0.3em] uppercase">
-        <ShieldCheck className="w-3 h-3 text-accent-red/40" />
-        Auth Protocol: v4.2.0-PRODUCT_AWARE
+      <div className="absolute top-12 right-12 flex items-center gap-4 text-[8px] font-bold text-zinc-600 tracking-[0.3em] uppercase z-20">
+        <ShieldCheck className="w-3 h-3 text-purple-500/40" />
+        Auth Protocol: v4.2.0-AGENT_AWARE
       </div>
 
       <motion.div 
@@ -48,18 +49,18 @@ export default function LoginPage() {
         <NeuralLogo className="w-16 h-16 mb-12" />
         
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
-            <span className="text-accent-red">E</span>nterprise Access
+          <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-4 text-white">
+            <span className="text-purple-500">I</span>ntelligence Access
           </h1>
-          <p className="text-[10px] uppercase font-black tracking-[0.5em] text-[#F2F0E9]/20">
-            Initialize Sovereign Architecture
+          <p className="text-[10px] uppercase font-black tracking-[0.5em] text-zinc-500">
+            Initialize Agentic Architecture
           </p>
         </div>
 
         {/* Product Selection Slab */}
-        <div className="w-full hairline-border rounded-sm bg-white/[0.01] p-8 md:p-12 relative overflow-hidden group mb-8">
-          <div className="text-[10px] uppercase font-black tracking-[0.4em] text-[#F2F0E9]/20 mb-8 border-b border-[#1F1F1F] pb-4">
-            Step 01: Select Architecture
+        <div className="w-full border border-zinc-900 rounded-sm bg-black p-8 md:p-12 relative overflow-hidden group mb-8 shadow-2xl">
+          <div className="text-[10px] uppercase font-black tracking-[0.4em] text-zinc-500 mb-8 border-b border-zinc-900 pb-4">
+            Step 01: Select Node Type
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -69,16 +70,16 @@ export default function LoginPage() {
                 onClick={() => setSelectedTier(tier.id)}
                 className={`p-6 text-left border transition-all duration-500 rounded-sm group/tier relative ${
                   selectedTier === tier.id 
-                    ? "border-accent-red bg-accent-red/[0.03]" 
-                    : "border-[#1F1F1F] bg-white/[0.01] hover:border-[#F2F0E9]/20"
+                    ? "border-purple-500 bg-purple-500/[0.05]" 
+                    : "border-zinc-900 bg-zinc-950 hover:border-purple-500/30"
                 }`}
               >
                 <div className={`text-[10px] font-black uppercase tracking-widest mb-2 transition-colors ${
-                  selectedTier === tier.id ? "text-accent-red" : "text-[#F2F0E9]/40"
+                  selectedTier === tier.id ? "text-purple-400" : "text-zinc-400"
                 }`}>
                   {tier.name}
                 </div>
-                <div className="text-[8px] font-medium text-[#F2F0E9]/20 leading-tight">
+                <div className="text-[8px] font-medium text-zinc-600 leading-tight">
                   {tier.desc}
                 </div>
                 {selectedTier === tier.id && (
@@ -86,21 +87,21 @@ export default function LoginPage() {
                     layoutId="check"
                     className="absolute top-2 right-2"
                   >
-                    <Plus className="w-3 h-3 text-accent-red" />
+                    <Plus className="w-3 h-3 text-purple-500" />
                   </motion.div>
                 )}
               </button>
             ))}
           </div>
 
-          <div className="text-[10px] uppercase font-black tracking-[0.4em] text-[#F2F0E9]/20 mb-8 border-b border-[#1F1F1F] pb-4">
+          <div className="text-[10px] uppercase font-black tracking-[0.4em] text-zinc-500 mb-8 border-b border-zinc-900 pb-4">
             Step 02: Verification
           </div>
 
           <div className={`space-y-6 transition-all duration-700 ${selectedTier ? "opacity-100 translate-y-0" : "opacity-20 pointer-events-none translate-y-4"}`}>
             <button 
               onClick={() => handleLogin("google")}
-              className="w-full py-5 px-8 flex items-center justify-between bg-emerald-600 text-white hover:bg-emerald-500 shadow-xl shadow-emerald-900/20 rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all group"
+              className="w-full py-5 px-8 flex items-center justify-between bg-purple-600 text-white hover:bg-purple-500 shadow-[0_0_20px_rgba(147,51,234,0.3)] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] transition-all group"
             >
               <span className="flex items-center gap-4">
                 <svg className="w-4 h-4" viewBox="0 0 24 24">
@@ -109,14 +110,14 @@ export default function LoginPage() {
                   <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
                   <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
                 </svg>
-                Initialize {selectedTier ? `BOS ${selectedTier}` : "Architecture"}
+                Initialize {selectedTier ? `Node [${selectedTier}]` : "Architecture"}
               </span>
               <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
             </button>
 
             <button 
               onClick={() => handleLogin("azure-ad")}
-              className="w-full py-5 px-8 flex items-center justify-between bg-white/[0.01] hairline-border text-[#F2F0E9] rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white/[0.05] transition-all group"
+              className="w-full py-5 px-8 flex items-center justify-between border border-zinc-800 bg-zinc-950 text-white rounded-sm font-black text-[10px] uppercase tracking-[0.4em] hover:bg-zinc-900 hover:border-purple-500/30 transition-all group"
             >
               <span className="flex items-center gap-4">
                 <svg className="w-4 h-4" viewBox="0 0 24 24">
@@ -128,22 +129,22 @@ export default function LoginPage() {
             </button>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-[#1F1F1F] text-center">
+          <div className="mt-12 pt-8 border-t border-zinc-900 text-center">
             <Link 
               href="/contact" 
-              className="text-[10px] uppercase font-black tracking-[0.3em] text-[#F2F0E9]/20 hover:text-accent-red transition-colors"
+              className="text-[10px] uppercase font-black tracking-[0.3em] text-zinc-500 hover:text-purple-400 transition-colors"
             >
-              Request Institutional Deployment
+              Request Custom Agent Deployment
             </Link>
           </div>
         </div>
 
-        <div className="flex items-center gap-6 text-[8px] font-black uppercase tracking-[0.5em] text-[#F2F0E9]/10">
+        <div className="flex items-center gap-6 text-[8px] font-black uppercase tracking-[0.5em] text-zinc-600">
           <div className="flex items-center gap-2">
-            <Lock className="w-3 h-3" /> Sovereign Encrypted Session
+            <Lock className="w-3 h-3 text-purple-500/50" /> Sovereign Encrypted Session
           </div>
-          <div className="w-1 h-1 bg-accent-red/20 rounded-full" />
-          <div>Factoric AI Auth Layer 4.2</div>
+          <div className="w-1 h-1 bg-purple-500/20 rounded-full" />
+          <div>Factoric Agent Orchestration Layer</div>
         </div>
       </motion.div>
     </main>

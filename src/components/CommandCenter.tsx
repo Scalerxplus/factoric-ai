@@ -50,8 +50,8 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
         >
           {/* Background Decorations */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-500/5 rounded-full blur-[120px]" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-500/5 rounded-full blur-[120px]" />
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/5 rounded-full blur-[120px]" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/5 rounded-full blur-[120px]" />
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10">
@@ -61,7 +61,7 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
                 <NeuralLogo className="w-10 h-10" />
                 <div>
                   <div className="text-sm font-black uppercase tracking-[0.4em] text-white">Command Center</div>
-                  <div className="text-[8px] font-bold text-emerald-500/40 uppercase tracking-[0.2em]">Institutional Access Level 4</div>
+                  <div className="text-[8px] font-bold text-purple-500/40 uppercase tracking-[0.2em]">Agent Orchestration Console</div>
                 </div>
               </div>
               <button 
@@ -82,7 +82,7 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
                   transition={{ delay: 0.1 + idx * 0.1 }}
                   className="space-y-12"
                 >
-                  <div className="text-[10px] uppercase font-black tracking-[0.5em] text-white/20 pl-4 border-l border-emerald-500/40">
+                  <div className="text-[10px] uppercase font-black tracking-[0.5em] text-white/20 pl-4 border-l border-purple-500/40">
                     {section.title}
                   </div>
                   <div className="space-y-2 md:space-y-4">
@@ -94,7 +94,7 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
                         className="group block p-4 md:p-6 rounded-sm hover:bg-white/[0.03] border border-transparent hover:border-white/5 transition-all"
                       >
                         <div className="flex items-start gap-4 mb-2">
-                          <link.icon className="w-4 h-4 text-emerald-500 mt-1 opacity-60 group-hover:opacity-100 transition-opacity" />
+                          <link.icon className="w-4 h-4 text-purple-500 mt-1 opacity-60 group-hover:opacity-100 transition-opacity" />
                           <div className="text-base md:text-lg font-medium text-white/80 group-hover:text-white transition-colors">{link.name}</div>
                         </div>
                         <p className="text-[8px] md:text-[10px] text-white/20 uppercase font-bold tracking-widest pl-8">{link.desc}</p>
@@ -109,12 +109,12 @@ export const CommandCenter = ({ isOpen, onClose }: CommandCenterProps) => {
             <div className="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="flex gap-12">
                 <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
                   <span className="text-[8px] font-black uppercase tracking-widest text-white/30">System Status: Optimal</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-[8px] font-black uppercase tracking-widest text-white/30">BOS Network: Active</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+                  <span className="text-[8px] font-black uppercase tracking-widest text-white/30">Factoric API: Synced</span>
                 </div>
               </div>
               <div className="text-[8px] font-black uppercase tracking-[0.3em] text-white/10">
