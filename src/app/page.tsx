@@ -1,206 +1,206 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { NeuralLogo } from "@/components/NeuralLogo";
-import { Bot, Headphones, Video, Music, Sparkles, ArrowRight, Zap, CheckCircle2 } from "lucide-react";
+import { Brain, Radio, Clapperboard, MessageSquare, Workflow, Mic, Terminal, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Home() {
+const TELEMETRY_LOGS = [
+  "[SYS] Agent-01: Triage Complete for Healthcare Client. Intent: High.",
+  "[SYS] Agent-02: Generating Podcast Script for Future Radio.",
+  "[SYS] Agent-03: Audio Sync Active for Media Mafias.",
+  "[SYS] Agent-01: Multilingual parsing successful. Routing to Hindi module.",
+  "[SYS] Agent-04: Synthesizing voice for ambient broadcast.",
+  "[SYS] System: Core intelligence models synced. Latency: 12ms."
+];
+
+export default function FactoricAIHome() {
+  const [logs, setLogs] = useState<string[]>([]);
+  const [logIndex, setLogIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLogs((prev) => {
+        const newLogs = [...prev, TELEMETRY_LOGS[logIndex % TELEMETRY_LOGS.length]];
+        return newLogs.slice(-4); // Keep last 4 logs
+      });
+      setLogIndex((prev) => prev + 1);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [logIndex]);
+
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-[#F2F0E9] selection:bg-astra-green/30 font-sans">
+    <main className="min-h-screen bg-black text-zinc-300 font-sans selection:bg-purple-500/30">
       <Navbar />
       
-      {/* 1. Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col items-center justify-center pt-32 pb-24 px-6 text-center overflow-hidden">
-        {/* Subtle Background Elements */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-astra-green/5 rounded-full blur-[160px] pointer-events-none" />
+      {/* 1. THE HERO SECTION (The Intelligence Core) */}
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-32 pb-24 px-6 text-center overflow-hidden">
+        {/* Abstract Background */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
+          <div className="w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[100px]" />
+        </div>
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-10 space-y-12"
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative z-10 max-w-5xl mx-auto space-y-10"
         >
-          <NeuralLogo className="w-12 h-12 mx-auto mb-8 opacity-80" />
-          <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.6em] mb-4 animate-pulse">Factoric AI Platform</div>
-          <h1 className="text-4xl md:text-[80px] font-black tracking-tighter leading-[0.95] silver-gradient mb-8 text-balance">
-            Deploy Autonomous AI Agents <br className="hidden md:block" /> for Any Task.
+          <div className="inline-block border border-emerald-500/20 bg-emerald-500/5 px-4 py-1.5 rounded-full">
+            <div className="text-emerald-400 text-[10px] font-black uppercase tracking-[0.4em] flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              THE INTELLIGENCE LAYER BY SCALERX LAB
+            </div>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-[80px] font-medium tracking-tighter leading-[0.95] text-white">
+            Deploy Custom AI Agents. <br />
+            <span className="text-zinc-500">Automate Complex Workflows.</span>
           </h1>
           
-          <div className="bg-white/[0.03] border-y border-white/5 py-4 mb-8 overflow-hidden">
-            <div className="max-w-4xl mx-auto px-6">
-              <h2 className="text-xs md:text-sm uppercase font-black tracking-[0.4em] text-emerald-500">
-                Your Need, Our Solution. From Customer Support to Media Production.
-              </h2>
-            </div>
-          </div>
-
-          <p className="text-lg md:text-xl text-white/40 max-w-4xl mx-auto font-medium leading-relaxed mb-16">
-            Train custom LLMs to act as your 24/7 autonomous customer support executives, or deploy creative AI agents to produce high-quality vlogs, podcasts, and music. We build the intelligence so you can focus on growth.
+          <p className="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+            Factoric AI engineers highly-specialized, autonomous agentic workforces. From 24/7 multilingual customer support desks to automated media production pipelines, we build the underlying intelligence that runs enterprise operations on absolute autopilot.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-8 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <Link 
               href="/contact" 
-              className="w-full sm:w-auto px-8 md:px-16 py-5 md:py-6 bg-astra-green text-white hover:bg-astra-green/80 green-glow rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all text-center"
+              className="w-full sm:w-auto px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm transition-all shadow-[0_0_30px_rgba(147,51,234,0.3)] hover:shadow-[0_0_40px_rgba(147,51,234,0.5)] flex items-center justify-center gap-3 group"
             >
-              Deploy Your Agent
+              Deploy Custom Agent <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <div className="flex items-center gap-2">
-              <Link 
-                href="/about" 
-                className="text-white/60 hover:text-white font-black text-[10px] uppercase tracking-[0.5em] transition-all"
-              >
-                Explore Capabilities {"->"}
-              </Link>
-            </div>
+            <Link 
+              href="/about" 
+              className="w-full sm:w-auto px-10 py-5 border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-bold text-xs uppercase tracking-[0.2em] rounded-sm transition-all flex items-center justify-center"
+            >
+              Read Technical Whitepaper
+            </Link>
           </div>
         </motion.div>
-      </section>
 
-      {/* 2. Trust Strip (Existing Clients) */}
-      <section className="py-12 border-b border-white/5 bg-black/50">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8 text-center">
-          <h3 className="text-xs md:text-sm font-black uppercase tracking-[0.4em] text-white/40 mb-4">
-            Trusted by Forward-Thinking Brands
-          </h3>
-          <div className="flex flex-wrap justify-center gap-16 md:gap-32 items-center grayscale opacity-50 group hover:opacity-80 transition-opacity">
-            <div className="flex flex-col items-center">
-              <span className="text-sm md:text-lg font-black uppercase tracking-widest text-white">ScalerX Lab</span>
+        {/* 4. THE AGENT TELEMETRY (Live Status Component) - Absolute Bottom */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-md px-6">
+          <div className="border border-purple-500/20 bg-black/80 backdrop-blur-md rounded-sm p-4 font-mono text-[10px] sm:text-xs">
+            <div className="flex items-center gap-2 mb-3 pb-2 border-b border-zinc-800">
+              <Terminal className="w-3 h-3 text-purple-500" />
+              <span className="text-zinc-500 uppercase tracking-widest font-bold">Live Telemetry Feed</span>
             </div>
-            <div className="h-4 w-[1px] bg-white/20 hidden md:block" />
-            <div className="flex flex-col items-center">
-              <span className="text-sm md:text-lg font-black uppercase tracking-widest text-white">The Future Radio</span>
-            </div>
-            <div className="h-4 w-[1px] bg-white/20 hidden md:block" />
-            <div className="flex flex-col items-center">
-              <span className="text-sm md:text-lg font-black uppercase tracking-widest text-white">Media Mafias</span>
+            <div className="space-y-2 h-[88px] overflow-hidden">
+              <AnimatePresence mode="popLayout">
+                {logs.map((log, index) => (
+                  <motion.div
+                    key={`${logIndex}-${index}`}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    className="text-emerald-400/80"
+                  >
+                    {log}
+                  </motion.div>
+                ))}
+              </AnimatePresence>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. The Core Capabilities */}
-      <section className="section-spacing border-b border-white/5 bg-white/[0.01]">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-24 text-center md:text-left">
-            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">Agent Catalog</div>
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">Everything You Need. <br />Powered by AI.</h2>
+      {/* 2. THE PROOF MATRIX: ECOSYSTEM VALIDATION */}
+      <section className="py-32 border-t border-zinc-900 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20">
+            <div className="text-purple-500 text-[10px] font-black uppercase tracking-[0.4em] mb-4">Ecosystem Validation</div>
+            <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white">The High-Authority Narrative.</h2>
+            <p className="text-zinc-400 mt-4 max-w-2xl">Showcasing how Factoric AI powers the other pillars of ScalerX Lab to prove real-world capability.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 relative">
+          <div className="grid lg:grid-cols-3 gap-6">
             {[
-              { 
-                title: "24/7 Support Executive", 
-                desc: "Train an LLM on your company's data. It handles customer inquiries, support tickets, and sales routing autonomously, around the clock.",
-                icon: Bot,
-                accent: "text-astra-green",
-                border: "border-astra-green/20"
+              {
+                title: "100% Engagement. Zero Lead Leakage.",
+                entity: "ScalerX BOS Integration",
+                copy: "Factoric AI acts as the sovereign automated triage layer for ScalerX BOS. By autonomously managing omnichannel client interactions, qualifying intent, and instantly routing data, it completely revolutionized the lead acquisition process with zero human error.",
+                icon: Brain,
+                color: "group-hover:border-emerald-500/30 group-hover:shadow-[0_0_30px_rgba(16,185,129,0.1)]"
               },
-              { 
-                title: "Podcast Generation", 
-                desc: "Generate professional-grade podcasts with lifelike synthetic voices. Feed it a script or an article, and get a ready-to-publish audio show.",
-                icon: Headphones,
-                accent: "text-astra-blue",
-                border: "border-astra-blue/20"
+              {
+                title: "High-Fidelity Agentic Media Pipelines",
+                entity: "The Future Radio Integration",
+                copy: "Powering the next generation of broadcasting. Factoric AI architected custom workflows for The Future Radio to automate the end-to-end content production pipeline for hi-fidelity musical, podcast, and talk-format digital stations, including autonomous AI RJs and hosts.",
+                icon: Radio,
+                color: "group-hover:border-purple-500/30 group-hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]"
               },
-              { 
-                title: "Vlog & Video Production", 
-                desc: "Create faceless vlogs or AI-avatar driven videos for YouTube, Instagram Reels, and TikTok without ever stepping in front of a camera.",
-                icon: Video,
-                accent: "text-astra-gold",
-                border: "border-astra-gold/20"
-              },
-              { 
-                title: "Music Composition", 
-                desc: "Produce original background tracks, jingles, or full-length music tailored to your brand's specific vibe and emotional requirements.",
-                icon: Music,
-                accent: "text-emerald-500",
-                border: "border-emerald-500/20"
+              {
+                title: "Digitizing & Preserving Vernacular Content",
+                entity: "Media Mafias Integration",
+                copy: "Empowering local talent through technology. Factoric AI provides deep production support to Media Mafias, deploying specialized AI-powered tools that simplify recording, processing, and preserving hyper-local cultural content for the decentralized creator network.",
+                icon: Clapperboard,
+                color: "group-hover:border-red-500/30 group-hover:shadow-[0_0_30px_rgba(239,68,68,0.1)]"
               }
-            ].map((feature, i) => (
-              <div key={i} className={`p-10 glass-card border ${feature.border} rounded-sm bg-black group hover:bg-white/[0.02] transition-all relative`}>
-                <div className={`mb-6 p-4 rounded-full bg-white/[0.02] w-fit border border-white/5`}>
-                  <feature.icon className={`w-8 h-8 ${feature.accent}`} />
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                whileHover={{ y: -5 }}
+                className={`p-8 border border-zinc-800 bg-black rounded-sm group transition-all duration-300 ${item.color}`}
+              >
+                <div className="mb-6 p-3 bg-zinc-900 border border-zinc-800 rounded-sm w-fit group-hover:bg-zinc-800 transition-colors">
+                  <item.icon className="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors" />
                 </div>
-                <div className={`text-2xl font-bold mb-4`}>{feature.title}</div>
-                <p className="text-sm text-white/60 leading-relaxed font-medium mb-8">{feature.desc}</p>
-                <div className="text-[10px] font-black uppercase tracking-widest text-white/20 group-hover:text-astra-green transition-colors flex items-center gap-2">
-                  Learn More <ArrowRight className="w-3 h-3" />
+                <div className="text-[10px] font-bold uppercase tracking-widest text-purple-500 mb-3">{item.entity}</div>
+                <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+                <p className="text-sm text-zinc-400 leading-relaxed">{item.copy}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. CORE CAPABILITIES (The Custom Deployment Engine) */}
+      <section className="py-32 border-t border-zinc-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20 text-center">
+            <div className="text-emerald-400 text-[10px] font-black uppercase tracking-[0.4em] mb-4">The Custom Deployment Engine</div>
+            <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white">Specific B2B Offerings.</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                title: "24/7 Multilingual Support Desks",
+                desc: "Deploy autonomous customer support agents that understand complex intent, handle multi-turn conversations, and speak the local language of your customers fluently. Continuous execution with absolute consistency.",
+                icon: MessageSquare
+              },
+              {
+                title: "Agentic Content Pipelines",
+                desc: "End-to-end automation for media and enterprise communications. Turn raw data into production-ready scripts, audio assets, and structured media feeds using orchestrated multi-agent systems.",
+                icon: Workflow
+              },
+              {
+                title: "Autonomous AI RJs & Hosts",
+                desc: "Synthetic voice and context-aware script engines built specifically for digital radio, ambient branding, and live streaming setups. Media that responds and adapts in real-time.",
+                icon: Mic
+              }
+            ].map((pillar, i) => (
+              <div key={i} className="flex flex-col items-center text-center group">
+                <div className="w-16 h-16 rounded-full border border-purple-500/20 bg-purple-500/5 flex items-center justify-center mb-8 group-hover:border-purple-500/50 group-hover:bg-purple-500/10 transition-all">
+                  <pillar.icon className="w-6 h-6 text-purple-400" />
                 </div>
+                <h3 className="text-lg font-bold text-white mb-4">{pillar.title}</h3>
+                <p className="text-sm text-zinc-400 leading-relaxed font-medium">{pillar.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. Comparison Strip */}
-      <section className="section-spacing border-b border-white/5 bg-black">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="p-12 border border-white/5 rounded-sm bg-red-500/[0.02] group">
-              <div className="text-accent-red text-[10px] font-black uppercase tracking-[0.5em] mb-8">The Old Way</div>
-              <ul className="space-y-4">
-                {["Hiring expensive human support teams", "Renting studios and buying gear", "Paying royalties for generic music", "Weeks of video editing and rendering"].map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 text-white/40 text-sm font-medium">
-                    <div className="w-1.5 h-1.5 mt-1.5 rounded-full bg-accent-red/50 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="p-12 border border-astra-green/20 rounded-sm bg-astra-green/[0.02] group relative overflow-hidden">
-              <div className="absolute inset-0 bg-astra-green/5 blur-3xl opacity-20" />
-              <div className="relative z-10">
-                <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em] mb-8">The Factoric Way</div>
-                <ul className="space-y-4">
-                  {["Zero-latency autonomous 24/7 support", "Instant podcast generation via text", "Original royalty-free music creation", "Automated vlog production in minutes"].map((item, i) => (
-                    <li key={i} className="flex items-start gap-4 text-white font-medium text-sm">
-                      <CheckCircle2 className="w-4 h-4 text-astra-green shrink-0 mt-0.5" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Final CTA */}
-      <section className="section-spacing bg-astra-green/[0.02]">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-          <div className="space-y-4">
-            <div className="text-astra-green text-[10px] font-black uppercase tracking-[0.5em]">Start Building</div>
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
-              Ready to Deploy Your <br />
-              <span className="text-astra-green">AI Agents?</span>
-            </h2>
-            <p className="text-xl text-white/40 leading-relaxed font-medium max-w-2xl mx-auto">
-              Tell us what you need. We'll train and deploy the perfect AI model for your business.
-            </p>
-          </div>
-
-          <div className="pt-8">
-            <Link 
-              href="/contact"
-              className="px-8 md:px-16 py-4 md:py-6 bg-astra-green text-white hover:bg-astra-green/80 rounded-sm font-black text-[10px] uppercase tracking-[0.5em] transition-all green-glow inline-block"
-            >
-              Get Started Now
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <footer className="py-32 text-center border-t border-white/5">
-        <div className="flex justify-center mb-12">
+      <footer className="py-12 border-t border-zinc-900 text-center bg-zinc-950">
+        <div className="flex justify-center mb-8">
           <NeuralLogo className="w-8 h-8 opacity-20" />
         </div>
-        <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-white/10">
-          Factoric AI is a product of <a href="https://scalerxlab.com" className="text-white/20 hover:text-astra-green transition-colors">ScalerX Lab</a>. All rights reserved.
+        <p className="text-[10px] uppercase font-bold tracking-[0.4em] text-zinc-600">
+          Factoric AI is a <a href="https://scalerxlab.com" className="text-zinc-400 hover:text-purple-400 transition-colors">ScalerX Lab</a> Ecosystem Infrastructure.
         </p>
       </footer>
     </main>
