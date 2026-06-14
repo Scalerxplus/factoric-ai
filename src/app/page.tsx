@@ -122,21 +122,21 @@ export default function FactoricAIHome() {
                 title: "100% Engagement. Zero Lead Leakage.",
                 entity: "ScalerX BOS Integration",
                 copy: "Factoric AI acts as the sovereign automated triage layer for ScalerX BOS. By autonomously managing omnichannel client interactions, qualifying intent, and instantly routing data, it completely revolutionized the lead acquisition process with zero human error.",
-                icon: Brain,
+                logoUrl: "https://www.google.com/s2/favicons?domain=scalerxlab.com&sz=128",
                 color: "group-hover:border-emerald-500/30 group-hover:shadow-[0_0_30px_rgba(16,185,129,0.1)]"
               },
               {
                 title: "High-Fidelity Agentic Media Pipelines",
                 entity: "The Future Radio Integration",
                 copy: "Powering the next generation of broadcasting. Factoric AI architected custom workflows for The Future Radio to automate the end-to-end content production pipeline for hi-fidelity musical, podcast, and talk-format digital stations, including autonomous AI RJs and hosts.",
-                icon: Radio,
+                logoUrl: "https://www.google.com/s2/favicons?domain=thefutureradio.com&sz=128",
                 color: "group-hover:border-purple-500/30 group-hover:shadow-[0_0_30px_rgba(147,51,234,0.1)]"
               },
               {
                 title: "Digitizing & Preserving Vernacular Content",
                 entity: "Media Mafias Integration",
                 copy: "Empowering local talent through technology. Factoric AI provides deep production support to Media Mafias, deploying specialized AI-powered tools that simplify recording, processing, and preserving hyper-local cultural content for the decentralized creator network.",
-                icon: Clapperboard,
+                logoUrl: "https://www.google.com/s2/favicons?domain=mediamafias.com&sz=128",
                 color: "group-hover:border-red-500/30 group-hover:shadow-[0_0_30px_rgba(239,68,68,0.1)]"
               }
             ].map((item, i) => (
@@ -146,7 +146,8 @@ export default function FactoricAIHome() {
                 className={`p-8 border border-zinc-800 bg-black rounded-sm group transition-all duration-300 ${item.color}`}
               >
                 <div className="mb-6 p-3 bg-zinc-900 border border-zinc-800 rounded-sm w-fit group-hover:bg-zinc-800 transition-colors">
-                  <item.icon className="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.logoUrl} alt={`${item.entity} Logo`} className="w-6 h-6 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
                 </div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-purple-500 mb-3">{item.entity}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
