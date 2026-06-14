@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { X, Shield, Zap, Target, Eye, Info, BookOpen, MessageSquare, Layout, LogIn, Rocket } from "lucide-react";
+import { X, Shield, Zap, Target, Eye, Info, BookOpen, MessageSquare, Layout, LogIn, Rocket, Headphones, Video, Music } from "lucide-react";
 import { NeuralLogo } from "./NeuralLogo";
 
 interface CommandCenterProps {
